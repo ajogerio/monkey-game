@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://lyabiikwtq6h"]
+[gd_scene load_steps=8 format=3 uid="uid://lyabiikwtq6h"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_olb5b"]
 
@@ -12,6 +12,16 @@ height = 16
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3laj3"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80rkq"]
+size = Vector2(336, 10)
+
+[sub_resource type="Gradient" id="Gradient_08b6x"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k6lgg"]
+gradient = SubResource("Gradient_08b6x")
+width = 336
+height = 10
+
 [node name="Player Scene" type="Node2D"]
 position = Vector2(27, 37)
 
@@ -23,3 +33,13 @@ texture = SubResource("GradientTexture2D_codpf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_3laj3")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(151, 105.5)
+shape = SubResource("RectangleShape2D_80rkq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(150, 106)
+texture = SubResource("GradientTexture2D_k6lgg")
