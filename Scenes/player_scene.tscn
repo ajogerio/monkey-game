@@ -1,13 +1,45 @@
-[gd_scene load_steps=8 format=3 uid="uid://lyabiikwtq6h"]
+[gd_scene load_steps=10 format=3 uid="uid://lyabiikwtq6h"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_olb5b"]
+[ext_resource type="Texture2D" uid="uid://3herub60pkpq" path="res://Sprites/Player/cb character idle sprite.png" id="2_ulh0l"]
 
-[sub_resource type="Gradient" id="Gradient_yrb32"]
+[sub_resource type="Animation" id="Animation_he1jt"]
+resource_name = "idle"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_codpf"]
-gradient = SubResource("Gradient_yrb32")
-width = 16
-height = 16
+[sub_resource type="Animation" id="Animation_axjhf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_anggn"]
+_data = {
+"RESET": SubResource("Animation_axjhf"),
+"idle": SubResource("Animation_he1jt")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3laj3"]
 size = Vector2(16, 16)
@@ -29,9 +61,17 @@ position = Vector2(27, 37)
 script = ExtResource("1_olb5b")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = SubResource("GradientTexture2D_codpf")
+texture_filter = 1
+texture = ExtResource("2_ulh0l")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_anggn")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+visible = false
 shape = SubResource("RectangleShape2D_3laj3")
 
 [node name="Floor" type="StaticBody2D" parent="."]
