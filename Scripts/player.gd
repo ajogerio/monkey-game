@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 const HORIZONTAL_SPEED = 300
-const GRAVITY_SPEED = 500
+const GRAVITY_SPEED = 1000
+const JUMP_SPEED = 300
 
 func _physics_process(delta: float) -> void:
 	# horizontal movement:
@@ -16,5 +17,9 @@ func _physics_process(delta: float) -> void:
 	# gravity movement:
 	if not is_on_floor():
 		velocity.y += GRAVITY_SPEED * delta
+	
+	# jumping:
+	if Input.is_action_just_pressed("jump"):
+		velocity.y = -JUMP_SPEED # negative value so that it goes upwards (+y is up and -y is down)
 		
 	move_and_slide()
