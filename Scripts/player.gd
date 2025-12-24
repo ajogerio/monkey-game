@@ -4,9 +4,13 @@ const HORIZONTAL_SPEED = 300
 const GRAVITY_SPEED = 1000
 const JUMP_SPEED = 300
 
+func _ready():
+	# play animation
+	$Sprite2D/AnimationPlayer.play("idle")
+
 func _physics_process(delta: float) -> void:
 	# horizontal movement:
-	velocity.x = 0
+	velocity.x = 0 # make sure that movement is always reset to 0 so it does not move infinitely
 	
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= HORIZONTAL_SPEED
