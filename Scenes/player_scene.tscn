@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://lyabiikwtq6h"]
+[gd_scene load_steps=5 format=3 uid="uid://lyabiikwtq6h"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3laj3"]
-size = Vector2(16, 16)
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_olb5b"]
 
 [sub_resource type="Gradient" id="Gradient_yrb32"]
 
@@ -10,13 +9,17 @@ gradient = SubResource("Gradient_yrb32")
 width = 16
 height = 16
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3laj3"]
+size = Vector2(16, 16)
+
 [node name="Player Scene" type="Node2D"]
 position = Vector2(27, 37)
 
 [node name="Player" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_3laj3")
+script = ExtResource("1_olb5b")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = SubResource("GradientTexture2D_codpf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_3laj3")
