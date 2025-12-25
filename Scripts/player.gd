@@ -11,7 +11,7 @@ const JUMP_SPEED = 300
 
 func _ready():
 	# play animation
-	$Sprite2D/AnimationPlayer.play("idle")
+	$"Player Sprite"/AnimationPlayer.play("idle")
 
 func _physics_process(delta: float) -> void:
 	# horizontal movement:
@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 # part, it checks the nodes one by one and asks if the input belongs
 # to them. In this case, if we click, it belongs to us and we handle it
 # below
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 
