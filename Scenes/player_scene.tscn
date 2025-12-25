@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://lyabiikwtq6h"]
+[gd_scene load_steps=7 format=3 uid="uid://lyabiikwtq6h"]
 
-[ext_resource type="Script" path="res://Scripts/player.gd" id="1_olb5b"]
-[ext_resource type="PackedScene" uid="uid://bp5neqwnb18rc" path="res://Scenes/cookie_bullet_scene.tscn" id="2_bowr6"]
+[ext_resource type="Script" path="res://Scripts/player_scene.gd" id="1_oditq"]
 [ext_resource type="Texture2D" uid="uid://3herub60pkpq" path="res://Sprites/Player/cb character idle sprite.png" id="2_ulh0l"]
 
 [sub_resource type="Animation" id="Animation_axjhf"]
@@ -45,50 +44,26 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3laj3"]
 size = Vector2(16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_80rkq"]
-size = Vector2(336, 10)
-
-[sub_resource type="Gradient" id="Gradient_08b6x"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_k6lgg"]
-gradient = SubResource("Gradient_08b6x")
-width = 336
-height = 10
-
-[node name="Player Scene" type="Node2D"]
-position = Vector2(232, 57)
-
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(-225, 10)
-script = ExtResource("1_olb5b")
-cookie_bullet_scene = ExtResource("2_bowr6")
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(17, 24)
+script = ExtResource("1_oditq")
 metadata/_edit_group_ = true
 
-[node name="Player Sprite" type="Sprite2D" parent="Player"]
+[node name="Player Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -2)
 texture = ExtResource("2_ulh0l")
 hframes = 3
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/Player Sprite"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player Sprite"]
 libraries = {
 "": SubResource("AnimationLibrary_anggn")
 }
 
-[node name="Player Hitbox" type="CollisionShape2D" parent="Player"]
+[node name="Player Hitbox" type="CollisionShape2D" parent="."]
 visible = false
+position = Vector2(-225, 10)
 shape = SubResource("RectangleShape2D_3laj3")
 
-[node name="Muzzle" type="Marker2D" parent="Player"]
-position = Vector2(10, 2)
-
-[node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(-63, 75)
-metadata/_edit_group_ = true
-
-[node name="Floor Hitbox" type="CollisionShape2D" parent="Floor"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_80rkq")
-
-[node name="Floor Sprite" type="Sprite2D" parent="Floor"]
-position = Vector2(-1, 0)
-texture = SubResource("GradientTexture2D_k6lgg")
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(10, 0)
