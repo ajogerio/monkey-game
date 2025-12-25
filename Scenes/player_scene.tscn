@@ -45,7 +45,7 @@ _data = {
 size = Vector2(16, 16)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(17, 24)
+position = Vector2(29, 55)
 script = ExtResource("1_oditq")
 metadata/_edit_group_ = true
 
@@ -61,8 +61,7 @@ libraries = {
 }
 
 [node name="Player Hitbox" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-225, 10)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_3laj3")
 
 [node name="Muzzle" type="Marker2D" parent="."]
