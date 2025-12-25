@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp5neqwnb18rc"]
+
+[ext_resource type="Script" path="res://Scripts/cookie_bullet.gd" id="3_r6sp0"]
+
+[sub_resource type="Gradient" id="Gradient_j8m7e"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7s7hb"]
+gradient = SubResource("Gradient_j8m7e")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hm863"]
+
+[node name="Cookie Bullet Scene" type="Node2D"]
+
+[node name="Cookie_Bullet" type="Area2D" parent="."]
+position = Vector2(-178, 44)
+script = ExtResource("3_r6sp0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Cookie_Bullet"]
+position = Vector2(2.26498e-06, 0)
+scale = Vector2(0.21875, 0.1875)
+texture = SubResource("GradientTexture2D_7s7hb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cookie_Bullet"]
+shape = SubResource("CircleShape2D_hm863")
