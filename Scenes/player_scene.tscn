@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://lyabiikwtq6h"]
+[gd_scene load_steps=13 format=3 uid="uid://lyabiikwtq6h"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_olb5b"]
 [ext_resource type="Texture2D" uid="uid://3herub60pkpq" path="res://Sprites/Player/cb character idle sprite.png" id="2_ulh0l"]
@@ -54,11 +54,20 @@ gradient = SubResource("Gradient_08b6x")
 width = 336
 height = 10
 
+[sub_resource type="Gradient" id="Gradient_j8m7e"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mfe1m"]
+gradient = SubResource("Gradient_j8m7e")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o4n0b"]
+
 [node name="Player Scene" type="Node2D"]
-position = Vector2(27, 37)
+position = Vector2(232, 57)
 
 [node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(-216, 5)
 script = ExtResource("1_olb5b")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture_filter = 1
@@ -75,11 +84,25 @@ visible = false
 shape = SubResource("RectangleShape2D_3laj3")
 
 [node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(-63, 75)
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(151, 105.5)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_80rkq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor"]
-position = Vector2(150, 106)
+position = Vector2(-1, 0)
 texture = SubResource("GradientTexture2D_k6lgg")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-178, 44)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(2.26498e-06, 0)
+scale = Vector2(0.21875, 0.1875)
+texture = SubResource("GradientTexture2D_mfe1m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_o4n0b")
