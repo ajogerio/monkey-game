@@ -48,3 +48,31 @@ Some description here.
 
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/91f1aff...41c67e1)
+
+### **Dec 25, 2025**
+
+#### 🧩 Feature Summary
+- Today I worked on the shooting mechanic of the game.
+- I wanted the character to shoot cookies, so I called these bullets "cookie bullets."
+- I mapped the left mouse-click to trigger shots and bullets will shoot in the direction of the mouse cursor.
+
+---
+
+#### ⚠️ Challenges
+- I had no idea how to even make shooting bullets in the first place so I consulted trusty ChatGPT to provide the links to the Godot docs that taught that specific mechanic.
+- I also had problems with the bullets spawning in the center of the game screen rather than on the designated marker I positioned in front of the character.
+- Turns out I was putting all my nodes in a single scene, which caused the global position of the bullets to be mismatched.
+- I fixed the issue by creating a scene for each element of the game (i.e. game scene, player scene, cookie bullet scene, etc.) and then adding scenes in the main game scene. Kind of like making functions and calling them in the main function.
+
+---
+
+#### 🎞️ Visuals
+
+**Shooting mechanic demo:**
+
+![Shooting mechanic](Devlog%20GIFs/shooting_mechanic.gif)
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4c92f30...3ca0507)
