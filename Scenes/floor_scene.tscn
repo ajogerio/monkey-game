@@ -1,24 +1,25 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1r7exha8pl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g54ld"]
-size = Vector2(336, 10.5)
+size = Vector2(1883, 10)
 
 [sub_resource type="Gradient" id="Gradient_li2hv"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_pj4ad"]
 gradient = SubResource("Gradient_li2hv")
-width = 336
+width = 50
 height = 10
 
 [node name="Floor" type="StaticBody2D"]
-position = Vector2(169, 150)
+position = Vector2(407, 161)
 metadata/_edit_group_ = true
 
 [node name="Floor Hitbox" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -0.25)
+position = Vector2(573.5, 4)
+scale = Vector2(0.998138, 1.017)
 shape = SubResource("RectangleShape2D_g54ld")
 
 [node name="Floor Sprite" type="Sprite2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(574, 4)
+scale = Vector2(-37.6536, 1)
 texture = SubResource("GradientTexture2D_pj4ad")

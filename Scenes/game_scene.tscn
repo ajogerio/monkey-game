@@ -10,7 +10,7 @@
 position = Vector2(85, 189)
 
 [node name="Floor" parent="." instance=ExtResource("2_pn527")]
-position = Vector2(221, 250)
+position = Vector2(407, 238)
 
 [node name="Camera2D" parent="." instance=ExtResource("3_ap1i3")]
 position = Vector2(272, 173)
