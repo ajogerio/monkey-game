@@ -1,8 +1,8 @@
 extends Camera2D
 
-#func _ready() -> void:
-	#drag_horizontal_enabled = true
-	#drag_vertical_enabled = false
-	#
-	## set the drag margins
-	#drag_left_margin = 0.1
+#@export var player_path: NodePath
+#@onready var player: Node2D = get_node(player_path)
+#
+#func _process(_delta):
+	## Track the player so margins can apply
+	#position = player.position
