@@ -11,15 +11,20 @@
 [node name="Player" parent="." instance=ExtResource("1_hoxpg")]
 position = Vector2(85, 189)
 
+[node name="Camera2D" parent="Player" instance=ExtResource("3_ap1i3")]
+position = Vector2(187, -58)
+zoom = Vector2(2.5, 2.5)
+drag_horizontal_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.7
+drag_bottom_margin = 0.0
+script = ExtResource("3_rhkxv")
+
 [node name="Floor" parent="." instance=ExtResource("2_pn527")]
 position = Vector2(407, 238)
 
-[node name="Camera2D" parent="." instance=ExtResource("3_ap1i3")]
-position = Vector2(272, 173)
-zoom = Vector2(2.5, 2.5)
-script = ExtResource("3_rhkxv")
-
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(150, 228)
+position = Vector2(254, 228)
 scale = Vector2(0.128906, 0.128906)
 texture = ExtResource("5_c87le")
