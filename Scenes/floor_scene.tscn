@@ -15,6 +15,7 @@ position = Vector2(169, 150)
 metadata/_edit_group_ = true
 
 [node name="Floor Hitbox" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -0.25)
 shape = SubResource("RectangleShape2D_g54ld")
 
