@@ -76,3 +76,31 @@ Some description here.
 
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4c92f30...3ca0507)
+
+### **Dec 27, 2025 - Dec 28, 2025**
+
+#### 🧩 Feature Summary
+- For these days I worked on making the first enemy monkey sprite.
+- I made the walking and idle animations for the monkey sprite.
+- I attempted to make the camera of the game work, but it's still a work in progress for now.
+
+---
+
+#### ⚠️ Challenges
+- I struggled to make the walking animation for the monkey sprite. I tweaked it dozens of times, even walking in my room slowly just to get the different key frames down, until I eventually ended up with a walk animation that I was pleased with.
+- My biggest challenge right now is understanding the camera. I took inspiration from the camera of Super Mario where the main sprite moves about 50 percent to the right of the screen before making the camera drag to the right alongside it. I got it working, sort of? I was confused by how I set the drag margin to be 0.7 (meaning the character can move until 70% of the camera before panning) but in the game itself, it only took about 50% before the panning. I tried looking through sources to find out why that is and I was not able to find an answer for now. I'm thinking it might have to do with a mismatch of positions of the character and the camera. I plan to look more into it on my next work session by watching some guides on YouTube.
+
+---
+
+#### 🎞️ Visuals
+
+**Enemy Monkey Sprite Animations:**
+
+![Monkey walking animation](Devlog%20GIFs/monkey_walking_animation.gif)
+
+![Monkey walking animation](Devlog%20GIFs/monkey_idle_animation.gif)
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4c92f30...3ca0507) change this
