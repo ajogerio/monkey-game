@@ -104,3 +104,31 @@ Some description here.
 
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4c92f30...3ca0507) change this
+
+### **Dec 27, 2025 - Dec 28, 2025**
+
+#### 🧩 Feature Summary
+- For these days I worked on making the first enemy monkey sprite.
+- I made the walking and idle animations for the monkey sprite.
+- I attempted to make the camera of the game work, but it's still a work in progress for now.
+
+---
+
+#### ⚠️ Challenges
+- Still struggling with making the camera work. I've tried changing the logic by getting the left edge of the screen and checking if the player has moved past a constant distance. But then I realized that this distance will stay the same even if the player moves past it and it wont adjust based on where the player is currently positioned. Still need to work on this in the coming days.
+- I got confused with viewports, resolutions, and scaling. Had to ask ChatGPT multiple times to explain it, and I am still kind of confused. I just know that resolution refers to the total amount of pixels on the screen, while scale is how large those pixels will be. So a "game pixel" isnt always one-to-one with the screen pixel in my laptop. A game pixel could be a square comprising multiple pixels from my laptop. And a good scale is a whole number.
+
+---
+
+#### 🎞️ Visuals
+
+**Enemy Monkey Sprite Animations:**
+
+![Monkey walking animation](Devlog%20GIFs/monkey_walking_animation.gif)
+
+![Monkey walking animation](Devlog%20GIFs/monkey_idle_animation.gif)
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4c92f30...3ca0507) change this
