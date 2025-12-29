@@ -9,7 +9,7 @@
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hoxpg")]
-position = Vector2(45, 172)
+position = Vector2(47, 176)
 
 [node name="Floor" parent="." instance=ExtResource("2_pn527")]
 position = Vector2(371, 195)
@@ -19,11 +19,11 @@ position = Vector2(100, 179)
 scale = Vector2(0.128906, 0.128906)
 texture = ExtResource("5_c87le")
 
-[node name="Camera2D" parent="." instance=ExtResource("3_ap1i3")]
+[node name="Camera2D" parent="." node_paths=PackedStringArray("player_node") instance=ExtResource("3_ap1i3")]
 position = Vector2(179, 119)
-drag_horizontal_enabled = true
 drag_left_margin = 0.0
 drag_top_margin = 0.0
 drag_right_margin = 1.0
 drag_bottom_margin = 0.0
 script = ExtResource("3_rhkxv")
+player_node = NodePath("../Player")
