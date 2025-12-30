@@ -105,12 +105,7 @@ Some description here.
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4c92f30...3ca0507) change this
 
-### **Dec 27, 2025 - Dec 28, 2025**
-
-#### 🧩 Feature Summary
-- For these days I worked on making the first enemy monkey sprite.
-- I made the walking and idle animations for the monkey sprite.
-- I attempted to make the camera of the game work, but it's still a work in progress for now.
+### **Dec 29, 2025**
 
 ---
 
@@ -118,17 +113,32 @@ Some description here.
 - Still struggling with making the camera work. I've tried changing the logic by getting the left edge of the screen and checking if the player has moved past a constant distance. But then I realized that this distance will stay the same even if the player moves past it and it wont adjust based on where the player is currently positioned. Still need to work on this in the coming days.
 - I got confused with viewports, resolutions, and scaling. Had to ask ChatGPT multiple times to explain it, and I am still kind of confused. I just know that resolution refers to the total amount of pixels on the screen, while scale is how large those pixels will be. So a "game pixel" isnt always one-to-one with the screen pixel in my laptop. A game pixel could be a square comprising multiple pixels from my laptop. And a good scale is a whole number.
 
+### **Dec 30, 2025**
+
+#### 🧩 Feature Summary
+- Camera moves to the right when player is at 30% of the screen, and moves to the left when the player is at 10%.
+
+---
+
+#### ⚠️ Challenges
+- I still struggled to make the camera do what I wanted it to. That is until I realized that you could change the "Anchor Mode" of the camera 2d such that its position is at the top left of the screen box rather than the center. This removed all my confusion and made calculating the barriers WAAAAY more easier.
+- I also struggled with the "lerp" function at first because that was what I initially saw for ensuring smooth camera movements. I even had to draw super wonky sketches in MS Paint just to visualize how it was supposed to work. It worked perfectly for the right panning, but it started to jitter with left panning. And then I realized that I could just the increase or decrease the position of the camera relative to the velocity of the player instead of using lerp, and it worked! Now, my code looks much more simpler than it did the past few days. I'm proud of myself for finally making this work properly and consistently.
+
 ---
 
 #### 🎞️ Visuals
 
-**Enemy Monkey Sprite Animations:**
+**Goofy MS Paint sketch for understanding LERP (lol):**
 
-![Monkey walking animation](Devlog%20GIFs/monkey_walking_animation.gif)
+![Goofy MS Paint sketch for understanding LERP](Devlog%20GIFs/camera_movement_sketch.png)
 
-![Monkey walking animation](Devlog%20GIFs/monkey_idle_animation.gif)
+<br/>
+
+**Working camera panning feature:**
+
+![Working camera panning feature](Devlog%20GIFs/camera_panning_showcase.gif)
 
 ---
 
 #### 🔗 Commits
-- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4c92f30...3ca0507) change this
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/91f1aff...41c67e1)
