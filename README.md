@@ -141,4 +141,4 @@ Some description here.
 ---
 
 #### 🔗 Commits
-- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/91f1aff...41c67e1)
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4d58b17...832aff0)
