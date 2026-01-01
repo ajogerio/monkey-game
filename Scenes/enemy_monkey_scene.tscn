@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://db6re2lmhgyvx"]
+[gd_scene load_steps=7 format=3 uid="uid://db6re2lmhgyvx"]
 
 [ext_resource type="Texture2D" uid="uid://wrjv0yh2amro" path="res://Sprites/Characters/monkey_enemy_iw.png" id="1_jedj3"]
 
@@ -34,9 +34,27 @@ tracks/0/keys = {
 "values": [8]
 }
 
+[sub_resource type="Animation" id="Animation_tmxat"]
+resource_name = "idle"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kd0q3"]
 _data = {
 "RESET": SubResource("Animation_i316t"),
+"idle": SubResource("Animation_tmxat"),
 "walk_right": SubResource("Animation_rd0d4")
 }
 
@@ -58,4 +76,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_y1tft")
