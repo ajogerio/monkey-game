@@ -61,7 +61,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1tft"]
 size = Vector2(16, 16)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Monkey Enemy" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
