@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_oditq"]
 [ext_resource type="PackedScene" uid="uid://bp5neqwnb18rc" path="res://Scenes/cookie_bullet_scene.tscn" id="2_pntg0"]
-[ext_resource type="Texture2D" uid="uid://3herub60pkpq" path="res://Sprites/Player/cb character idle sprite.png" id="2_ulh0l"]
+[ext_resource type="Texture2D" uid="uid://3herub60pkpq" path="res://Sprites/Characters/cb character idle sprite.png" id="2_ulh0l"]
 
 [sub_resource type="Animation" id="Animation_axjhf"]
 length = 0.001

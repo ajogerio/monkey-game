@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3herub60pkpq"
-path="res://.godot/imported/cb character idle sprite.png-ce7f53af75531df792cb7fac04e285d3.ctex"
+uid="uid://wrjv0yh2amro"
+path="res://.godot/imported/monkey_enemy_iw.png-c38d955b81f0630c0ef19f2d080a78ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/cb character idle sprite.png"
-dest_files=["res://.godot/imported/cb character idle sprite.png-ce7f53af75531df792cb7fac04e285d3.ctex"]
+source_file="res://Sprites/Characters/monkey_enemy_iw.png"
+dest_files=["res://.godot/imported/monkey_enemy_iw.png-c38d955b81f0630c0ef19f2d080a78ab.ctex"]
 
 [params]
 
