@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://3q1avp6uo11r"]
+[gd_scene load_steps=6 format=3 uid="uid://3q1avp6uo11r"]
 
 [ext_resource type="PackedScene" uid="uid://db6re2lmhgyvx" path="res://Scenes/enemy_monkey_scene.tscn" id="1_hnsa0"]
 [ext_resource type="PackedScene" uid="uid://lyabiikwtq6h" path="res://Scenes/player_scene.tscn" id="1_hoxpg"]
-[ext_resource type="Script" path="res://Scripts/enemy_monkey.gd" id="2_p01vl"]
 [ext_resource type="PackedScene" uid="uid://d1r7exha8pl" path="res://Scenes/floor_scene.tscn" id="2_pn527"]
 [ext_resource type="PackedScene" uid="uid://bumtdx3tb1pse" path="res://Scenes/camera_scene.tscn" id="3_ap1i3"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="3_rhkxv"]
@@ -11,7 +10,6 @@
 
 [node name="Monkey Enemy" parent="." instance=ExtResource("1_hnsa0")]
 position = Vector2(313, 106)
-script = ExtResource("2_p01vl")
 
 [node name="Player" parent="." instance=ExtResource("1_hoxpg")]
 position = Vector2(47, 176)
