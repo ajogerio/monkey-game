@@ -155,6 +155,7 @@ Some description here.
 #### ⚠️ Challenges
 - I encountered an issue where the monkey won't stop walking to the right. It would stop when the monkey's walking speed was fast. But, if it was slow, it won't. I took a break out of frustration, and during my break I realized the cause of the issue. The monkey was walking so slowly that it does not reach the pace distance on time. And since reaching the pace distance was the stop condition, it never stopped before the timer goes off and makes it walk again. So I added a condition in the timer callback wherein the walk cycle only starts when it is not already doing so. And it worked!
 - I also encountered a bug where the camera would not follow the player if they stood on top of the pacing monkey. I have to look into this in the future.
+- I'm sure my code could still be optimized and refactored to be more clean. But I'll think about that later. I think this version of the code is good for now and gets the job done haha.
 
 ---
 
@@ -173,4 +174,4 @@ Some description here.
 ---
 
 #### 🔗 Commits
-- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4d58b17...832aff0)
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/05bb7ba...5fff5a2)
