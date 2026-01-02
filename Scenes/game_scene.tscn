@@ -11,7 +11,7 @@
 [node name="Game" type="Node2D"]
 
 [node name="Monkey Enemy" parent="." instance=ExtResource("1_hnsa0")]
-position = Vector2(314, 178)
+position = Vector2(313, 106)
 script = ExtResource("2_p01vl")
 
 [node name="Player" parent="." instance=ExtResource("1_hoxpg")]
