@@ -45,4 +45,4 @@ func _on_timer_timeout():
 			$"Monkey Sprite"/AnimationPlayer.play("walk_right")
 		if pace_direction == "left":
 			is_pacing_left = true
-			$"Monkey Sprite"/AnimationPlayer.play("walk_right")
+			$"Monkey Sprite"/AnimationPlayer.play("walk_left")
