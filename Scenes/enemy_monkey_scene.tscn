@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://db6re2lmhgyvx"]
+[gd_scene load_steps=9 format=3 uid="uid://db6re2lmhgyvx"]
 
+[ext_resource type="Script" path="res://Scripts/enemy_monkey.gd" id="1_ebc0t"]
 [ext_resource type="Texture2D" uid="uid://wrjv0yh2amro" path="res://Sprites/Characters/monkey_enemy_iw.png" id="1_jedj3"]
 
 [sub_resource type="Animation" id="Animation_i316t"]
@@ -80,6 +81,7 @@ _data = {
 size = Vector2(16, 16)
 
 [node name="Monkey Enemy" type="CharacterBody2D"]
+script = ExtResource("1_ebc0t")
 
 [node name="Monkey Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -96,3 +98,7 @@ libraries = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_y1tft")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
