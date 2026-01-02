@@ -63,14 +63,14 @@ size = Vector2(16, 16)
 
 [node name="Monkey Enemy" type="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Monkey Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_jedj3")
 hframes = 4
 vframes = 3
 frame = 8
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monkey Sprite"]
 libraries = {
 "": SubResource("AnimationLibrary_kd0q3")
 }
