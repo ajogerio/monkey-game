@@ -142,3 +142,35 @@ Some description here.
 
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4d58b17...832aff0)
+
+### **January 2, 2026**
+
+#### 🧩 Feature Summary
+- Enemy monkey is now imported into the game.
+- Enemy monkey idle and walk animations are now playing.
+- Enemy monkey automatically paces left and right every 5 seconds. I plan for this to be the default action of the monkey when the player is still outside its attack range. Eventually, it should approach the player once the player enters its attack range.
+
+---
+
+#### ⚠️ Challenges
+- I encountered an issue where the monkey won't stop walking to the right. It would stop when the monkey's walking speed was fast. But, if it was slow, it won't. I took a break out of frustration, and during my break I realized the cause of the issue. The monkey was walking so slowly that it does not reach the pace distance on time. And since reaching the pace distance was the stop condition, it never stopped before the timer goes off and makes it walk again. So I added a condition in the timer callback wherein the walk cycle only starts when it is not already doing so. And it worked!
+- I also encountered a bug where the camera would not follow the player if they stood on top of the pacing monkey. I have to look into this in the future.
+
+---
+
+#### 🎞️ Visuals
+
+**Monkey auto-pacing:**
+
+![The monkey pacing back-and-forth automatically](Devlog%20GIFs/monkey_pacing_showcase.gif)
+
+<br>
+
+**Camera bug (camera doesnt pan when player is on top of the monkey):**
+
+![The monkey pacing back-and-forth automatically](Devlog%20GIFs/camera_bug_ontop_monkey.gif)
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/4d58b17...832aff0)
