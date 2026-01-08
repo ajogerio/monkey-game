@@ -98,26 +98,26 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1tft"]
 size = Vector2(16, 16)
 
-[node name="Monkey Enemy" type="CharacterBody2D"]
+[node name="Monkey Enemy" type="CharacterBody2D" groups=["enemy_monkey"]]
 script = ExtResource("1_ebc0t")
 
-[node name="Monkey Sprite" type="Sprite2D" parent="."]
+[node name="Monkey Sprite" type="Sprite2D" parent="." groups=["enemy_monkey"]]
 texture_filter = 1
 texture = ExtResource("1_jedj3")
 hframes = 4
 vframes = 4
 frame = 8
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Monkey Sprite"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monkey Sprite" groups=["enemy_monkey"]]
 libraries = {
 "": SubResource("AnimationLibrary_kd0q3")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["enemy_monkey"]]
 visible = false
 shape = SubResource("RectangleShape2D_y1tft")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." groups=["enemy_monkey"]]
 wait_time = 5.0
 autostart = true
 
