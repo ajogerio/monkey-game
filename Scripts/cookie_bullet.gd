@@ -9,3 +9,8 @@ func _physics_process(delta: float) -> void:
 	# the position vector. Unlike Character2D which has it built in and you could just do 
 	# velocity = speed * direction, then move_and_slide() does the adding to position
 	position += direction * SPEED * delta 
+
+func 
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
