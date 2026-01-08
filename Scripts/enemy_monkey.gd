@@ -55,6 +55,8 @@ func _on_timer_timeout():
 
 func die():
 	# play death animation
+	
+	# make monkey disappear
 	queue_free()
 
 func take_damage():
@@ -63,5 +65,4 @@ func take_damage():
 	else:
 		# play hit animation
 		lives_left -= 1
-		print(lives_left)
 	
