@@ -9,6 +9,8 @@ var is_pacing_right : bool = false
 var is_pacing_left : bool = false
 var pace_direction = "right"
 
+var lives_left = 2
+
 @onready var animation_player: AnimationPlayer = $"Monkey Sprite/AnimationPlayer"
 
 func _ready() -> void:
@@ -50,3 +52,16 @@ func _on_timer_timeout():
 		if pace_direction == "left":
 			is_pacing_left = true
 			animation_player.play("walk_left")
+
+func die():
+	# play death animation
+	queue_free()
+
+func take_damage():
+	if lives_left == 1:
+		die()
+	else:
+		# play hit animation
+		lives_left -= 1
+		print(lives_left)
+	

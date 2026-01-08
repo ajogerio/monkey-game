@@ -14,5 +14,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy_monkey"):
 		# bullet disappears
 		queue_free()
-		# monkey loses a life or dies
+		
+		# monkey takes damage
+		body.take_damage()
 		
