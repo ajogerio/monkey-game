@@ -11,6 +11,8 @@ func _physics_process(delta: float) -> void:
 	position += direction * SPEED * delta 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("hit")
 	if body.is_in_group("enemy_monkey"):
-		print(body.position)
+		# bullet disappears
+		queue_free()
+		# monkey loses a life or dies
+		
