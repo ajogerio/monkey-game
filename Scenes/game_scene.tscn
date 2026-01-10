@@ -32,4 +32,6 @@ drag_bottom_margin = 0.0
 script = ExtResource("3_rhkxv")
 player_node = NodePath("../Player")
 
-[node name="Dialogue Box" parent="." instance=ExtResource("7_p6fht")]
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Dialogue Box" parent="UI" instance=ExtResource("7_p6fht")]
