@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bl73fbqyb0vqm"]
+
+[node name="Dialogue Box" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
