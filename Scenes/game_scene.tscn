@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://3q1avp6uo11r"]
+[gd_scene load_steps=8 format=3 uid="uid://3q1avp6uo11r"]
 
 [ext_resource type="PackedScene" uid="uid://b757sdjyt2fh5" path="res://Scenes/snorlax_scene.tscn" id="1_aylle"]
 [ext_resource type="PackedScene" uid="uid://db6re2lmhgyvx" path="res://Scenes/enemy_monkey_scene.tscn" id="1_hnsa0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d1r7exha8pl" path="res://Scenes/floor_scene.tscn" id="2_pn527"]
 [ext_resource type="PackedScene" uid="uid://bumtdx3tb1pse" path="res://Scenes/camera_scene.tscn" id="3_ap1i3"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="3_rhkxv"]
+[ext_resource type="PackedScene" uid="uid://bl73fbqyb0vqm" path="res://Scenes/dialogue_box_scene.tscn" id="7_p6fht"]
 
 [node name="Game" type="Node2D"]
 
@@ -30,3 +31,5 @@ drag_right_margin = 1.0
 drag_bottom_margin = 0.0
 script = ExtResource("3_rhkxv")
 player_node = NodePath("../Player")
+
+[node name="Dialogue Box" parent="." instance=ExtResource("7_p6fht")]
