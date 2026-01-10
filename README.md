@@ -169,9 +169,38 @@ Some description here.
 
 **Camera bug (camera doesnt pan when player is on top of the monkey):**
 
-![The monkey pacing back-and-forth automatically](Devlog%20GIFs/camera_bug_ontop_monkey.gif)
+![Camera bug](Devlog%20GIFs/camera_bug_ontop_monkey.gif)
 
 ---
 
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/05bb7ba...5fff5a2)
+
+### **January 8, 2026**
+
+#### 🧩 Feature Summary
+- Cookie bullets now disappear on impact on monkey
+- Enemy monkey now takes damage from bullet
+- Enemy monkey disappears once his lives reach 0
+- Enemy monkey has 2 lives
+
+---
+
+#### ⚠️ Challenges
+- I was not sure how to make Godot register hits at first. I did some research and learned about the "body_entered" signal. It registers if an Area2D node (like the cookie bullet) overlaps with a Character2D node (the monkey). After asking A.I. for help, I got it working completely fine.
+- I struggled to muster energy to work today because I felt so tired. But I did, and I'm happy I finished even just a small feature.
+
+---
+
+#### 🎞️ Visuals
+
+**Monkey taking damage from cookie bullet:**
+
+![Monkey taking damage from cookie bullet](Devlog%20GIFs/monkey_taking_damage_from_bullet.gif)
+
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899)
