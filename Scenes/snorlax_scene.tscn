@@ -3,12 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://erj0f8j6sv32" path="res://Sprites/Placeholders/snorlax_placeholder.png" id="1_ukefw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evw67"]
+size = Vector2(32, 32)
 
 [node name="Snorlax" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_ukefw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_evw67")
