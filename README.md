@@ -204,3 +204,30 @@ Some description here.
 
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899)
+
+### **January 10, 2026**
+
+#### 🧩 Feature Summary
+- Added placeholder Snorlax npc
+- Added U.I. layer
+- Added dialogue box
+
+---
+
+#### ⚠️ Challenges
+- The anchors of the U.I. elements were confusing. I tried asking A.I. for help in explaining it to me, and it still seems pretty confusing. I played around with the anchors and presets a bit, and I eventually got my desired position of the dialogue box. Though, I hope the anchoring gets more intuitive the more I work on U.I. elements.
+
+---
+
+#### 🎞️ Visuals
+
+**Black dialogue box at the bottom of the screen:**
+
+![Black dialogue box at the bottom of the screen](Devlog%20Pictures/black_dialogue_box.png)
+
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899)
