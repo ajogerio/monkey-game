@@ -69,9 +69,13 @@ custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 3
 text = "Hello there dude"
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="NPC Portrait" type="TextureRect" parent="Panel/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 8
 texture = SubResource("PlaceholderTexture2D_mfufd")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
