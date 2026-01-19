@@ -3,6 +3,8 @@ extends Control
 # references to the child nodes
 @onready var speaker_name = $"Panel/MarginContainer/HBoxContainer/VBoxContainer/Speaker Name"
 @onready var speaker_dialogue = $"Panel/MarginContainer/HBoxContainer/VBoxContainer/Speaker Dialogue"
+@onready var player_portrait = $"Panel/MarginContainer/HBoxContainer/Player Portrait"
+@onready var npc_portrait = $"Panel/MarginContainer/HBoxContainer/NPC Portrait"
 
 var typing_speed := 0.03
 var is_typing := false
