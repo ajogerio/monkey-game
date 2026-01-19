@@ -25,6 +25,16 @@ func _start_typing() -> void:
 	
 	is_typing = false
 
+func _unhandled_input(event: InputEvent) -> void:
+	if not visible:
+		return
+	
+	if event.is_action_pressed("ui_accept"):
+		if is_typing:
+			# finish typing instantly
+			speaker_dialogue.visible_characters = speaker_dialogue.get_total_character_count()
+			is_typing = false
+
 
 func _on_ready() -> void:
 	show_dialogue("Snorlax", "Hello there. This text should type slowly.")
