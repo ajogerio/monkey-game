@@ -9,10 +9,10 @@ extends Control
 var typing_speed := 0.03
 var is_typing := false
 
-var dialogue_lines : Array[String] = []
+var dialogue_lines : Array[Dictionary] = []
 var current_line_index := 0
 
-func show_dialogue(speaker: String, lines: Array[String]) -> void:
+func show_dialogue(speaker: String, lines: Array[Dictionary]) -> void:
 	visible = true
 	speaker_name.text = speaker
 	
@@ -21,8 +21,19 @@ func show_dialogue(speaker: String, lines: Array[String]) -> void:
 	_show_current_line()
 	
 func _show_current_line():
+	var line = dialogue_lines[current_line_index]
+	
+	if line["speaker"] == "Player":
+		player_portrait.visible = true
+		npc_portrait.visible = false
+	else:
+		player_portrait.visible = false
+		npc_portrait.visible = true
+	
+	# set speaker name and text
+	speaker_name.text = line["speaker"]
 	speaker_dialogue.clear()
-	speaker_dialogue.append_text(dialogue_lines[current_line_index])
+	speaker_dialogue.append_text(line["text"])
 	speaker_dialogue.visible_characters = 0
 	is_typing = true
 	_start_typing()
@@ -52,6 +63,11 @@ func _unhandled_input(event: InputEvent) -> void:
 				# end of dialogue
 				visible = false
 
+var dialogue_data : Array[Dictionary] = [
+	Dictionary({"speaker": "NPC", "text": "Hello there!"}),
+	Dictionary({"speaker": "Player", "text": "Hi! Nice to meet you."}),
+	Dictionary({"speaker": "NPC", "text": "Be careful out there."})
+]
 
 func _on_ready() -> void:
-	show_dialogue("Snorlax", ["Hello there. This text should type slowly.", "This is the next line of dialogue from Snorlax."])
+	show_dialogue("Snorlax", dialogue_data)
