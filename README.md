@@ -231,3 +231,4 @@ Some description here.
 
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899)
+
