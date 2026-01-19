@@ -232,3 +232,30 @@ Some description here.
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899)
 
+### **January 18, 2026**
+
+#### 🧩 Feature Summary
+- Added typewriter effect for dialogue text
+- Added hiding and showing the appropriate chacracter portrait depending on speaker
+- Added dictionary data for the dialogues
+
+---
+
+#### ⚠️ Challenges
+- hard to understandd timeout at first and the get tree function
+
+---
+
+#### 🎞️ Visuals
+
+**Black dialogue box at the bottom of the screen:**
+
+![Black dialogue box at the bottom of the screen](Devlog%20Pictures/black_dialogue_box.png)
+
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899)
+
