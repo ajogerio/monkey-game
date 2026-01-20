@@ -230,7 +230,7 @@ Some description here.
 ---
 
 #### 🔗 Commits
-- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899) change this
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/678184e...3b9c41e)
 
 ### **January 19, 2026**
 
@@ -257,7 +257,7 @@ Some description here.
 ---
 
 #### 🔗 Commits
-- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899) change this
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/54afb22...40b66b5)
 
 ### **January 20, 2026**
 
@@ -282,5 +282,5 @@ Some description here.
 ---
 
 #### 🔗 Commits
-- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899) change this
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86)
 
