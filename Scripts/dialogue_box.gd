@@ -69,5 +69,5 @@ var dialogue_data : Array[Dictionary] = [
 	Dictionary({"speaker": "NPC", "text": "Be careful out there."})
 ]
 
-func _on_ready() -> void:
-	show_dialogue("Snorlax", dialogue_data)
+#func _on_ready() -> void:
+	#show_dialogue("Snorlax", dialogue_data)

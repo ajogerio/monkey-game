@@ -4,4 +4,5 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group
+	if body.is_in_group("player"):
+		print("player entered the interaction zone.")
