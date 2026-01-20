@@ -12,9 +12,8 @@ var is_typing := false
 var dialogue_lines : Array[Dictionary] = []
 var current_line_index := 0
 
-func show_dialogue(speaker: String, lines: Array[Dictionary]) -> void:
+func show_dialogue(lines: Array[Dictionary]) -> void:
 	visible = true
-	speaker_name.text = speaker
 	
 	dialogue_lines = lines # assign it to the global variable so all functions have access
 	current_line_index = 0
@@ -63,11 +62,5 @@ func _unhandled_input(event: InputEvent) -> void:
 				# end of dialogue
 				visible = false
 
-var dialogue_data : Array[Dictionary] = [
-	Dictionary({"speaker": "NPC", "text": "Hello there!"}),
-	Dictionary({"speaker": "Player", "text": "Hi! Nice to meet you."}),
-	Dictionary({"speaker": "NPC", "text": "Be careful out there."})
-]
-
-#func _on_ready() -> void:
-	#show_dialogue("Snorlax", dialogue_data)
+func _on_ready() -> void:
+	visible = false
