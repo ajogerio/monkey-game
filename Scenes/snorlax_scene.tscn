@@ -1,16 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://b757sdjyt2fh5"]
+[gd_scene load_steps=4 format=3 uid="uid://b757sdjyt2fh5"]
 
+[ext_resource type="Script" path="res://Scripts/snorlax.gd" id="1_iuqji"]
 [ext_resource type="Texture2D" uid="uid://erj0f8j6sv32" path="res://Sprites/Placeholders/snorlax_placeholder.png" id="1_ukefw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evw67"]
-size = Vector2(32, 32)
+size = Vector2(48, 36)
 
 [node name="Snorlax" type="Area2D"]
+script = ExtResource("1_iuqji")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_ukefw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("RectangleShape2D_evw67")
