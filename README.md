@@ -230,7 +230,7 @@ Some description here.
 ---
 
 #### 🔗 Commits
-- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899)
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899) change this
 
 ### **January 18, 2026**
 
@@ -242,20 +242,20 @@ Some description here.
 ---
 
 #### ⚠️ Challenges
-- hard to understandd timeout at first and the get tree function
+- It was hard to understand the timeout and get_tree function at first. It was easily clarified by a quick question in ChatGPT.
 
 ---
 
 #### 🎞️ Visuals
 
-**Black dialogue box at the bottom of the screen:**
+**Typewriter effect and portrait switching in dialogue:**
 
-![Black dialogue box at the bottom of the screen](Devlog%20Pictures/black_dialogue_box.png)
+![Typewriter effect and portrait switchin in dialogue](Devlog%20GIFs/dialogue_typewriter_effect.gif)
 
 <br>
 
 ---
 
 #### 🔗 Commits
-- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899)
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899) change this
 
