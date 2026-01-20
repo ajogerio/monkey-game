@@ -38,3 +38,5 @@ player_node = NodePath("../Player")
 [node name="Dialogue Box" parent="UI" instance=ExtResource("7_p6fht")]
 
 [node name="Dialogue Manager" parent="UI" instance=ExtResource("8_2gcwo")]
+
+[connection signal="dialogue_finished" from="UI/Dialogue Box" to="Snorlax" method="_on_dialogue_box_dialogue_finished"]
