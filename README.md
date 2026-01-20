@@ -232,7 +232,7 @@ Some description here.
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899) change this
 
-### **January 18, 2026**
+### **January 19, 2026**
 
 #### 🧩 Feature Summary
 - Added typewriter effect for dialogue text
@@ -251,6 +251,31 @@ Some description here.
 **Typewriter effect and portrait switching in dialogue:**
 
 ![Typewriter effect and portrait switchin in dialogue](Devlog%20GIFs/dialogue_typewriter_effect.gif)
+
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/ff1b003...0494899) change this
+
+### **January 20, 2026**
+
+#### 🧩 Feature Summary
+- Added a zone around the NPC where the player can press "E" to talk to them
+
+---
+
+#### ⚠️ Challenges
+- It was slightly confusing to connect the "dialogue_finished" signal from the dialogue box script to the NPC script. I tried using the _ready function for it at first, but then I learned that you could use the "Signals" tab to connect the signals automatically. (Thanks Godot!)
+
+---
+
+#### 🎞️ Visuals
+
+**Pressing "E" to talk to the NPC:**
+
+![Pressing "E" to talk to the NPC](Devlog%20GIFs/press_e_to_talk.gif)
 
 <br>
 
