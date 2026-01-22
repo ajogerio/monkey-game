@@ -284,3 +284,33 @@ Some description here.
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86)
 
+### **January 22, 2026**
+
+#### 🧩 Feature Summary
+- Reorganized the scene structure to accomodate a level loader
+- Added a new scene "Main" to handle loading the levels
+- Made the original "Game" scene into the new tutorial level
+- Added a level loader script to load the tutorial level (and potentially other levels) into the Main scene
+
+---
+
+#### ⚠️ Challenges
+- Reorganizing the scenes was confusing at first. But I copy pasted the scenes around and placed them where they should be with the guidance of ChatGPT. I got it down eventually.
+
+---
+
+#### 🎞️ Visuals
+
+**The new node structures of the Main and Tutorial Level Scenes:**
+
+![Main scene node structure](Devlog%20Pictures/main_scene_node_struct.png)
+
+![Tutorial Level scene node structure](Devlog%20Pictures/tutorial_level_node_struct.png)
+
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this
+
