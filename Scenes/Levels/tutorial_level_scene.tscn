@@ -16,3 +16,4 @@ position = Vector2(313, 106)
 position = Vector2(371, 195)
 
 [node name="Player Spawn" type="Marker2D" parent="."]
+position = Vector2(33, 155)
