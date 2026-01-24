@@ -6,8 +6,6 @@ extends Control
 @onready var player_portrait = $"Panel/MarginContainer/HBoxContainer/Player Portrait"
 @onready var npc_portrait = $"Panel/MarginContainer/HBoxContainer/NPC Portrait"
 
-signal dialogue_finished
-
 var typing_speed := 0.03
 var is_typing := false
 
@@ -63,7 +61,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			else:
 				# end of dialogue
 				visible = false
-				emit_signal("dialogue_finished")
+				DialogueManagerAutoload.dialogue_finished.emit()
 
 func _on_ready() -> void:
+	DialogueManagerAutoload.dialogue_box = self
 	visible = false
