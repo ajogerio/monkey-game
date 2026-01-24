@@ -7,7 +7,7 @@
 [node name="Tutorial Level" type="Node2D"]
 
 [node name="Snorlax" parent="." instance=ExtResource("1_pr6qi")]
-position = Vector2(101, 182)
+position = Vector2(182, 182)
 
 [node name="Monkey Enemy" parent="." instance=ExtResource("2_4qggg")]
 position = Vector2(313, 106)
