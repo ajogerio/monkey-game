@@ -9,34 +9,47 @@ extends Control
 var player_name = "Cb"
 var typing_speed := 0.03
 var is_typing := false
-var dialogue : DialogueResource
+var dialogue : Dictionary = {}
 var current_line_index := 0
 
-func show_dialogue(new_dialogue : DialogueResource) -> void:
+func load_dialogue_from_json(filepath : String) -> void:
+	var json_file = FileAccess.open(filepath, FileAccess.READ)
+	if not json_file:
+		push_error("Failed to open dialogue JSON: %s", % filepath)
+		return
+	
+	var json_text = json_file.get_as_text()
+	json_file.close
+	
+	var parsed_json = JSON.parse_string(json_text)
+	if parsed_json.error != OK:
+		push_error("Failed to parse JSON: %s", parsed_json.error_string)
+		return
+	
+	dialogue = parsed_json.result # assign it to the global variable so all functions have access
+
+func show_dialogue(dialogue_filepath : String) -> void:
 	visible = true
 	
-	dialogue = new_dialogue # assign it to the global variable so all functions have access
+	load_dialogue_from_json(dialogue_filepath) 
 	current_line_index = 0
 	_show_current_line()
 	
 func _show_current_line():
-	var line : DialogueLine = dialogue.lines[current_line_index]
+	var line = dialogue["lines"][current_line_index]
+	var speaker = line["speaker"]
 	
-	if line.speaker == player_name:
+	if speaker == player_name:
 		player_portrait.visible = true
 		npc_portrait.visible = false
-		if line.portrait:
-			player_portrait.texture = line.portrait
 	else:
 		player_portrait.visible = false
 		npc_portrait.visible = true
-		if line.portrait:
-			player_portrait.texture = line.portrait
 	
 	# set speaker name and text
-	speaker_name.text = line.speaker
+	speaker_name.text = speaker
 	speaker_dialogue.clear()
-	speaker_dialogue.append_text(line.text)
+	speaker_dialogue.append_text(line["text"])
 	speaker_dialogue.visible_characters = 0
 	is_typing = true
 	_start_typing()
