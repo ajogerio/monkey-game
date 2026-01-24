@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		print("player entered the interaction zone.")
 		is_player_in_talk_range = true
 		floating_e_key.visible = true
 
@@ -25,7 +24,7 @@ func _on_body_exited(body: Node2D) -> void:
 func _start_dialogue():
 	floating_e_key.visible = false
 	is_talking = true
-	DialogueManagerAutoload.dialogue_box.show_dialogue(sample_dialogue)
+	DialogueManagerAutoload.dialogue_box.show_dialogue("res://Resources/tutorial_snorlax_meetup.json")
 
 func _on_dialogue_box_dialogue_finished() -> void:
 	is_talking = false

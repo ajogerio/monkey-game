@@ -15,18 +15,20 @@ var current_line_index := 0
 func load_dialogue_from_json(filepath : String) -> void:
 	var json_file = FileAccess.open(filepath, FileAccess.READ)
 	if not json_file:
-		push_error("Failed to open dialogue JSON: %s", % filepath)
+		push_error("Failed to open dialogue JSON: %s" % filepath)
 		return
 	
 	var json_text = json_file.get_as_text()
-	json_file.close
+	json_file.close()
 	
-	var parsed_json = JSON.parse_string(json_text)
-	if parsed_json.error != OK:
-		push_error("Failed to parse JSON: %s", parsed_json.error_string)
+	var json = JSON.new()
+	var error_code = json.parse(json_text)
+	
+	if error_code != OK:
+		push_error("Failed to parse JSON: %s (line %d)" % json.get_error_message(), json.get_error_line())
 		return
 	
-	dialogue = parsed_json.result # assign it to the global variable so all functions have access
+	dialogue = json.data # assign it to the global variable so all functions have access
 
 func show_dialogue(dialogue_filepath : String) -> void:
 	visible = true
@@ -73,7 +75,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			# go to the next line if available
 			current_line_index += 1
-			if current_line_index < dialogue.lines.size():
+			if current_line_index < dialogue["lines"].size():
 				_show_current_line()
 			else:
 				# end of dialogue
