@@ -1,7 +1,18 @@
-[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3 uid="uid://dip2px7y1momr"]
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=5 format=3 uid="uid://dip2px7y1momr"]
 
 [ext_resource type="Script" path="res://Resources/dialogue_resource.gd" id="1_5gpvc"]
+[ext_resource type="Script" path="res://Resources/dialogue_line.gd" id="1_xbg0h"]
+
+[sub_resource type="Resource" id="Resource_38ujl"]
+script = ExtResource("1_xbg0h")
+speaker = "CB"
+text = "Snorlax! You're alive?!"
+
+[sub_resource type="Resource" id="Resource_oyf8s"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "Yes. I am. Lol."
 
 [resource]
 script = ExtResource("1_5gpvc")
-lines = Array[ExtResource("1_5gpvc")]([null])
+lines = Array[ExtResource("1_xbg0h")]([SubResource("Resource_38ujl"), SubResource("Resource_oyf8s")])

@@ -9,30 +9,34 @@ extends Control
 var typing_speed := 0.03
 var is_typing := false
 
-var dialogue_lines : Array[Dictionary] = []
+var dialogue : DialogueResource
 var current_line_index := 0
 
-func show_dialogue(lines: Array[Dictionary]) -> void:
+func show_dialogue(new_dialogue : DialogueResource) -> void:
 	visible = true
 	
-	dialogue_lines = lines # assign it to the global variable so all functions have access
+	dialogue = new_dialogue # assign it to the global variable so all functions have access
 	current_line_index = 0
 	_show_current_line()
 	
 func _show_current_line():
-	var line = dialogue_lines[current_line_index]
+	var line : DialogueLine = dialogue.lines[current_line_index]
 	
-	if line["speaker"] == "Player":
+	if line.speaker == "Player":
 		player_portrait.visible = true
 		npc_portrait.visible = false
+		if line.portrait:
+			player_portrait.texture = line.portrait
 	else:
 		player_portrait.visible = false
 		npc_portrait.visible = true
+		if line.portrait:
+			player_portrait.texture = line.portrait
 	
 	# set speaker name and text
-	speaker_name.text = line["speaker"]
+	speaker_name.text = line.speaker
 	speaker_dialogue.clear()
-	speaker_dialogue.append_text(line["text"])
+	speaker_dialogue.append_text(line.text)
 	speaker_dialogue.visible_characters = 0
 	is_typing = true
 	_start_typing()
@@ -56,7 +60,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			# go to the next line if available
 			current_line_index += 1
-			if current_line_index < dialogue_lines.size():
+			if current_line_index < dialogue.size():
 				_show_current_line()
 			else:
 				# end of dialogue
