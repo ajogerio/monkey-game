@@ -60,7 +60,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			# go to the next line if available
 			current_line_index += 1
-			if current_line_index < dialogue.size():
+			if current_line_index < dialogue.lines.size():
 				_show_current_line()
 			else:
 				# end of dialogue

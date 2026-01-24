@@ -2,14 +2,10 @@ extends Area2D
 
 @onready var floating_e_key = $"Floating E Key"
 
+@export var sample_dialogue : DialogueResource
+
 var is_player_in_talk_range := false
 var is_talking := false
-
-var dialogue_data : Array[Dictionary] = [
-	Dictionary({"speaker": "NPC", "text": "Hello there!"}),
-	Dictionary({"speaker": "Player", "text": "Hi! Nice to meet you."}),
-	Dictionary({"speaker": "NPC", "text": "Be careful out there."})
-]
 
 func _process(delta: float) -> void:
 	if is_player_in_talk_range and !is_talking and Input.is_action_just_pressed("interact"):
@@ -29,7 +25,7 @@ func _on_body_exited(body: Node2D) -> void:
 func _start_dialogue():
 	floating_e_key.visible = false
 	is_talking = true
-	DialogueManagerAutoload.dialogue_box.show_dialogue(dialogue_data)
+	DialogueManagerAutoload.dialogue_box.show_dialogue(sample_dialogue)
 
 func _on_dialogue_box_dialogue_finished() -> void:
 	is_talking = false
