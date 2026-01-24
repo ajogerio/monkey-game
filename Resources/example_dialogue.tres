@@ -1,18 +1,88 @@
-[gd_resource type="Resource" script_class="DialogueResource" load_steps=5 format=3 uid="uid://dip2px7y1momr"]
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=19 format=3 uid="uid://dip2px7y1momr"]
 
 [ext_resource type="Script" path="res://Resources/dialogue_resource.gd" id="1_5gpvc"]
 [ext_resource type="Script" path="res://Resources/dialogue_line.gd" id="1_xbg0h"]
 
 [sub_resource type="Resource" id="Resource_38ujl"]
 script = ExtResource("1_xbg0h")
-speaker = "CB"
-text = "Snorlax! You're alive?!"
+speaker = "Cb"
+text = "WHAT?? SNORLIE?!"
 
 [sub_resource type="Resource" id="Resource_oyf8s"]
 script = ExtResource("1_xbg0h")
 speaker = "Snorlax"
-text = "Yes. I am. Lol."
+text = "ZZZZZZ"
+
+[sub_resource type="Resource" id="Resource_106bh"]
+script = ExtResource("1_xbg0h")
+speaker = "Cb"
+text = "Oh mein gott! I can't believe you're real Snorlie!"
+
+[sub_resource type="Resource" id="Resource_jiylh"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "*wakes up*"
+
+[sub_resource type="Resource" id="Resource_lo113"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "E? Dare ga yonda no? Nani ga okotteru no?"
+
+[sub_resource type="Resource" id="Resource_8kop4"]
+script = ExtResource("1_xbg0h")
+speaker = "Cb"
+text = "Huh? Snorlie why are you ching chonging me."
+
+[sub_resource type="Resource" id="Resource_uxs3f"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "A, chotto matte."
+
+[sub_resource type="Resource" id="Resource_rpddr"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "*clears throat*"
+
+[sub_resource type="Resource" id="Resource_36tet"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "Hi traveller! I'm sorry for the confusion."
+
+[sub_resource type="Resource" id="Resource_11hgt"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "I was set to Japanese mode because I came from Hokkaido."
+
+[sub_resource type="Resource" id="Resource_mc74s"]
+script = ExtResource("1_xbg0h")
+speaker = "Cb"
+text = "Oh. Its cool that you can switch languages like that."
+
+[sub_resource type="Resource" id="Resource_tgstr"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "Why thank you!"
+
+[sub_resource type="Resource" id="Resource_ttpga"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "And it's a good thing you woke me up."
+
+[sub_resource type="Resource" id="Resource_7dqr0"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "I had a horrible nightmare where I was a stuffed toy for this girl."
+
+[sub_resource type="Resource" id="Resource_optcy"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "I kept seeing her making out with her boyfriend."
+
+[sub_resource type="Resource" id="Resource_uivux"]
+script = ExtResource("1_xbg0h")
+speaker = "Snorlax"
+text = "You actually look kind of like her..."
 
 [resource]
 script = ExtResource("1_5gpvc")
-lines = Array[ExtResource("1_xbg0h")]([SubResource("Resource_38ujl"), SubResource("Resource_oyf8s")])
+lines = Array[ExtResource("1_xbg0h")]([SubResource("Resource_38ujl"), SubResource("Resource_oyf8s"), SubResource("Resource_106bh"), SubResource("Resource_jiylh"), SubResource("Resource_lo113"), SubResource("Resource_8kop4"), SubResource("Resource_uxs3f"), SubResource("Resource_rpddr"), SubResource("Resource_36tet"), SubResource("Resource_11hgt"), SubResource("Resource_mc74s"), SubResource("Resource_tgstr"), SubResource("Resource_ttpga"), SubResource("Resource_7dqr0"), SubResource("Resource_optcy"), null, SubResource("Resource_uivux")])

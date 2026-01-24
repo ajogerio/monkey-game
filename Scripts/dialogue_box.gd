@@ -6,9 +6,9 @@ extends Control
 @onready var player_portrait = $"Panel/MarginContainer/HBoxContainer/Player Portrait"
 @onready var npc_portrait = $"Panel/MarginContainer/HBoxContainer/NPC Portrait"
 
+var player_name = "Cb"
 var typing_speed := 0.03
 var is_typing := false
-
 var dialogue : DialogueResource
 var current_line_index := 0
 
@@ -22,7 +22,7 @@ func show_dialogue(new_dialogue : DialogueResource) -> void:
 func _show_current_line():
 	var line : DialogueLine = dialogue.lines[current_line_index]
 	
-	if line.speaker == "Player":
+	if line.speaker == player_name:
 		player_portrait.visible = true
 		npc_portrait.visible = false
 		if line.portrait:

@@ -1,0 +1,15 @@
+{
+	"portraites": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Snorlax": {
+			"portrait": "insert portrait here"
+		}
+	},
+	
+	"lines": [
+		{"speaker": "Cb", "text": "WHAT?? SNORLIE?!"},
+		{"speaker": "Snorlax", "text": "ZZZZZZ"},
+	]
+}
