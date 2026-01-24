@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3 uid="uid://dip2px7y1momr"]
+
+[ext_resource type="Script" path="res://Resources/dialogue_resource.gd" id="1_5gpvc"]
+
+[resource]
+script = ExtResource("1_5gpvc")
+lines = Array[ExtResource("1_5gpvc")]([null])
