@@ -7,7 +7,7 @@ extends Control
 @onready var npc_portrait = $"Panel/MarginContainer/HBoxContainer/NPC Portrait"
 
 var player_name = "Cb"
-var typing_speed := 0.03
+var typing_speed := 0.05
 var is_typing := false
 var dialogue : Dictionary = {}
 var current_line_index := 0
