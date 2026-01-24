@@ -1,15 +1,20 @@
 {
-	"portraites": {
+	"portraits": {
 		"Cb": {
 			"portrait": "sample portrait goes here"
 		},
 		"Snorlax": {
 			"portrait": "insert portrait here"
-		}
+		}	
 	},
 	
 	"lines": [
 		{"speaker": "Cb", "text": "WHAT?? SNORLIE?!"},
 		{"speaker": "Snorlax", "text": "ZZZZZZ"},
+		{"speaker": "Cb", "text": "Oh Mein Gott! How are you alive?"},
+		{"speaker": "Snorlax", "text": "ZZZZZZZ... *mutter* *mutter*"},
+		{"speaker": "Cb", "text": "Snorlie wake up!"},
+		{"speaker": "Snorlax", "text": "*wakes up*"},
+		{"speaker": "Snorlax", "text": "E? Dare ga yonda no?"},
 	]
 }

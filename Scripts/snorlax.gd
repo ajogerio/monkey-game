@@ -2,8 +2,6 @@ extends Area2D
 
 @onready var floating_e_key = $"Floating E Key"
 
-@export var sample_dialogue : DialogueResource
-
 var is_player_in_talk_range := false
 var is_talking := false
 
