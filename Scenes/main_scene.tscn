@@ -13,6 +13,7 @@ script = ExtResource("1_sweal")
 
 [node name="Player" parent="." instance=ExtResource("1_qnya4")]
 position = Vector2(47, 176)
+collision_mask = 2
 
 [node name="Camera2D" parent="." node_paths=PackedStringArray("player_node") instance=ExtResource("2_1ktsv")]
 position = Vector2(0, 0)
