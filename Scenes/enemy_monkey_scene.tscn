@@ -99,6 +99,8 @@ _data = {
 size = Vector2(16, 16)
 
 [node name="Monkey Enemy" type="CharacterBody2D" groups=["enemy_monkey"]]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_ebc0t")
 
 [node name="Monkey Sprite" type="Sprite2D" parent="." groups=["enemy_monkey"]]
