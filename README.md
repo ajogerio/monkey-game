@@ -314,3 +314,62 @@ Some description here.
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this
 
+### **January 24, 2026 - January 25, 2026**
+
+#### 🧩 Feature Summary
+- Added dialogue autoload to ensure talking NPCs in loaded levels get access to the dialogue box script
+- Stored dialogue data in JSON files
+- Added JSON parser code in dialogue box script to read and parse the JSON dialogue data
+- Added tutorial level blockout with placeholder tiles
+
+---
+
+#### ⚠️ Challenges
+- I kept switching between different ways of storing dialogue. At first, I used resource nodes. But I had too much dialogue that the inspector got crowded really fast. It was also hard to add lines using resurces. So I decided to use JSON files instead. It was way easier to duplicate and type the dialogue, and it was not as crowded as the inspector.
+- Designing the tutorial level was kind of tough. I wanted to introduce the game mechanics to the player, but sometimes the player speed or jump height were not enough to play the game. So I tweaked, refined, and did a lot of trial and error to make sure the tutorial was well paced, and playable.
+
+---
+
+#### 🎞️ Visuals
+
+**Initial block-out of the tutorial level:**
+
+![Main scene node structure](Devlog%20Pictures/initial_tutorial_blockout.png)
+
+**Tutorial Gameplay:**
+
+![Tutorial Level scene node structure](Devlog%20GIFs/tutorial_gameplay.gif)
+
+**The JSON snapshot below was used for this dialogue interaction:**
+
+```
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Snorlax": {
+			"portrait": "insert portrait here"
+		}	
+	},
+	
+	"lines": [
+		{"speaker": "Cb", "text": "WHAT?? SNORLIE?!"},
+		{"speaker": "Snorlax", "text": "ZZZZZZ"},
+		{"speaker": "Cb", "text": "Oh Mein Gott! How are you alive?"},
+		{"speaker": "Snorlax", "text": "ZZZZZZZ... *mutter* *mutter*"},
+		{"speaker": "Cb", "text": "Snorlie wake up!"},
+		{"speaker": "Snorlax", "text": "*wakes up*"},
+		{"speaker": "Snorlax", "text": "E? Dare ga yonda no?"},
+    ... # more lines here
+  ]
+}
+```
+![Dialogue using JSON](Devlog%20GIFs/json_dialogue_showcase.gif)
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this
+
