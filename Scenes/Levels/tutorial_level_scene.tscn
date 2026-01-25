@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://3q1avp6uo11r"]
+[gd_scene load_steps=5 format=3 uid="uid://3q1avp6uo11r"]
 
 [ext_resource type="PackedScene" uid="uid://b757sdjyt2fh5" path="res://Scenes/snorlax_scene.tscn" id="1_pr6qi"]
 [ext_resource type="PackedScene" uid="uid://db6re2lmhgyvx" path="res://Scenes/enemy_monkey_scene.tscn" id="2_4qggg"]
 [ext_resource type="PackedScene" uid="uid://d1r7exha8pl" path="res://Scenes/floor_scene.tscn" id="3_kxcc5"]
+
+[sub_resource type="TileSet" id="TileSet_06ysa"]
 
 [node name="Tutorial Level" type="Node2D"]
 
@@ -10,10 +12,14 @@
 position = Vector2(182, 182)
 
 [node name="Monkey Enemy" parent="." instance=ExtResource("2_4qggg")]
-position = Vector2(313, 106)
+position = Vector2(718, 146)
 
 [node name="Floor" parent="." instance=ExtResource("3_kxcc5")]
 position = Vector2(371, 195)
 
 [node name="Player Spawn" type="Marker2D" parent="."]
 position = Vector2(33, 155)
+
+[node name="Terrain Blockout" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_06ysa")
+format = 2
