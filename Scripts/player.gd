@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const HORIZONTAL_SPEED = 180
+const HORIZONTAL_SPEED = 150
 const GRAVITY_SPEED = 1000
 const JUMP_SPEED = 300
 

@@ -15,6 +15,3 @@ func _process(delta: float) -> void:
 	# make the camera pan to the right whenever the player is past the right barrier of the deadzone
 	if player_node.position.x > right_barrier_of_deadzone || player_node.position.x < left_barrier_of_deadzone:
 		global_position.x += player_node.velocity.x * delta
-	else:
-		# player is in between the barriers
-		return
