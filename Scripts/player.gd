@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const HORIZONTAL_SPEED = 150
 const GRAVITY_SPEED = 1000
-const JUMP_SPEED = 300
+const JUMP_SPEED = 350
 
 # export allows us to modify the value in the inspector (right panel)
 # drag the cookie bullet scene into the slot in the inspector
