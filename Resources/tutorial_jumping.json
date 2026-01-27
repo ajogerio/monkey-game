@@ -1,0 +1,20 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Snorlax": {
+			"portrait": "insert portrait here"
+		}	
+	},
+	
+	"lines": [
+		{"speaker": "Cb", "text": "WOAH!"},
+		{"speaker": "Snorlax", "text": "Hey slow down there kid!"},
+		{"speaker": "Snorlax", "text": "That's a deep and painful fall."},
+		{"speaker": "Snorlax", "text": "To face Klat Yeknom, you need to learn how to jump."},
+		{"speaker": "Snorlax", "text": "Press the W key on your keyboard to jump over these holes."},
+		{"speaker": "Cb", "text": "*gulp*"},
+		{"speaker": "Cb", "text": "Okay, let's do this. Waaaah!"},
+	]
+}
