@@ -1,0 +1,30 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Snorlax": {
+			"portrait": "insert portrait here"
+		}
+	},
+	"lines": [
+		{"speaker": "Snorlax", "text": "Damn."},
+		{"speaker": "Snorlax", "text": "That was actually kind of Gnarly."},
+		{"speaker": "Cb", "text": "Fried chicken..."},
+		{"speaker": "Cb", "text": "Gnarly."},
+		{"speaker": "Snorlax", "text": "Party in the Hollywood Hills..."},
+		{"speaker": "Cb", "text": "Ugh ugh ugh."},
+		{"speaker": "Snorlax", "text": "HAHAHAHAHAHA"},
+		{"speaker": "Cb", "text": "HAHAHAHAHAHA"},
+		{"speaker": "Cb", "text": "..."},
+		{"speaker": "Snorlax", "text": "..."},
+		{"speaker": "Snorlax", "text": "Okay enough joking around."},
+		{"speaker": "Snorlax", "text": "Next, I'll teach you how to do damage."},
+		{"speaker": "Snorlax", "text": "Klat Yeknom has many monkey goons."},
+		{"speaker": "Snorlax", "text": "Take this cookie gun and shoot those monkeys in that cave up ahead."},
+		{"speaker": "Snorlax", "text": "Don't worry they're my friends."},
+		{"speaker": "Snorlax", "text": "Those dudes are weird masochists, so don't worry about hurting them."},
+		{"speaker": "Snorlax", "text": "They love that stuff."},
+		{"speaker": "Cb", "text": "Gnarly."},
+	]
+}

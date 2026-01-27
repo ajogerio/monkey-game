@@ -58,3 +58,7 @@ dialogue_filepath = "res://Resources/tutorial_holes_done.json"
 [node name="Tutorial Checkpoint4" parent="." instance=ExtResource("4_ic8x4")]
 position = Vector2(1853, -34)
 dialogue_filepath = "res://Resources/tutorial_doublejump_timing.json"
+
+[node name="Tutorial Checkpoint5" parent="." instance=ExtResource("4_ic8x4")]
+position = Vector2(2115, 12)
+dialogue_filepath = "res://Resources/tutorial_monkey_shooting.json"
