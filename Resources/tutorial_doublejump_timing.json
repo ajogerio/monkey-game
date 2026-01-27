@@ -1,0 +1,17 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Snorlax": {
+			"portrait": "insert portrait here"
+		}
+	},
+	"lines": [
+		{"speaker": "Snorlax", "text": "Alright here's a challenge."},
+		{"speaker": "Snorlax", "text": "Time your double jump right to avoid falling into the pits."},
+		{"speaker": "Cb", "text": "Easy as fuck."},
+		{"speaker": "Cb", "text": "*stretches arms*"},
+		{"speaker": "Cb", "text": "Watch this."},
+	]
+}
