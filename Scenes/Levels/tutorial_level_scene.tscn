@@ -41,3 +41,4 @@ layer_0/tile_data = PackedInt32Array(786468, 0, 0, 786479, 0, 0, 1048609, 65536,
 
 [node name="Tutorial Checkpoint" parent="." instance=ExtResource("4_ic8x4")]
 position = Vector2(294, 54)
+dialogue_filepath = "res://Resources/tutorial_jumping.json"
