@@ -21,6 +21,10 @@ sources/0 = SubResource("TileSetAtlasSource_6oi2l")
 [node name="Snorlax" parent="." instance=ExtResource("1_pr6qi")]
 position = Vector2(171, 179)
 
+[node name="Snorlax2" parent="." instance=ExtResource("1_pr6qi")]
+position = Vector2(1289, 179)
+script = null
+
 [node name="Monkey Enemy" parent="." instance=ExtResource("2_4qggg")]
 position = Vector2(2465, 177)
 
@@ -45,4 +49,8 @@ dialogue_filepath = "res://Resources/tutorial_jumping.json"
 
 [node name="Tutorial Checkpoint2" parent="." instance=ExtResource("4_ic8x4")]
 position = Vector2(933, 55)
-dialogue_filepath = "res://Resources/tutorial_jumping.json"
+dialogue_filepath = "res://Resources/tutorial_doublejump.json"
+
+[node name="Tutorial Checkpoint3" parent="." instance=ExtResource("4_ic8x4")]
+position = Vector2(1249, 54)
+dialogue_filepath = "res://Resources/tutorial_holes_done.json"

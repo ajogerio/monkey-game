@@ -1,0 +1,23 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Snorlax": {
+			"portrait": "insert portrait here"
+		}
+	},
+	"lines": [
+		{"speaker": "Snorlax", "text": "Woohoo! You did it Cb!"},
+		{"speaker": "Cb", "text": "*pant* *pant* *wheeze*"},
+		{"speaker": "Cb", "text": "This is so... *pant*... intense Snorlie."},
+		{"speaker": "Cb", "text": "Let me... *wheeze*... catch my breath."},
+		{"speaker": "Snorlax", "text": "As much as I want to make this easier, I believe we do not have enough time Cb."},
+		{"speaker": "Snorlax", "text": "You're baby needs help."},
+		{"speaker": "Cb", "text": "You're right."},
+		{"speaker": "Cb", "text": "I could here him screaming *ONE MORE LAP COME ON!* like he's next to me."},
+		{"speaker": "Snorlax", "text": "Hell yeah."},
+		{"speaker": "Snorlax", "text": "Come on, let's climb the hill up ahead."},
+		{"speaker": "Cb", "text": "I'm coming for you baby!!"},
+	]
+}
