@@ -1,0 +1,19 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Snorlax": {
+			"portrait": "insert portrait here"
+		}
+	},
+	"lines": [
+		{"speaker": "Cb", "text": "This looks like a really big jump Snorlie."},
+		{"speaker": "Cb", "text": "I don't think I can make it."},
+		{"speaker": "Snorlax", "text": "Don't worry."},
+		{"speaker": "Snorlax", "text": "You can press W twice to do a double jump."},
+		{"speaker": "Snorlax", "text": "Just make sure to time your second jump right so you can make it as far as possible."},
+		{"speaker": "Snorlax", "text": "I belive in you!"},
+		{"speaker": "Cb", "text": "I love being in this fictional, unrealistic world."},
+	]
+}
