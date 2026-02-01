@@ -14,7 +14,7 @@ script = ExtResource("1_rm5hk")
 shape = SubResource("RectangleShape2D_xws1a")
 
 [node name="Arrow Indicator" type="Node2D" parent="."]
-position = Vector2(-3, 83)
+position = Vector2(-3, 103)
 script = ExtResource("2_2dfe1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Arrow Indicator"]
