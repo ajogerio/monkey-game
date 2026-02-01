@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://clh5a45xmaqvt"]
+[gd_scene load_steps=4 format=3 uid="uid://clh5a45xmaqvt"]
 
 [ext_resource type="Script" path="res://Scripts/tutorial_checkpoint.gd" id="1_rm5hk"]
+[ext_resource type="Texture2D" uid="uid://da64sw1c0e44w" path="res://Sprites/Placeholders/red-down-arrow-png.png" id="2_00va7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xws1a"]
 size = Vector2(20, 300)
@@ -10,5 +11,12 @@ script = ExtResource("1_rm5hk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_xws1a")
+
+[node name="Arrow Indicator" type="Node2D" parent="."]
+
+[node name="Arrow Sprite" type="Sprite2D" parent="Arrow Indicator"]
+position = Vector2(-5.96046e-08, 92)
+scale = Vector2(0.09, 0.0942857)
+texture = ExtResource("2_00va7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
