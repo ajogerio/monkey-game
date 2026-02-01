@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManagerAutoload="*res://Scripts/dialogue_manager_autoload.gd"
+SignalBusAutoload="*res://Scripts/signal_bus_autoload.gd"
 
 [display]
 
