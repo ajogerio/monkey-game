@@ -57,20 +57,25 @@ dialogue_filepath = "res://Resources/tutorial_jumping.json"
 
 [node name="Tutorial Checkpoint2" parent="." instance=ExtResource("4_ic8x4")]
 position = Vector2(933, 55)
+checkpoint_name = "Checkpoint2"
 dialogue_filepath = "res://Resources/tutorial_doublejump.json"
 
 [node name="Tutorial Checkpoint3" parent="." instance=ExtResource("4_ic8x4")]
 position = Vector2(1249, 54)
+checkpoint_name = "Checkpoint3"
 dialogue_filepath = "res://Resources/tutorial_holes_done.json"
 
 [node name="Tutorial Checkpoint4" parent="." instance=ExtResource("4_ic8x4")]
 position = Vector2(1853, -34)
+checkpoint_name = "Checkpoint4"
 dialogue_filepath = "res://Resources/tutorial_doublejump_timing.json"
 
 [node name="Tutorial Checkpoint5" parent="." instance=ExtResource("4_ic8x4")]
 position = Vector2(2115, 12)
+checkpoint_name = "Checkpoint5"
 dialogue_filepath = "res://Resources/tutorial_monkey_shooting.json"
 
 [node name="Tutorial Checkpoint6" parent="." instance=ExtResource("4_ic8x4")]
 position = Vector2(2985, 39)
+checkpoint_name = "Checkpoint6"
 dialogue_filepath = "res://Resources/tutorial_farewell.json"

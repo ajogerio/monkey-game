@@ -27,3 +27,9 @@ func start_hover():
 		start_y,
 		float_time
 	).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+
+func show_arrow():
+	visible = true
+	
+func hide_arrow():
+	visible = false
