@@ -1,0 +1,35 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Snorlax": {
+			"portrait": "insert portrait here"
+		}
+	},
+	"lines": [
+		{"speaker": "Snorlax", "text": "Hell yeah! You shot the bananas out of them monkeys!"},
+		{"speaker": "Cb", "text": "Yipee!"},
+		{"speaker": "Snorlax", "text": "I can now confidently say that you are ready to face Klat Yeknom."},
+		{"speaker": "Snorlax", "text": "*sigh*"},
+		{"speaker": "Snorlax", "text": "They grow up so fast..."},
+		{"speaker": "Snorlax", "text": "Huhuhuhu"},
+		{"speaker": "Cb", "text": "Stop it Snorlie you're going to make me cry too..."},
+		{"speaker": "Snorlax", "text": "Huhuhuhuhu"},
+		{"speaker": "Cb", "text": "Huhuhuhuhu"},
+		{"speaker": "Snorlax", "text": "*sniff sniff*"},
+		{"speaker": "Snorlax", "text": "Alright... enough moping."},
+		{"speaker": "Snorlax", "text": "Klat Yeknom's lair is somewhere in that jungle ahead."},
+		{"speaker": "Snorlax", "text": "I'm sure you will find it."},
+		{"speaker": "Snorlax", "text": "Your boyfriend needs you."},
+		{"speaker": "Cb", "text": "What boyfriend? I don't have..."},
+		{"speaker": "Snorlax", "text": "It's okay Cb."},
+		{"speaker": "Snorlax", "text": "I figured out that you were the girl from my dream."},
+		{"speaker": "Snorlax", "text": "I'll see you back in your room once all of this is over okay?"},
+		{"speaker": "Snorlax", "text": "You better cuddle me hard after all of this."},
+		{"speaker": "Cb", "text": "HUHUHUHU I'LL MISS YOU SNORLIE!"},
+		{"speaker": "Cb", "text": "THANK YOU FOR EVERYTHING!"},
+		{"speaker": "Snorlax", "text": "Take care Cb."},
+		{"speaker": "Snorlax", "text": "I'll see you around."},
+	]
+}
