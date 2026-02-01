@@ -13,10 +13,10 @@ script = ExtResource("1_rm5hk")
 shape = SubResource("RectangleShape2D_xws1a")
 
 [node name="Arrow Indicator" type="Node2D" parent="."]
+position = Vector2(-3, 83)
 
-[node name="Arrow Sprite" type="Sprite2D" parent="Arrow Indicator"]
-position = Vector2(-5.96046e-08, 92)
-scale = Vector2(0.09, 0.0942857)
+[node name="Sprite2D" type="Sprite2D" parent="Arrow Indicator"]
+scale = Vector2(0.075, 0.0710714)
 texture = ExtResource("2_00va7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
