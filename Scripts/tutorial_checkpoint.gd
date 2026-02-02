@@ -16,6 +16,7 @@ func _ready():
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		DialogueManagerAutoload.dialogue_box.show_dialogue(dialogue_filepath)
+		arrow_indicator.hide_arrow()
 		
 func _on_show_arrow(name: String):
 	if name == checkpoint_name:
