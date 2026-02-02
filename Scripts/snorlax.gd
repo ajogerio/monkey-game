@@ -28,7 +28,7 @@ func _on_dialogue_box_dialogue_finished() -> void:
 	is_talking = false
 	if is_player_in_talk_range:
 		floating_e_key.visible = true
-	SignalBusAutoload.show_arrow_signal.emit("Checkpoint1")
+	SignalBusAutoload.start_checkpoint_chain.emit("Checkpoint1")
 
 func _ready():
 	DialogueManagerAutoload.dialogue_finished.connect(_on_dialogue_box_dialogue_finished)
