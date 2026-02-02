@@ -373,3 +373,32 @@ Some description here.
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this
 
+### **January 27, 2026 - Februrary 2, 2026**
+
+#### 🧩 Feature Summary
+- Added dialogue checkpoints for the tutorial level
+- Added hovering arrows over checkpoints
+- Added a signal bus autoload for the checkpoint signals
+- Decided on a fixed order for checkpoints to show
+
+---
+
+#### ⚠️ Challenges
+- The signals that triggered the appearing/disappearing of checkpoints needed a few brain cells to get used to. I had to keep in mind that once a signal is emitted, *ALL* functions that listen to that signal would be triggered. So I had to put boolean flags in the checkpoints like *is_active* and *has_been_completed* to signify which checkpoint should show in order.
+- I encountered a bug where the first checkpoint would hide during the dialogue, but then reappear after the dialogue which was unintended behavior. I realized that it was caused by the signal listener *_on_dialogue_box_dialogue_finished* in the Snorlax code. I added a flag called *checkpoint_chain_started* and added it to a condition that ensures the *start_checkpoint_chain* signal does not get emitted again after the initial talk with Snorlax.
+
+---
+
+#### 🎞️ Visuals
+
+**Dialogue Checkpoints:**
+
+![Dialogue Checkpoints](Devlog%20GIFs/dialogue_checkpoints.gif)
+
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this till add checkpoint chain start guard 
+
