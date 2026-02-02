@@ -4,6 +4,7 @@ extends Area2D
 
 var is_player_in_talk_range := false
 var is_talking := false
+var checkpoint_chain_started := false
 
 func _process(delta: float) -> void:
 	if is_player_in_talk_range and !is_talking and Input.is_action_just_pressed("interact"):
@@ -28,7 +29,9 @@ func _on_dialogue_box_dialogue_finished() -> void:
 	is_talking = false
 	if is_player_in_talk_range:
 		floating_e_key.visible = true
-	SignalBusAutoload.start_checkpoint_chain.emit("Checkpoint1")
+	if not checkpoint_chain_started:
+		SignalBusAutoload.start_checkpoint_chain.emit("Checkpoint1")
+		checkpoint_chain_started = true
 
 func _ready():
 	DialogueManagerAutoload.dialogue_finished.connect(_on_dialogue_box_dialogue_finished)

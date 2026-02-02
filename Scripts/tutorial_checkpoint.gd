@@ -8,6 +8,7 @@ extends Area2D
 
 var is_active := false
 var has_been_completed := false
+var waiting_for_dialogue := false
 
 func _ready():
 	# Hide the arrow indicator at start
@@ -27,6 +28,7 @@ func _on_body_entered(body: Node2D) -> void:
 		arrow_indicator.hide_arrow()
 		
 		if dialogue_filepath != "":
+			waiting_for_dialogue = true
 			DialogueManagerAutoload.dialogue_box.show_dialogue(dialogue_filepath)
 			
 func _on_show_arrow(name: String):
@@ -40,5 +42,10 @@ func _on_start_checkpoint_chain(first_checkpoint: String):
 		arrow_indicator.show_arrow()
 		
 func _on_dialogue_finished():
+	if not waiting_for_dialogue:
+		return
+		
+	waiting_for_dialogue = false
+	
 	if next_checkpoint != "":
 		SignalBusAutoload.show_arrow_signal.emit(next_checkpoint)
