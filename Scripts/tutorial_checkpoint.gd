@@ -23,6 +23,7 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	
 	if body.is_in_group("player"):
+		body.controls_enabled = false # freeze player
 		has_been_completed = true
 		is_active = false
 		arrow_indicator.hide_arrow()
@@ -46,6 +47,10 @@ func _on_dialogue_finished():
 		return
 		
 	waiting_for_dialogue = false
+	
+	var player = get_tree().get_first_node_in_group("player")
+	if player:
+		player.controls_enabled = true # unfreeze player
 	
 	if next_checkpoint != "":
 		SignalBusAutoload.show_arrow_signal.emit(next_checkpoint)

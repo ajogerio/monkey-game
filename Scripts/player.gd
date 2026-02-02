@@ -4,6 +4,8 @@ const HORIZONTAL_SPEED = 150
 const GRAVITY_SPEED = 1000
 const JUMP_SPEED = 350
 
+var controls_enabled := true
+
 # export allows us to modify the value in the inspector (right panel)
 # drag the cookie bullet scene into the slot in the inspector
 # so we have access to it now in the code
@@ -14,6 +16,11 @@ func _ready():
 	$"Player Sprite"/AnimationPlayer.play("idle")
 
 func _physics_process(delta: float) -> void:
+	if not controls_enabled:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+	
 	# horizontal movement:
 	velocity.x = 0 # make sure that movement is always reset to 0 so it does not move infinitely
 	
@@ -39,6 +46,9 @@ func _physics_process(delta: float) -> void:
 # to them. In this case, if we click, it belongs to us and we handle it
 # below
 func _unhandled_input(_event):
+	if not controls_enabled:
+		return
+		
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 
