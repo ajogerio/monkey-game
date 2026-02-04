@@ -1,9 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://3q1avp6uo11r"]
+[gd_scene load_steps=9 format=3 uid="uid://3q1avp6uo11r"]
 
 [ext_resource type="PackedScene" uid="uid://b757sdjyt2fh5" path="res://Scenes/snorlax_scene.tscn" id="1_pr6qi"]
 [ext_resource type="PackedScene" uid="uid://db6re2lmhgyvx" path="res://Scenes/enemy_monkey_scene.tscn" id="2_4qggg"]
 [ext_resource type="Texture2D" uid="uid://c34p6nfgmheg7" path="res://Sprites/Tilesets/sample_tileset.png" id="3_k2r5c"]
 [ext_resource type="PackedScene" uid="uid://clh5a45xmaqvt" path="res://Scenes/tutorial_checkpoint_scene.tscn" id="4_ic8x4"]
+
+[sub_resource type="GDScript" id="GDScript_oonwb"]
+script/source = "extends Node2D
+
+@export var camera: Camera2D
+@export var camera_bounds: Node2D
+	
+func _ready() -> void:
+	if camera and camera_bounds:
+		camera.set_camera_bounds(camera_bounds)
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oi2l"]
 texture = ExtResource("3_k2r5c")
@@ -20,6 +31,7 @@ sources/0 = SubResource("TileSetAtlasSource_6oi2l")
 size = Vector2(3137, 240)
 
 [node name="Tutorial Level" type="Node2D"]
+script = SubResource("GDScript_oonwb")
 
 [node name="Snorlax" parent="." instance=ExtResource("1_pr6qi")]
 position = Vector2(171, 179)
@@ -89,7 +101,7 @@ position = Vector2(2985, 39)
 checkpoint_name = "Checkpoint6"
 dialogue_filepath = "res://Resources/tutorial_farewell.json"
 
-[node name="Camera Bounds" type="Node2D" parent="."]
+[node name="Camera Bounds" type="Area2D" parent="."]
 
 [node name="Bounds Shape" type="CollisionShape2D" parent="Camera Bounds"]
 position = Vector2(1568.5, 120)

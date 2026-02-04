@@ -1,22 +1,27 @@
 extends Camera2D
 
 @export var player_node: CharacterBody2D
-@export var camera_bounds: Node2D
 @export var right_barrier_percent: float = 0.3
 @export var left_barrier_percent: float = 0.1
 
 var min_camera_x: float
 var max_camera_x: float
+var camera_bounds: Area2D
 
-func _ready() -> void:
-	var shape := camera_bounds.get_node("CollisionShape2d").shape as RectangleShape2D
-	var rect_size := shape.size
-	var rect_center := camera_bounds.global_position.x
-	var rect_width := shape.size.x
+func set_camera_bounds(bounds: Area2D) -> void:
+	camera_bounds = bounds
+	var collision_shape := camera_bounds.get_node("Bounds Shape") as CollisionShape2D
+	var rect_shape = collision_shape.shape as RectangleShape2D
+	var rect_width = rect_shape.size.x
+	var rect_center = collision_shape.global_position.x
 	
 	# Half the width of the rectangle goes to the left, and other half goes to the right
 	min_camera_x = rect_center - rect_width / 2
 	max_camera_x = rect_center + rect_width / 2
+	print(rect_center)
+	print(rect_width)
+	print(min_camera_x)
+	print(max_camera_x)
 	
 func _process(delta: float) -> void:
 	if not player_node:
@@ -27,5 +32,5 @@ func _process(delta: float) -> void:
 	var left_barrier_of_deadzone = global_position.x + (viewport_width * left_barrier_percent)
 	
 	# make the camera pan to the right whenever the player is past the right barrier of the deadzone
-	if player_node.position.x > right_barrier_of_deadzone || player_node.position.x < left_barrier_of_deadzone:
+	if player_node.global_position.x > right_barrier_of_deadzone || player_node.global_position.x < left_barrier_of_deadzone:
 		global_position.x += player_node.velocity.x * delta

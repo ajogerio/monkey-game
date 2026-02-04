@@ -17,6 +17,11 @@ func load_level(level_scene: PackedScene):
 	var level_instance: Node = level_scene.instantiate()
 	level_container.add_child(level_instance)
 	
+	# assign camera bounds to camera
+	if level_instance.has_node("Camera Bounds"):
+		var camera_bounds_node = level_instance.get_node("Camera Bounds") as Area2D
+		$Camera2D.set_camera_bounds(camera_bounds_node)
+	
 	# move the player to the spawn point
 	if level_instance.has_node("Player Spawn"):
 		var spawn := level_instance.get_node("Player Spawn") as Marker2D
