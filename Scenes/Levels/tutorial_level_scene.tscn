@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://3q1avp6uo11r"]
+[gd_scene load_steps=8 format=3 uid="uid://3q1avp6uo11r"]
 
 [ext_resource type="PackedScene" uid="uid://b757sdjyt2fh5" path="res://Scenes/snorlax_scene.tscn" id="1_pr6qi"]
 [ext_resource type="PackedScene" uid="uid://db6re2lmhgyvx" path="res://Scenes/enemy_monkey_scene.tscn" id="2_4qggg"]
@@ -15,6 +15,8 @@ texture = ExtResource("3_k2r5c")
 [sub_resource type="TileSet" id="TileSet_06ysa"]
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_6oi2l")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71f3i"]
 
 [node name="Tutorial Level" type="Node2D"]
 
@@ -85,3 +87,8 @@ dialogue_filepath = "res://Resources/tutorial_monkey_shooting.json"
 position = Vector2(2985, 39)
 checkpoint_name = "Checkpoint6"
 dialogue_filepath = "res://Resources/tutorial_farewell.json"
+
+[node name="Camera Bounds" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera Bounds"]
+shape = SubResource("RectangleShape2D_71f3i")

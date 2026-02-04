@@ -37,7 +37,7 @@ func _on_dialogue_box_dialogue_finished() -> void:
 	if not checkpoint_chain_started:
 		SignalBusAutoload.start_checkpoint_chain.emit("Checkpoint1")
 		checkpoint_chain_started = true
-	player_node.controls_enabled = true # unfreeze the player
+	player_node.controls_enabled = true # unfreeze the playera
 
 func _ready():
 	DialogueManagerAutoload.dialogue_finished.connect(_on_dialogue_box_dialogue_finished)
