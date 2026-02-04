@@ -1,15 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccknm2fqv5oce"]
+[gd_scene load_steps=7 format=3 uid="uid://ccknm2fqv5oce"]
 
 [ext_resource type="PackedScene" uid="uid://lyabiikwtq6h" path="res://Scenes/player_scene.tscn" id="1_qnya4"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_sweal"]
 [ext_resource type="PackedScene" uid="uid://bumtdx3tb1pse" path="res://Scenes/camera_scene.tscn" id="2_1ktsv"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="2_p8qcs"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="3_0lrml"]
 [ext_resource type="PackedScene" uid="uid://bl73fbqyb0vqm" path="res://Scenes/dialogue_box_scene.tscn" id="4_0f1i1"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_sweal")
 
-[node name="Level" type="Node2D" parent="."]
+[node name="Level" type="Node2D" parent="." node_paths=PackedStringArray("camera")]
+script = ExtResource("2_p8qcs")
+camera = NodePath("../Camera2D")
 
 [node name="Player" parent="." instance=ExtResource("1_qnya4")]
 position = Vector2(47, 176)
