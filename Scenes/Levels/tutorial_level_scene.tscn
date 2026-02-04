@@ -17,6 +17,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_6oi2l")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71f3i"]
+size = Vector2(3137, 240)
 
 [node name="Tutorial Level" type="Node2D"]
 
@@ -90,5 +91,6 @@ dialogue_filepath = "res://Resources/tutorial_farewell.json"
 
 [node name="Camera Bounds" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera Bounds"]
+[node name="Bounds Shape" type="CollisionShape2D" parent="Camera Bounds"]
+position = Vector2(1568.5, 120)
 shape = SubResource("RectangleShape2D_71f3i")
