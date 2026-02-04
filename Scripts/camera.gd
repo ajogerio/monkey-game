@@ -34,3 +34,6 @@ func _process(delta: float) -> void:
 	# make the camera pan to the right whenever the player is past the right barrier of the deadzone
 	if player_node.global_position.x > right_barrier_of_deadzone || player_node.global_position.x < left_barrier_of_deadzone:
 		global_position.x += player_node.velocity.x * delta
+	
+	# make sure the camera stays within bounds
+	global_position.x = clamp(global_position.x, min_camera_x, max_camera_x)
