@@ -35,3 +35,6 @@ func _process(delta: float) -> void:
 	
 	# make sure the camera stays within bounds
 	global_position.x = clamp(global_position.x, min_camera_x, max_camera_x)
+
+func reset_camera():
+	position = Vector2.ZERO

@@ -18,11 +18,12 @@ func load_level(level_scene: PackedScene):
 	level_container.add_child(level_instance)
 	
 	# listen for the next level signal
-	if level_instance.has_signal("load_next_level"):
-		level_instance.load_next_level.connect(_on_load_next_level)
+	if level_instance.has_node("Exit Area"):
+		var exit = level_instance.get_node("Exit Area")
+		exit.load_next_level.connect(_on_load_next_level)
 		
 	# assign camera bounds to camera
-	if level_instance.has_node("Camera Bounds"):
+	if level_instance.has_node("Camera Bounds"):	
 		var camera_bounds_node = level_instance.get_node("Camera Bounds") as Area2D
 		$Camera2D.set_camera_bounds(camera_bounds_node)
 	
