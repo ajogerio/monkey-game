@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://3q1avp6uo11r"]
+[gd_scene load_steps=10 format=3 uid="uid://3q1avp6uo11r"]
 
 [ext_resource type="PackedScene" uid="uid://b757sdjyt2fh5" path="res://Scenes/snorlax_scene.tscn" id="1_pr6qi"]
 [ext_resource type="PackedScene" uid="uid://db6re2lmhgyvx" path="res://Scenes/enemy_monkey_scene.tscn" id="2_4qggg"]
@@ -29,6 +29,9 @@ sources/0 = SubResource("TileSetAtlasSource_wwbr2")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71f3i"]
 size = Vector2(3137, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f8f3"]
+size = Vector2(155.75, 239)
 
 [node name="Tutorial Level" type="Node2D"]
 script = SubResource("GDScript_oonwb")
@@ -106,3 +109,9 @@ dialogue_filepath = "res://Resources/tutorial_farewell.json"
 [node name="Bounds Shape" type="CollisionShape2D" parent="Camera Bounds"]
 position = Vector2(1568.5, 120)
 shape = SubResource("RectangleShape2D_71f3i")
+
+[node name="Exit Area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Area"]
+position = Vector2(3236, 119)
+shape = SubResource("RectangleShape2D_0f8f3")
