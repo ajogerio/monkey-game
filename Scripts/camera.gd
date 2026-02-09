@@ -18,10 +18,6 @@ func set_camera_bounds(bounds: Area2D) -> void:
 	# Half the width of the rectangle goes to the left, and other half goes to the right
 	min_camera_x = rect_center - rect_width / 2
 	max_camera_x = (rect_center + rect_width / 2) - get_viewport_rect().size.x
-	print(rect_center)
-	print(rect_width)
-	print(min_camera_x)
-	print(max_camera_x)
 	
 func _process(delta: float) -> void:
 	if not player_node:

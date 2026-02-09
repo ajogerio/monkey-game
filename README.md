@@ -380,6 +380,7 @@ Some description here.
 - Added hovering arrows over checkpoints
 - Added a signal bus autoload for the checkpoint signals
 - Decided on a fixed order for checkpoints to show
+- Freeze the player when dialogue is happening
 
 ---
 
@@ -401,4 +402,30 @@ Some description here.
 
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this till add checkpoint chain start guard 
+
+### **February 4, 2026**
+
+#### 🧩 Feature Summary
+- Added bounds to the camera so it doesnt move past the borders of the level
+
+---
+
+#### ⚠️ Challenges
+- It was difficult to connect the camera bounds node and the camera node because the camera bounds were tied to the level. And since the level was loaded on runtime, I had to find a way to get the
+camera bounds node on run time as well. I fixed this by making a function in the camera to set the camera bounds, and then called it in the main script that loads the level. As a result, the camera bounds are set at the same time as the level is loaded, avoiding any empty object fetches.
+
+---
+
+#### 🎞️ Visuals
+
+**The camera is now bounded to the edge of the level:**
+
+![The camera is now bounded to the edge of the level](Devlog%20GIFs/camera_bounds.gif)
+
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this
 
