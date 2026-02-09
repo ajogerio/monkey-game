@@ -31,6 +31,7 @@ window/stretch/mode="canvas_items"
 enemy_monkey=""
 player=""
 dialogue_box=""
+level_manager=""
 
 [input]
 

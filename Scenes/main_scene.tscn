@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="3_0lrml"]
 [ext_resource type="PackedScene" uid="uid://bl73fbqyb0vqm" path="res://Scenes/dialogue_box_scene.tscn" id="4_0f1i1"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" groups=["level_manager"]]
 script = ExtResource("1_sweal")
 
 [node name="Level" type="Node2D" parent="."]
