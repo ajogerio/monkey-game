@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccknm2fqv5oce"]
+[gd_scene load_steps=10 format=3 uid="uid://ccknm2fqv5oce"]
 
 [ext_resource type="PackedScene" uid="uid://lyabiikwtq6h" path="res://Scenes/player_scene.tscn" id="1_qnya4"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_sweal"]
@@ -37,9 +37,26 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_5crgh"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade Rectangle:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_85ptn"]
 _data = {
 "RESET": SubResource("Animation_mddi1"),
+"fade_in": SubResource("Animation_5crgh"),
 "fade_out": SubResource("Animation_fu5cg")
 }
 
