@@ -33,6 +33,8 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 		var camera_bounds_node = level_instance.get_node("Camera Bounds") as Area2D
 		$Camera2D.set_camera_bounds(camera_bounds_node)
 	
+	$Camera2D.reset_camera()
+	
 	# move the player to the spawn point
 	if level_instance.has_node("Player Spawn"):
 		var spawn := level_instance.get_node("Player Spawn") as Marker2D
@@ -45,5 +47,4 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 	player.controls_enabled = true
 
 func _on_load_next_level(next_level : PackedScene):
-	$Camera2D.reset_camera()
 	load_level(next_level)
