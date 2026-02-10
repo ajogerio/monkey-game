@@ -1,13 +1,15 @@
 extends Node2D
 
 const TUTORIAL_LEVEL: PackedScene = preload("res://Scenes/Levels/tutorial_level_scene.tscn")
+const JUNGLE_LEVEL: PackedScene = preload("res://Scenes/Levels/jungle_level_scene.tscn") # remove this later
 
 @onready var level_container = $Level
 @onready var player = $Player
 @onready var transition = $Transition
 
 func _ready() -> void:
-	load_level(TUTORIAL_LEVEL, true)
+	#load_level(TUTORIAL_LEVEL, true) uncomment this later
+	load_level(JUNGLE_LEVEL, true) # remove this later
 
 func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 	player.controls_enabled = false
