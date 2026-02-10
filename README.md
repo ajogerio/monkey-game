@@ -429,3 +429,34 @@ camera bounds node on run time as well. I fixed this by making a function in the
 #### 🔗 Commits
 - [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this
 
+### **February 9, 2026 - February 10, 2026**
+
+#### 🧩 Feature Summary
+- Added a new jungle level
+- Added level switching
+- Added fade in and fade out transition on level switching
+
+---
+
+#### ⚠️ Challenges
+- I was debating between using a signal to load the new level or by accessing the level container node itself, and calling the function manually. I decided to use the signal instead because I predict that I could use the signal to trigger other events in the boss fight in the future. We shall see.
+
+---
+
+#### 🎞️ Visuals
+
+**Level Switching:**
+
+![Level switching](Devlog%20GIFs/level_switching.gif)
+
+**Initial Jungle Blockout:**
+
+![Initial jungle blockout](Devlog%20Pictures/initial_jungle_blockout.png)
+
+<br>
+
+---
+
+#### 🔗 Commits
+- [View all commits for this devlog](https://github.com/ajogerio/monkey-game/compare/731917a...c3bed86) change this
+
