@@ -29,4 +29,10 @@ player_node = NodePath("../Player")
 
 [node name="Dialogue Box" parent="UI" instance=ExtResource("4_0f1i1")]
 
+[node name="Transition" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="ready" from="." to="." method="_on_ready"]
