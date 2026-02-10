@@ -4,11 +4,16 @@ const TUTORIAL_LEVEL: PackedScene = preload("res://Scenes/Levels/tutorial_level_
 
 @onready var level_container = $Level
 @onready var player = $Player
+@onready var transition = $Transition
 
 func _ready() -> void:
 	load_level(TUTORIAL_LEVEL)
 
 func load_level(level_scene: PackedScene):
+	
+	if level_scene != TUTORIAL_LEVEL:
+		await transition.fade_out()
+	
 	# clear any existing levels
 	for child in level_container.get_children():
 		child.queue_free()
@@ -32,6 +37,10 @@ func load_level(level_scene: PackedScene):
 		var spawn := level_instance.get_node("Player Spawn") as Marker2D
 		if spawn:
 			player.global_position = spawn.global_position
+	
+	if level_scene != TUTORIAL_LEVEL:
+		await transition.fade_in()
+	
 
 func _on_load_next_level(next_level : PackedScene):
 	$Camera2D.reset_camera()
