@@ -7,11 +7,12 @@ const TUTORIAL_LEVEL: PackedScene = preload("res://Scenes/Levels/tutorial_level_
 @onready var transition = $Transition
 
 func _ready() -> void:
-	load_level(TUTORIAL_LEVEL)
+	load_level(TUTORIAL_LEVEL, true)
 
-func load_level(level_scene: PackedScene):
+func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
+	player.controls_enabled = false
 	
-	if level_scene != TUTORIAL_LEVEL:
+	if not skip_fade:
 		await transition.fade_out()
 	
 	# clear any existing levels
@@ -38,9 +39,10 @@ func load_level(level_scene: PackedScene):
 		if spawn:
 			player.global_position = spawn.global_position
 	
-	if level_scene != TUTORIAL_LEVEL:
+	if not skip_fade:
 		await transition.fade_in()
 	
+	player.controls_enabled = true
 
 func _on_load_next_level(next_level : PackedScene):
 	$Camera2D.reset_camera()
