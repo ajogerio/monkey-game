@@ -57,7 +57,7 @@ position = Vector2(2572, 82)
 position = Vector2(2715, 102)
 
 [node name="Player Spawn" type="Marker2D" parent="."]
-position = Vector2(94, 166)
+position = Vector2(77, 179)
 
 [node name="Terrain Blockout" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -101,5 +101,6 @@ checkpoint_name = "Checkpoint6"
 dialogue_filepath = "res://Resources/tutorial_farewell.json"
 
 [node name="Camera Bounds" parent="." instance=ExtResource("5_wvlgu")]
+visible = false
 
 [node name="Exit Area" parent="." instance=ExtResource("6_h4jwl")]
