@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://j3ml3ouf16fc"]
+
+[ext_resource type="PackedScene" uid="uid://dqe6q3kfyxa58" path="res://Scenes/camera_bounds_scene.tscn" id="1_rrojc"]
+[ext_resource type="PackedScene" uid="uid://dssfpvbh3g1dn" path="res://Scenes/exit_area_scene.tscn" id="2_aoi7l"]
+
+[node name="Boss Level" type="Node2D"]
+
+[node name="Player Spawn" type="Marker2D" parent="."]
+position = Vector2(77, 179)
+
+[node name="Camera Bounds" parent="." instance=ExtResource("1_rrojc")]
+
+[node name="Exit Area" parent="." instance=ExtResource("2_aoi7l")]
