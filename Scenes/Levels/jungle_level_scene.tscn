@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c34p6nfgmheg7" path="res://Sprites/Tilesets/sample_tileset.png" id="1_2y0ir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ct1iw"]
-size = Vector2(4073, 240)
+size = Vector2(3193, 240)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i32rf"]
 texture = ExtResource("1_2y0ir")
@@ -24,7 +24,7 @@ position = Vector2(95, 177)
 [node name="Camera Bounds" type="Area2D" parent="."]
 
 [node name="Bounds Shape" type="CollisionShape2D" parent="Camera Bounds"]
-position = Vector2(2036.5, 120)
+position = Vector2(1596.5, 120)
 shape = SubResource("RectangleShape2D_ct1iw")
 
 [node name="Terrain Blockout" type="TileMap" parent="."]
