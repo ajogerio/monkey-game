@@ -1,7 +1,7 @@
 extends Node2D
 
 const TUTORIAL_LEVEL: PackedScene = preload("res://Scenes/Levels/tutorial_level_scene.tscn")
-#const JUNGLE_LEVEL: PackedScene = preload("res://Scenes/Levels/jungle_level_scene.tscn") # remove this later
+const JUNGLE_LEVEL: PackedScene = preload("res://Scenes/Levels/jungle_level_scene.tscn") # remove this later
 
 @onready var level_container = $Level
 @onready var player = $Player
