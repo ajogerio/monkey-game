@@ -101,6 +101,5 @@ checkpoint_name = "Checkpoint6"
 dialogue_filepath = "res://Resources/tutorial_farewell.json"
 
 [node name="Camera Bounds" parent="." instance=ExtResource("5_wvlgu")]
-visible = false
 
 [node name="Exit Area" parent="." instance=ExtResource("6_h4jwl")]
