@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://j3ml3ouf16fc"]
+[gd_scene load_steps=10 format=3 uid="uid://j3ml3ouf16fc"]
 
 [ext_resource type="PackedScene" uid="uid://dssfpvbh3g1dn" path="res://Scenes/exit_area_scene.tscn" id="2_aoi7l"]
 [ext_resource type="Texture2D" uid="uid://c34p6nfgmheg7" path="res://Sprites/Tilesets/sample_tileset.png" id="3_gredn"]
 [ext_resource type="Texture2D" uid="uid://ct2fgpas83pvk" path="res://Sprites/Placeholders/gorilla_boss_placeholder.png" id="4_cqt2x"]
 [ext_resource type="Texture2D" uid="uid://bfsuw6vceouvu" path="res://Sprites/UI/boss_heart_full.png" id="4_trd7f"]
+[ext_resource type="Texture2D" uid="uid://qqv2xlf28etr" path="res://Sprites/UI/boss_heart_empty.png" id="5_0td32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04d0l"]
 texture = ExtResource("3_gredn")
@@ -18,6 +19,9 @@ sources/0 = SubResource("TileSetAtlasSource_04d0l")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67yox"]
 size = Vector2(353.271, 356.087)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5oms"]
+size = Vector2(327.145, 24.2611)
 
 [node name="Boss Level" type="Node2D"]
 
@@ -40,10 +44,18 @@ scale = Vector2(0.297222, 0.255556)
 scale = Vector2(1, 1)
 texture = ExtResource("4_cqt2x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boss"]
+[node name="Physics Collission" type="CollisionShape2D" parent="Boss"]
+visible = false
 position = Vector2(1.68225, 1.95654)
 scale = Vector2(1, 0.999999)
 shape = SubResource("RectangleShape2D_67yox")
+
+[node name="Hitbox" type="Area2D" parent="Boss"]
+
+[node name="Hitbox Collission" type="CollisionShape2D" parent="Boss/Hitbox"]
+position = Vector2(1.68225, 1.95654)
+scale = Vector2(1.07986, 15.3224)
+shape = SubResource("RectangleShape2D_m5oms")
 
 [node name="Boss Hearts" type="CanvasLayer" parent="."]
 
@@ -58,7 +70,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Boss Hearts/Control"]
+[node name="Empty Hearts" type="HBoxContainer" parent="Boss Hearts/Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -70,35 +82,82 @@ offset_right = 48.0
 offset_bottom = 16.0
 grow_horizontal = 2
 
-[node name="Heart 1" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
+[node name="Heart 1" type="TextureRect" parent="Boss Hearts/Control/Empty Hearts"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5_0td32")
+
+[node name="Heart 2" type="TextureRect" parent="Boss Hearts/Control/Empty Hearts"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5_0td32")
+
+[node name="Heart 3" type="TextureRect" parent="Boss Hearts/Control/Empty Hearts"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5_0td32")
+
+[node name="Heart 4" type="TextureRect" parent="Boss Hearts/Control/Empty Hearts"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5_0td32")
+
+[node name="Heart 5" type="TextureRect" parent="Boss Hearts/Control/Empty Hearts"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("5_0td32")
+
+[node name="Full Hearts" type="HBoxContainer" parent="Boss Hearts/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.2
+anchor_right = 0.5
+anchor_bottom = 0.2
+offset_left = -48.0
+offset_right = 48.0
+offset_bottom = 16.0
+grow_horizontal = 2
+
+[node name="Heart 1" type="TextureRect" parent="Boss Hearts/Control/Full Hearts"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Heart 2" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
+[node name="Heart 2" type="TextureRect" parent="Boss Hearts/Control/Full Hearts"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Heart 3" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
+[node name="Heart 3" type="TextureRect" parent="Boss Hearts/Control/Full Hearts"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Heart 4" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
+[node name="Heart 4" type="TextureRect" parent="Boss Hearts/Control/Full Hearts"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Heart 5" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
+[node name="Heart 5" type="TextureRect" parent="Boss Hearts/Control/Full Hearts"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
