@@ -50,6 +50,7 @@ func _unhandled_input(_event):
 		return
 		
 	if Input.is_action_just_pressed("shoot"):
+		print("SHOOT PRESSED")
 		shoot()
 
 func shoot() -> void:

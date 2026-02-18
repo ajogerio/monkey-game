@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ct1iw"]
 size = Vector2(3193, 240)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i32rf"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jl1v6"]
 texture = ExtResource("1_2y0ir")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -14,7 +14,7 @@ texture = ExtResource("1_2y0ir")
 
 [sub_resource type="TileSet" id="TileSet_ire4o"]
 physics_layer_0/collision_layer = 2
-sources/0 = SubResource("TileSetAtlasSource_i32rf")
+sources/0 = SubResource("TileSetAtlasSource_jl1v6")
 
 [node name="Jungle Level" type="Node2D"]
 
