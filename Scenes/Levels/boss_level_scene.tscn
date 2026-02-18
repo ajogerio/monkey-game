@@ -47,39 +47,58 @@ shape = SubResource("RectangleShape2D_67yox")
 
 [node name="Boss Hearts" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Boss Hearts"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" type="Control" parent="Boss Hearts"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
 
-[node name="Heart 1" type="TextureRect" parent="Boss Hearts/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Boss Hearts/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.2
+anchor_right = 0.5
+anchor_bottom = 0.2
+offset_left = -48.0
+offset_right = 48.0
+offset_bottom = 16.0
+grow_horizontal = 2
+
+[node name="Heart 1" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Heart 2" type="TextureRect" parent="Boss Hearts/HBoxContainer"]
+[node name="Heart 2" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Heart 3" type="TextureRect" parent="Boss Hearts/HBoxContainer"]
+[node name="Heart 3" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Heart 4" type="TextureRect" parent="Boss Hearts/HBoxContainer"]
+[node name="Heart 4" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Heart 5" type="TextureRect" parent="Boss Hearts/HBoxContainer"]
+[node name="Heart 5" type="TextureRect" parent="Boss Hearts/Control/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
