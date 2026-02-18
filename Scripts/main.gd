@@ -12,7 +12,7 @@ var current_level_index := 0
 
 func _ready() -> void:
 	levels = [
-		#BOSS_LEVEL, # remove this later
+		BOSS_LEVEL, # remove this later
 		TUTORIAL_LEVEL,
 		JUNGLE_LEVEL
 	]
