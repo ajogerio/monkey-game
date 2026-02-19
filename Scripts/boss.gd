@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
+signal boss_damaged
+
 func _on_hitbox_area_entered(area: Area2D) -> void:
-	print("activated")
 	if area.is_in_group("cookie_bullet"):
-		print("Boss hit")
+		# send signal to the level that the boss took damage
+		boss_damaged.emit()
+		
