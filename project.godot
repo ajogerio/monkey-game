@@ -32,6 +32,8 @@ enemy_monkey=""
 player=""
 dialogue_box=""
 level_manager=""
+boss=""
+cookie_bullet=""
 
 [input]
 
@@ -70,6 +72,7 @@ interact={
 2d_physics/layer_2="Ground"
 2d_physics/layer_3="Enemy Monkey"
 2d_physics/layer_4="Cookie Bullet"
+2d_physics/layer_5="Boss"
 
 [rendering]
 

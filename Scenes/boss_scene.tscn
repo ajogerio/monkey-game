@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://b77ipel2dy33a"]
+
+[ext_resource type="Script" path="res://Scripts/boss.gd" id="1_2hjcn"]
+[ext_resource type="Texture2D" uid="uid://ct2fgpas83pvk" path="res://Sprites/Placeholders/gorilla_boss_placeholder.png" id="2_s3o82"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67yox"]
+size = Vector2(353.271, 356.087)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5oms"]
+size = Vector2(327.145, 24.2611)
+
+[node name="Boss" type="CharacterBody2D" groups=["boss"]]
+position = Vector2(270, 146)
+scale = Vector2(0.297222, 0.255556)
+script = ExtResource("1_2hjcn")
+
+[node name="Boss Sprite" type="Sprite2D" parent="." groups=["boss"]]
+texture = ExtResource("2_s3o82")
+
+[node name="Physics Collission" type="CollisionShape2D" parent="." groups=["boss"]]
+visible = false
+position = Vector2(1.68225, 1.95654)
+scale = Vector2(1, 0.999999)
+shape = SubResource("RectangleShape2D_67yox")
+
+[node name="Hitbox" type="Area2D" parent="." groups=["boss"]]
+collision_layer = 16
+collision_mask = 8
+
+[node name="Hitbox Collission" type="CollisionShape2D" parent="Hitbox" groups=["boss"]]
+position = Vector2(1.68225, 1.95654)
+scale = Vector2(1.07986, 15.3224)
+shape = SubResource("RectangleShape2D_m5oms")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

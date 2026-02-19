@@ -9,19 +9,19 @@ gradient = SubResource("Gradient_kea6s")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xe07u"]
 
-[node name="Cookie_Bullet" type="Area2D"]
+[node name="Cookie_Bullet" type="Area2D" groups=["cookie_bullet"]]
 position = Vector2(49, 27)
 collision_layer = 8
-collision_mask = 6
+collision_mask = 22
 script = ExtResource("3_r6sp0")
 metadata/_edit_group_ = true
 
-[node name="Cookie Sprite" type="Sprite2D" parent="."]
+[node name="Cookie Sprite" type="Sprite2D" parent="." groups=["cookie_bullet"]]
 position = Vector2(2.26498e-06, 0)
 scale = Vector2(0.21875, 0.1875)
 texture = SubResource("GradientTexture2D_ah22x")
 
-[node name="Cookie Hitbox" type="CollisionShape2D" parent="."]
+[node name="Cookie Hitbox" type="CollisionShape2D" parent="." groups=["cookie_bullet"]]
 shape = SubResource("CircleShape2D_xe07u")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

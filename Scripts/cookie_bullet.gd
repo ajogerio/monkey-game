@@ -15,6 +15,3 @@ func _on_body_entered(body: Node2D) -> void:
 		# bullet disappears
 		queue_free()
 		
-		# monkey takes damage
-		body.take_damage()
-		
