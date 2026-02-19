@@ -5,6 +5,7 @@ extends Node2D
 
 var boss_hp := 5
 var damage_amount := 1
+var is_taking_damage := true
 
 func _ready() -> void:
 	boss.connect("boss_hit", _on_boss_hit)
@@ -12,6 +13,6 @@ func _ready() -> void:
 func _on_boss_hit():
 	boss_hp -= damage_amount
 	
-	if boss_hp >= 0 and boss_hp < full_hearts.size():
+	if boss_hp >= 0 and boss_hp < full_hearts.size() and is_taking_damage:
 		full_hearts[boss_hp].visible = false
 	

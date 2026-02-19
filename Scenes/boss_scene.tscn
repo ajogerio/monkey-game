@@ -32,4 +32,6 @@ position = Vector2(1.68225, 1.95654)
 scale = Vector2(1.07986, 15.3224)
 shape = SubResource("RectangleShape2D_m5oms")
 
+[node name="Attack Origin" type="Marker2D" parent="."]
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
