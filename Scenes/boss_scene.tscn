@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b77ipel2dy33a"]
+[gd_scene load_steps=6 format=3 uid="uid://b77ipel2dy33a"]
 
 [ext_resource type="Script" path="res://Scripts/boss.gd" id="1_2hjcn"]
+[ext_resource type="PackedScene" uid="uid://bln0slig7ogbo" path="res://Scenes/rock_scene.tscn" id="2_ks1hg"]
 [ext_resource type="Texture2D" uid="uid://ct2fgpas83pvk" path="res://Sprites/Placeholders/gorilla_boss_placeholder.png" id="2_s3o82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67yox"]
@@ -13,6 +14,7 @@ size = Vector2(327.145, 24.2611)
 position = Vector2(270, 146)
 scale = Vector2(0.297222, 0.255556)
 script = ExtResource("1_2hjcn")
+rock_scene = ExtResource("2_ks1hg")
 
 [node name="Boss Sprite" type="Sprite2D" parent="." groups=["boss"]]
 texture = ExtResource("2_s3o82")
@@ -35,4 +37,9 @@ shape = SubResource("RectangleShape2D_m5oms")
 [node name="Attack Origin" type="Marker2D" parent="."]
 position = Vector2(-198.505, 113.478)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
