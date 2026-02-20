@@ -5,6 +5,9 @@ const GRAVITY_SPEED = 1000
 const JUMP_SPEED = 350
 
 var controls_enabled := true
+var knockback_velocity: Vector2 = Vector2.ZERO
+var is_knocked_back := false
+var knockback_decay := 800.0
 
 # export allows us to modify the value in the inspector (right panel)
 # drag the cookie bullet scene into the slot in the inspector
@@ -18,6 +21,17 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	if not controls_enabled:
 		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+	
+	if is_knocked_back:
+		velocity = knockback_velocity
+		
+		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, knockback_decay * delta)
+		
+		if knockback_velocity.length() < 10:
+			is_knocked_back = false
+			
 		move_and_slide()
 		return
 	
@@ -57,3 +71,9 @@ func shoot() -> void:
 	cookie_bullet.global_position = $Muzzle.global_position # put the new bullet in the position of the muzzle
 	cookie_bullet.direction = $Muzzle.global_position.direction_to(get_global_mouse_position()) # set the direction vector of the cookie_bullet to be the vector from the muzzle to the mouse position
 	get_tree().current_scene.add_child(cookie_bullet)
+	
+func take_rock_hit(from_position: Vector2):
+	is_knocked_back = true
+	
+	var direction = (global_position - from_position).normalized()
+	knockback_velocity = direction * 250
