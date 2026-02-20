@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2qd2rk6cng0h"]
+[gd_scene load_steps=3 format=3 uid="uid://bln0slig7ogbo"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_e4366"]
+[ext_resource type="Texture2D" uid="uid://4j1vlag26io2" path="res://Sprites/Objects/rock.png" id="1_v3b0f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57pc5"]
+radius = 16.0
 
 [node name="Rock" type="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_e4366")
+shape = SubResource("CircleShape2D_57pc5")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v3b0f")

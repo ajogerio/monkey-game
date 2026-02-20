@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://j3ml3ouf16fc"]
+[gd_scene load_steps=10 format=3 uid="uid://j3ml3ouf16fc"]
 
 [ext_resource type="Script" path="res://Scripts/boss_level.gd" id="1_dgdms"]
 [ext_resource type="PackedScene" uid="uid://dssfpvbh3g1dn" path="res://Scenes/exit_area_scene.tscn" id="2_aoi7l"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b77ipel2dy33a" path="res://Scenes/boss_scene.tscn" id="3_uiruu"]
 [ext_resource type="Texture2D" uid="uid://bfsuw6vceouvu" path="res://Sprites/UI/boss_heart_full.png" id="4_trd7f"]
 [ext_resource type="Texture2D" uid="uid://qqv2xlf28etr" path="res://Sprites/UI/boss_heart_empty.png" id="5_0td32"]
+[ext_resource type="PackedScene" uid="uid://bln0slig7ogbo" path="res://Scenes/rock_scene.tscn" id="7_q0cqo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04d0l"]
 texture = ExtResource("3_gredn")
@@ -140,3 +141,6 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
+
+[node name="Rock" parent="." instance=ExtResource("7_q0cqo")]
+position = Vector2(183, 173)

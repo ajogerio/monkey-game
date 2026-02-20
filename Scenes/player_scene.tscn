@@ -63,7 +63,6 @@ libraries = {
 }
 
 [node name="Player Hitbox" type="CollisionShape2D" parent="." groups=["player"]]
-visible = false
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_3laj3")
 
