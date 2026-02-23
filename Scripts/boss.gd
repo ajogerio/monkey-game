@@ -41,7 +41,7 @@ func _on_boss_level_wake_up(current_hp) -> void:
 		rocks_to_throw = 5
 		print("speed up 2")
 	if current_hp <= 2:
-		$Timer.wait_time = 11
+		$Timer.wait_time = 1
 		print("speed up 1")
 		rocks_to_throw = 10
 	$Timer.start()

@@ -16,15 +16,21 @@ func _ready() -> void:
 func _on_boss_hit():
 	if is_taking_damage:
 		boss_hp -= damage_amount
-		
-		if boss_hp >= 0 and boss_hp < full_hearts.size():
-			full_hearts[boss_hp].visible = false
-			# play boss hit animation
-			is_taking_damage = false
+		full_hearts[boss_hp].visible = false
+		# play boss hit animation
+		is_taking_damage = false
+			
+		if boss_hp > 0 and boss_hp < full_hearts.size():
 			wake_up.emit(boss_hp)
+		else:
+			boss_dies()
 		
 func _on_boss_dizzy():
 	is_taking_damage = true
 	print("boss is dizzy")
-	
+
+func boss_dies():
+	# play  the boss animation death
+	is_taking_damage = false
+	print("boss is dead")
 	
