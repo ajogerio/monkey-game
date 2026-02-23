@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 		var collider = collision.get_collider()
 		
 		if collider.is_in_group("player"):
+			collider.take_rock_hit(global_position)
 			queue_free()
 	
 

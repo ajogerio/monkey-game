@@ -3,6 +3,10 @@ extends CharacterBody2D
 @export var rock_scene: PackedScene
 
 signal boss_hit
+signal boss_dizzy
+
+var rocks_thrown := 0
+var rocks_to_throw := 3
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("cookie_bullet"):
@@ -14,11 +18,15 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 		
 
 func _on_timer_timeout() -> void:
-	throw_rock()
-	print("threw rock")
+	if rocks_thrown != rocks_to_throw:
+		throw_rock()
+		rocks_thrown += 1
+	else:
+		$Timer.stop()
+		# play the animation to make boss dizzy
+		boss_dizzy.emit()
 
 func throw_rock():
-	print("Ran func")
 	var rock = rock_scene.instantiate()
 	rock.global_position = $"Attack Origin".global_position
 	get_tree().current_scene.add_child(rock)
