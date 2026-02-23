@@ -30,3 +30,10 @@ func throw_rock():
 	var rock = rock_scene.instantiate()
 	rock.global_position = $"Attack Origin".global_position
 	get_tree().current_scene.add_child(rock)
+
+
+func _on_boss_level_wake_up() -> void:
+	# play aniimation to stop the boss from being dizzy
+	# play a roar or something
+	rocks_thrown = 0
+	$Timer.start()
