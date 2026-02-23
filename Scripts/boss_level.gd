@@ -7,7 +7,7 @@ var boss_hp := 5
 var damage_amount := 1
 var is_taking_damage := false
 
-signal wake_up
+signal wake_up(boss_hp)
 
 func _ready() -> void:
 	boss.connect("boss_hit", _on_boss_hit)
@@ -21,7 +21,7 @@ func _on_boss_hit():
 			full_hearts[boss_hp].visible = false
 			# play boss hit animation
 			is_taking_damage = false
-			wake_up.emit()
+			wake_up.emit(boss_hp)
 		
 func _on_boss_dizzy():
 	is_taking_damage = true

@@ -32,8 +32,16 @@ func throw_rock():
 	get_tree().current_scene.add_child(rock)
 
 
-func _on_boss_level_wake_up() -> void:
+func _on_boss_level_wake_up(current_hp) -> void:
 	# play aniimation to stop the boss from being dizzy
 	# play a roar or something
 	rocks_thrown = 0
+	if current_hp < 4 and current_hp > 2:
+		$Timer.wait_time = 2
+		rocks_to_throw = 5
+		print("speed up 2")
+	if current_hp <= 2:
+		$Timer.wait_time = 11
+		print("speed up 1")
+		rocks_to_throw = 10
 	$Timer.start()
