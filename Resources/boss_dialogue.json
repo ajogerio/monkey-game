@@ -1,0 +1,38 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Aj": {
+			"portrait": "insert portrait here"
+		},
+		"Klat Yeknom": {
+			"portrait": "insert portrait here"
+		},
+	},
+	"lines": [
+		{"speaker": "Cb", "text": "What... the... fu--"},
+		{"speaker": "Aj", "text": "BABY RUN AWAY! SAVE YOURSELF!"},
+		{"speaker": "Klat Yeknom", "text": "MUAHAHAHAHAHA!"},
+		{"speaker": "Klat Yeknom", "text": "The other half has FINALLY arrived... just in time."},
+		{"speaker": "Cb", "text": "KLAT YEKNOM!"},
+		{"speaker": "Cb", "text": "Release my baby at once!"},
+		{"speaker": "Klat Yeknom", "text": "MUAHAHAHAHAHAHAHA!"},
+		{"speaker": "Klat Yeknom", "text": "FOOL!"},
+		{"speaker": "Klat Yeknom", "text": "Don't you see that you have fallen for my trap?"},
+		{"speaker": "Klat Yeknom", "text": "The only way to satisfy my hunger is to consume a romantic couple that had a fight."},
+		{"speaker": "Klat Yeknom", "text": "The moment you and your boyfriend faught, was the moment that sealed your fate."},
+		{"speaker": "Klat Yeknom", "text": "You are nothing more than food!"},
+		{"speaker": "Klat Yeknom", "text": "I ordered my little minions to capture your boyfriend, knowing damn well that you would come running after him."},
+		{"speaker": "Klat Yeknom", "text": "And here you are, right in front of my doorstep."},
+		{"speaker": "Klat Yeknom", "text": "Now both you AND your little *baby* are here for me to feast!"},
+		{"speaker": "Klat Yeknom", "text": "MUAHAHAHAHAHA!"},
+		{"speaker": "Klat Yeknom", "text": "Once I'm full with you two, I'll go back to my nice slumber, waiting for the next arguing couple to fill my belly up again."},
+		{"speaker": "Cb", "text": "Well jokes on you Klat Yeknom!"},
+		{"speaker": "Cb", "text": "You won't be needing a feast to go to sleep."},
+		{"speaker": "Cb", "text": "Becauses I'll put you to sleep myself! With my COOKIE BLASTER!"},
+		{"speaker": "Klat Yeknom", "text": "Then bring it on then Cb! Show me how far you would go to save your pathetic boyfriend!"},
+		{"speaker": "Cb", "text": "BRING IT ON!"},
+		{"speaker": "Aj", "text": "BABY! WATCH OUT HE'S GOING TO THROW ROCKS! JUMP OVER THEM OKAY?"},
+	]
+}
