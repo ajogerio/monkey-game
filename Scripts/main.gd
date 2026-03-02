@@ -10,6 +10,8 @@ var current_level_index := 0
 @onready var player = $Player
 @onready var transition = $Transition
 
+signal level_loaded
+
 func _ready() -> void:
 	levels = [
 		BOSS_LEVEL, # remove this later
@@ -35,6 +37,10 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 	# instantiate the level scene into the scene tree
 	var level_instance: Node = level_scene.instantiate()
 	level_container.add_child(level_instance)
+	
+	# pass the player reference if there are any (i.e. in boss level)
+	if level_instance.has_method("set_player"):
+		level_instance.call_deferred("set_player", player)
 	
 	# listen for the next level signal
 	if level_instance.has_node("Exit Area"):
