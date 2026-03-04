@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/boss.gd" id="1_2hjcn"]
 [ext_resource type="PackedScene" uid="uid://bln0slig7ogbo" path="res://Scenes/rock_scene.tscn" id="2_ks1hg"]
-[ext_resource type="Texture2D" uid="uid://ct2fgpas83pvk" path="res://Sprites/Placeholders/gorilla_boss_placeholder.png" id="2_s3o82"]
+[ext_resource type="Texture2D" uid="uid://bilq6d44153d8" path="res://Sprites/Characters/klat yeknom.png" id="3_0s2b6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67yox"]
 size = Vector2(353.271, 356.087)
@@ -17,10 +17,11 @@ script = ExtResource("1_2hjcn")
 rock_scene = ExtResource("2_ks1hg")
 
 [node name="Boss Sprite" type="Sprite2D" parent="." groups=["boss"]]
-texture = ExtResource("2_s3o82")
+position = Vector2(11.7757, -7.82605)
+scale = Vector2(8.6215, 9.78259)
+texture = ExtResource("3_0s2b6")
 
 [node name="Physics Collission" type="CollisionShape2D" parent="." groups=["boss"]]
-visible = false
 position = Vector2(1.68225, 1.95654)
 scale = Vector2(1, 0.999999)
 shape = SubResource("RectangleShape2D_67yox")
@@ -30,6 +31,7 @@ collision_layer = 16
 collision_mask = 8
 
 [node name="Hitbox Collission" type="CollisionShape2D" parent="Hitbox" groups=["boss"]]
+visible = false
 position = Vector2(1.68225, 1.95654)
 scale = Vector2(1.07986, 15.3224)
 shape = SubResource("RectangleShape2D_m5oms")
