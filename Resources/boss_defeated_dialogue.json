@@ -1,0 +1,32 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Aj": {
+			"portrait": "insert portrait here"
+		},
+	},
+	"lines": [
+		{"speaker": "Cb", "text": "BABY!!!"},
+		{"speaker": "Aj", "text": "BABY!!! YOU DID IT!!!"},
+		{"speaker": "Aj", "text": "You saved me!!!"},
+		{"speaker": "Cb", "text": "Hehehe. Of course! I am a strong independent woman."},
+		{"speaker": "Aj", "text": "Oh yes you are! Muah muah muah!"},
+		{"speaker": "Aj", "text": "Oh... and about earlier..."},
+		{"speaker": "Aj", "text": "I'm really sorry about eating the shrimp tail."},
+		{"speaker": "Aj", "text": "I know you love shrimp tails, and I should have remembered to give them to you."},
+		{"speaker": "Aj", "text": "You must have felt so sad and hungry, I'm sorry for invalidating how you felt."},
+		{"speaker": "Cb", "text": "I did feel sad and invalidated at the moment. Thank you for acknowledging how I felt."},
+		{"speaker": "Cb", "text": "But it's not entirely your fault. I'm sorry too."},
+		{"speaker": "Cb", "text": "I know you didn't mean to neglect me like that."},
+		{"speaker": "Cb", "text": "You were just eating and enjoying the moment with me. It must have not crossed your mind to leave the shrimp tails because you were so engrossed in the moment."},
+		{"speaker": "Cb", "text": "I know that in other circumstances, you would have definitely given me the shrimp tail."},
+		{"speaker": "Cb", "text": "I'm sorry I lashed out at you."},
+		{"speaker": "Aj", "text": "It's okay. I forgive you."},
+		{"speaker": "Aj", "text": "Next time, I will make sure to cut off the shrimp tails first, and give them over to you before I eat so I don't ever forget again."},
+		{"speaker": "Cb", "text": "Aww. I would love that. Thank you baby!"},
+		{"speaker": "Aj", "text": "I love you baby! Thank you for always being open, understanding, and caring."},
+		{"speaker": "Cb", "text": "Thank you also for making me feel heard and loved. I love you too!"},
+	]
+}

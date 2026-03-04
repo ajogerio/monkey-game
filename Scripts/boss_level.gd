@@ -47,3 +47,6 @@ func boss_dies():
 	# play  the boss animation death
 	is_taking_damage = false
 	print("boss is dead")
+	# set a timer for 3 seconds
+	# exit to the outro level
+	
