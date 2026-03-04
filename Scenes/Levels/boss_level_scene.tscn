@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://j3ml3ouf16fc"]
+[gd_scene load_steps=8 format=3 uid="uid://j3ml3ouf16fc"]
 
 [ext_resource type="Script" path="res://Scripts/boss_level.gd" id="1_dgdms"]
-[ext_resource type="PackedScene" uid="uid://dssfpvbh3g1dn" path="res://Scenes/exit_area_scene.tscn" id="2_aoi7l"]
 [ext_resource type="Texture2D" uid="uid://c34p6nfgmheg7" path="res://Sprites/Tilesets/sample_tileset.png" id="3_gredn"]
 [ext_resource type="PackedScene" uid="uid://b77ipel2dy33a" path="res://Scenes/boss_scene.tscn" id="3_uiruu"]
 [ext_resource type="Texture2D" uid="uid://bfsuw6vceouvu" path="res://Sprites/UI/boss_heart_full.png" id="4_trd7f"]
@@ -24,8 +23,6 @@ intro_dialogue_filepath = "res://Resources/boss_dialogue.json"
 
 [node name="Player Spawn" type="Marker2D" parent="."]
 position = Vector2(77, 179)
-
-[node name="Exit Area" parent="." instance=ExtResource("2_aoi7l")]
 
 [node name="Terrain Blockout" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -142,4 +139,8 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
+[node name="Dialogue Start Timer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="wake_up" from="." to="Boss" method="_on_boss_level_wake_up"]
+[connection signal="timeout" from="Dialogue Start Timer" to="." method="_on_dialogue_start_timer_timeout"]

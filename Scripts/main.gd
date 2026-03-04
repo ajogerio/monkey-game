@@ -6,17 +6,18 @@ const BOSS_LEVEL: PackedScene = preload("res://Scenes/Levels/boss_level_scene.ts
 
 var levels := []
 var current_level_index := 0
+
 @onready var level_container = $Level
 @onready var player = $Player
 @onready var transition = $Transition
 
-signal level_loaded
+#signal level_loaded()
 
 func _ready() -> void:
 	levels = [
+		JUNGLE_LEVEL,
 		BOSS_LEVEL, # remove this later
 		TUTORIAL_LEVEL,
-		JUNGLE_LEVEL
 	]
 	load_level_by_index(0, true)
 	
@@ -37,10 +38,6 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 	# instantiate the level scene into the scene tree
 	var level_instance: Node = level_scene.instantiate()
 	level_container.add_child(level_instance)
-	
-	# pass the player reference if there are any (i.e. in boss level)
-	if level_instance.has_method("set_player"):
-		level_instance.call_deferred("set_player", player)
 	
 	# listen for the next level signal
 	if level_instance.has_node("Exit Area"):
@@ -63,7 +60,10 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 	if not skip_fade:
 		await transition.fade_in()
 	
-	player.controls_enabled = true
+	if level_instance.has_method("play_boss_intro"):
+		await level_instance.play_boss_intro(player)
+	else:
+		player.controls_enabled = true
 
 func _on_load_next_level():
 	var next_index = current_level_index + 1

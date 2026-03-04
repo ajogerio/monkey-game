@@ -1,0 +1,10 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+	},
+	"lines": [
+		{"speaker": "Cb", "text": "What... the... ffff..."},
+	]
+}

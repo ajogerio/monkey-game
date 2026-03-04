@@ -2,9 +2,9 @@ extends Node2D
 
 @onready var boss := $Boss
 @onready var full_hearts := $"Boss Hearts/Control/Full Hearts".get_children()
+@onready var dialogue_timer := $"Dialogue Start Timer"
 
 @export var intro_dialogue_filepath: String
-@export var player: Node2D
 
 var boss_hp := 5
 var damage_amount := 1
@@ -15,15 +15,17 @@ signal wake_up(boss_hp)
 func _ready() -> void:
 	boss.connect("boss_hit", _on_boss_hit)
 	boss.connect("boss_dizzy", _on_boss_dizzy)
-	DialogueManagerAutoload.dialogue_finished.connect(Callable(self, "_on_dialogue_finished"))
-
-func set_player(p: Node) -> void:
-	player = p
-	start_intro_boss_dialogue()
-
-func start_intro_boss_dialogue():
+	
+func play_boss_intro(player: Node2D):
 	player.controls_enabled = false
+	print("timer start")
+	await get_tree().create_timer(3.0).timeout
+	print("timer end")
+	
 	DialogueManagerAutoload.dialogue_box.show_dialogue(intro_dialogue_filepath)
+	await DialogueManagerAutoload.dialogue_finished
+	
+	player.controls_enabled = true
 
 func _on_boss_hit():
 	if is_taking_damage:
@@ -45,7 +47,3 @@ func boss_dies():
 	# play  the boss animation death
 	is_taking_damage = false
 	print("boss is dead")
-
-func _on_dialogue_finished():
-	player.controls_enabled = true
-	
