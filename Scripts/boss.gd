@@ -6,7 +6,7 @@ signal boss_hit
 signal boss_dizzy
 
 var rocks_thrown := 0
-var rocks_to_throw := 3
+var rocks_to_throw := 0
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("cookie_bullet"):
@@ -36,6 +36,9 @@ func _on_boss_level_wake_up(current_hp) -> void:
 	# play aniimation to stop the boss from being dizzy
 	# play a roar or something
 	rocks_thrown = 0
+	if current_hp >= 4:
+		$Timer.wait_time = 3
+		rocks_to_throw = 3
 	if current_hp < 4 and current_hp > 2:
 		$Timer.wait_time = 2
 		rocks_to_throw = 5

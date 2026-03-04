@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://j3ml3ouf16fc"]
+[gd_scene load_steps=9 format=3 uid="uid://j3ml3ouf16fc"]
 
 [ext_resource type="Script" path="res://Scripts/boss_level.gd" id="1_dgdms"]
 [ext_resource type="Texture2D" uid="uid://c34p6nfgmheg7" path="res://Sprites/Tilesets/sample_tileset.png" id="3_gredn"]
@@ -16,6 +16,9 @@ texture = ExtResource("3_gredn")
 [sub_resource type="TileSet" id="TileSet_il0n8"]
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_04d0l")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc6hs"]
+size = Vector2(359.125, 240)
 
 [node name="Boss Level" type="Node2D"]
 script = ExtResource("1_dgdms")
@@ -141,6 +144,12 @@ texture = ExtResource("4_trd7f")
 
 [node name="Dialogue Start Timer" type="Timer" parent="."]
 wait_time = 5.0
+
+[node name="Camera Bounds" type="Area2D" parent="."]
+
+[node name="Bounds Shape" type="CollisionShape2D" parent="Camera Bounds"]
+position = Vector2(180.438, 120)
+shape = SubResource("RectangleShape2D_vc6hs")
 
 [connection signal="wake_up" from="." to="Boss" method="_on_boss_level_wake_up"]
 [connection signal="timeout" from="Dialogue Start Timer" to="." method="_on_dialogue_start_timer_timeout"]

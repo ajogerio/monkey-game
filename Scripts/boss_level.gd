@@ -18,14 +18,14 @@ func _ready() -> void:
 	
 func play_boss_intro(player: Node2D):
 	player.controls_enabled = false
-	print("timer start")
+	
 	await get_tree().create_timer(3.0).timeout
-	print("timer end")
 	
 	DialogueManagerAutoload.dialogue_box.show_dialogue(intro_dialogue_filepath)
 	await DialogueManagerAutoload.dialogue_finished
 	
 	player.controls_enabled = true
+	wake_up.emit(boss_hp)
 
 func _on_boss_hit():
 	if is_taking_damage:

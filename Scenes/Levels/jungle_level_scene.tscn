@@ -20,7 +20,7 @@ sources/0 = SubResource("TileSetAtlasSource_jl1v6")
 [node name="Jungle Level" type="Node2D"]
 
 [node name="Player Spawn" type="Marker2D" parent="."]
-position = Vector2(95, 177)
+position = Vector2(3109, 38)
 
 [node name="Camera Bounds" type="Area2D" parent="."]
 
