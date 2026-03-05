@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://j3ml3ouf16fc"]
+[gd_scene load_steps=14 format=3 uid="uid://j3ml3ouf16fc"]
 
 [ext_resource type="Script" path="res://Scripts/boss_level.gd" id="1_dgdms"]
 [ext_resource type="Texture2D" uid="uid://dinf3tm75ecgo" path="res://Sprites/Tilesets/tileset_1.png" id="2_3smec"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b77ipel2dy33a" path="res://Scenes/boss_scene.tscn" id="3_uiruu"]
 [ext_resource type="Texture2D" uid="uid://bfsuw6vceouvu" path="res://Sprites/UI/boss_heart_full.png" id="4_trd7f"]
 [ext_resource type="Texture2D" uid="uid://qqv2xlf28etr" path="res://Sprites/UI/boss_heart_empty.png" id="5_0td32"]
+[ext_resource type="Texture2D" uid="uid://bmmu4k6wab7ga" path="res://Sprites/Placeholders/aj character idle sprite.png" id="7_onp4q"]
+[ext_resource type="Texture2D" uid="uid://bqxyoieirlfki" path="res://Sprites/Objects/cage.png" id="8_n0t1m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehaha"]
 texture = ExtResource("2_3smec")
@@ -185,9 +187,6 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 texture = ExtResource("4_trd7f")
 
-[node name="Dialogue Start Timer" type="Timer" parent="."]
-wait_time = 5.0
-
 [node name="Camera Bounds" type="Area2D" parent="."]
 visible = false
 
@@ -195,5 +194,12 @@ visible = false
 position = Vector2(180.438, 120)
 shape = SubResource("RectangleShape2D_vc6hs")
 
+[node name="Aj" type="Sprite2D" parent="."]
+position = Vector2(345, 177)
+texture = ExtResource("7_onp4q")
+
+[node name="Cage" type="Sprite2D" parent="."]
+position = Vector2(346, 176)
+texture = ExtResource("8_n0t1m")
+
 [connection signal="wake_up" from="." to="Boss" method="_on_boss_level_wake_up"]
-[connection signal="timeout" from="Dialogue Start Timer" to="." method="_on_dialogue_start_timer_timeout"]
