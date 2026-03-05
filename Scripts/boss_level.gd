@@ -3,6 +3,7 @@ extends Node2D
 @onready var boss := $Boss
 @onready var full_hearts := $"Boss Hearts/Control/Full Hearts".get_children()
 @onready var dialogue_timer := $"Dialogue Start Timer"
+@onready var boss_hearts_ui := $"Boss Hearts"
 
 @export var intro_dialogue_filepath: String
 
@@ -15,6 +16,7 @@ signal wake_up(boss_hp)
 func _ready() -> void:
 	boss.connect("boss_hit", _on_boss_hit)
 	boss.connect("boss_dizzy", _on_boss_dizzy)
+	boss_hearts_ui.visible = false
 	
 func play_boss_intro(player: Node2D):
 	player.controls_enabled = false
@@ -26,6 +28,7 @@ func play_boss_intro(player: Node2D):
 	
 	player.controls_enabled = true
 	wake_up.emit(boss_hp)
+	boss_hearts_ui.visible = true
 
 func _on_boss_hit():
 	if is_taking_damage:
