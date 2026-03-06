@@ -1,5 +1,6 @@
 extends Node2D
 
+const INTRO_LEVEL: PackedScene = preload("res://Scenes/Levels/intro_cutscene.tscn")
 const TUTORIAL_LEVEL: PackedScene = preload("res://Scenes/Levels/tutorial_level_scene.tscn")
 const JUNGLE_LEVEL: PackedScene = preload("res://Scenes/Levels/jungle_level_scene.tscn") # remove this later
 const BOSS_LEVEL: PackedScene = preload("res://Scenes/Levels/boss_level_scene.tscn") 
@@ -15,6 +16,7 @@ var current_level_index := 0
 
 func _ready() -> void:
 	levels = [
+		INTRO_LEVEL,
 		JUNGLE_LEVEL,
 		BOSS_LEVEL, # remove this later
 		TUTORIAL_LEVEL,
