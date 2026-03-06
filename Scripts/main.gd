@@ -64,6 +64,8 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 	
 	if level_instance.has_method("play_boss_intro"):
 		await level_instance.play_boss_intro(player)
+	elif level_instance.has_method("play_intro"):
+		await level_instance.play_intro(player)
 	else:
 		player.controls_enabled = true
 
