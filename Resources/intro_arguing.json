@@ -1,0 +1,30 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Aj": {
+			"portrait": "insert portrait here"
+		},
+	},
+	"lines": [
+		{"speaker": "Aj", "text": "Baby are you okay?"},
+		{"speaker": "Cb", "text": "Hmp."},
+		{"speaker": "Aj", "text": "Baby? Did you not like something I did?"},
+		{"speaker": "Cb", "text": "HMP!"},
+		{"speaker": "Aj", "text": "What? We were just eating japanese food... why are you suddenly not noticing me."},
+		{"speaker": "Cb", "text": "Because you forgot."},
+		{"speaker": "Aj", "text": "Forgot what?"},
+		{"speaker": "Cb", "text": "HMP! Tell me you're kidding right now..."},
+		{"speaker": "Aj", "text": "OH! You wanted the shrimp tails of my tempura. Hahahaha!"},
+		{"speaker": "Aj", "text": "Here baby have my shrimp tails hehe."},
+		{"speaker": "Cb", "text": "NO! BABY! JUST NO! It's our anniversary TODAY!"},
+		{"speaker": "Cb", "text": "I can't believe you would forget something as important as this!"},
+		{"speaker": "Aj", "text": "Oh no. But baby I--"},
+		{"speaker": "Cb", "text": "UGH! How could you forget?! Don't you love me anymore?"},
+		{"speaker": "Aj", "text": "Baby I do! And I--"},
+		{"speaker": "Cb", "text": "Huhuhuhu"},
+		{"speaker": "Cb", "text": "Waaaaaah!"},
+		{"speaker": "Aj", "text": "Baby I hear where you're coming from, but I --"},
+	]
+}

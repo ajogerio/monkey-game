@@ -18,6 +18,7 @@ sources/0 = SubResource("TileSetAtlasSource_hpceo")
 
 [node name="IntroCutscene" type="Node2D"]
 script = ExtResource("1_jpfy1")
+intro_dialogue_filepath = "res://Resources/intro_arguing.json"
 
 [node name="Terrain Blockout" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -29,7 +30,7 @@ layer_0/tile_data = PackedInt32Array(786468, 0, 0, 786479, 0, 0, 1048609, 65536,
 position = Vector2(-2768, 3)
 
 [node name="Player Spawn" type="Marker2D" parent="."]
-position = Vector2(134, 183)
+position = Vector2(135, 187)
 
 [node name="Aj" parent="." instance=ExtResource("3_doqwc")]
 position = Vector2(212, 184)
