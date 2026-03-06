@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cju4eigr5dc13"]
+
+[ext_resource type="Texture2D" uid="uid://b0ansjeddmwt6" path="res://Sprites/Placeholders/aj character idle sprite left facing.png" id="1_b1ly7"]
+
+[node name="Aj" type="CharacterBody2D"]
+
+[node name="Aj Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_b1ly7")
