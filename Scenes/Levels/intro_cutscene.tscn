@@ -24,3 +24,6 @@ layer_0/tile_data = PackedInt32Array(786468, 0, 0, 786479, 0, 0, 1048609, 65536,
 
 [node name="Exit Area" parent="." instance=ExtResource("2_ybb0e")]
 position = Vector2(-2768, 3)
+
+[node name="Player Spawn" type="Marker2D" parent="."]
+position = Vector2(77, 179)
