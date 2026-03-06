@@ -62,6 +62,7 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 	if not skip_fade:
 		await transition.fade_in()
 	
+	# if there are any intros to the scene, play those first
 	if level_instance.has_method("play_boss_intro"):
 		await level_instance.play_boss_intro(player)
 	elif level_instance.has_method("play_intro"):
