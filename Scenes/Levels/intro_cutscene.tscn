@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbskya77m7esf"]
+[gd_scene load_steps=7 format=3 uid="uid://hjildb3b376h"]
 
 [ext_resource type="Texture2D" uid="uid://c34p6nfgmheg7" path="res://Sprites/Tilesets/sample_tileset.png" id="1_bppg8"]
 [ext_resource type="Script" path="res://Scripts/intro_cutscene.gd" id="1_jpfy1"]
 [ext_resource type="PackedScene" uid="uid://dssfpvbh3g1dn" path="res://Scenes/exit_area_scene.tscn" id="2_ybb0e"]
-[ext_resource type="PackedScene" uid="uid://cju4eigr5dc13" path="res://Scenes/aj_scene.tscn" id="3_doqwc"]
+[ext_resource type="PackedScene" path="res://Scenes/aj_scene.tscn" id="3_doqwc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpceo"]
 texture = ExtResource("1_bppg8")

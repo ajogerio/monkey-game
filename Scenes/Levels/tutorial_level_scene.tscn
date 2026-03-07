@@ -18,7 +18,7 @@ func _ready() -> void:
 		camera.set_camera_bounds(camera_bounds)
 "
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pkrc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwbr2"]
 texture = ExtResource("3_k2r5c")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -27,7 +27,7 @@ texture = ExtResource("3_k2r5c")
 
 [sub_resource type="TileSet" id="TileSet_06ysa"]
 physics_layer_0/collision_layer = 2
-sources/0 = SubResource("TileSetAtlasSource_8pkrc")
+sources/0 = SubResource("TileSetAtlasSource_wwbr2")
 
 [node name="Tutorial Level" type="Node2D"]
 script = SubResource("GDScript_oonwb")
