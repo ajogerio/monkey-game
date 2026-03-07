@@ -1,9 +1,7 @@
 extends Node2D
 
-@onready var boss := $Boss
-@onready var full_hearts := $"Boss Hearts/Control/Full Hearts".get_children()
-@onready var dialogue_timer := $"Dialogue Start Timer"
-@onready var boss_hearts_ui := $"Boss Hearts"
+signal wake_up(boss_hp)
+signal load_next_level
 
 @export var intro_dialogue_filepath: String
 
@@ -12,8 +10,10 @@ var damage_amount := 1
 var is_taking_damage := false
 var player: Node2D
 
-signal wake_up(boss_hp)
-signal load_next_level
+@onready var boss := $Boss
+@onready var full_hearts := $"Boss Hearts/Control/Full Hearts".get_children()
+@onready var dialogue_timer := $"Dialogue Start Timer"
+@onready var boss_hearts_ui := $"Boss Hearts"
 
 
 func _ready() -> void:
@@ -56,7 +56,7 @@ func _on_boss_dizzy():
 
 
 func boss_dies():
-	# play  the boss animation death
+	# play the boss death animation
 	is_taking_damage = false
 	print("boss is dead")
 

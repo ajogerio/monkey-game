@@ -4,11 +4,11 @@ extends Area2D
 @export var next_checkpoint: String = ""
 @export var dialogue_filepath: String
 
-@onready var arrow_indicator := $"Arrow Indicator"
-
 var is_active := false
 var has_been_completed := false
 var waiting_for_dialogue := false
+
+@onready var arrow_indicator := $"Arrow Indicator"
 
 
 func _ready():

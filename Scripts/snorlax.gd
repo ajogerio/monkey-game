@@ -1,14 +1,14 @@
 extends Area2D
 
-@onready var floating_e_key = $"Floating E Key"
-
 var is_player_in_talk_range := false
 var is_talking := false
 var checkpoint_chain_started := false
 var player_node
 
+@onready var floating_e_key = $"Floating E Key"
 
-func _process(delta: float) -> void:
+
+func _process(_delta: float) -> void:
 	if is_player_in_talk_range and !is_talking and Input.is_action_just_pressed("interact"):
 		_start_dialogue()
 

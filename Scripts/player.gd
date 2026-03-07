@@ -4,20 +4,19 @@ const HORIZONTAL_SPEED = 150
 const GRAVITY_SPEED = 1000
 const JUMP_SPEED = 350
 
+@export var cookie_bullet_scene: PackedScene
+
 var controls_enabled := true
 var knockback_velocity: Vector2 = Vector2.ZERO
 var is_knocked_back := false
 var knockback_decay := 800.0
 
-# export allows us to modify the value in the inspector (right panel)
-# drag the cookie bullet scene into the slot in the inspector
-# so we have access to it now in the code
-@export var cookie_bullet_scene: PackedScene
+@onready var anim = $"Player Sprite/AnimationPlayer"
 
 
 func _ready():
 	# play animation
-	$"Player Sprite" / AnimationPlayer.play("idle")
+	anim.play("idle")
 
 
 func _physics_process(delta: float) -> void:
@@ -71,9 +70,10 @@ func _unhandled_input(_event):
 
 
 func shoot() -> void:
-	var cookie_bullet = cookie_bullet_scene.instantiate()  # make a new instance of the cookie bullet
-	cookie_bullet.global_position = $Muzzle.global_position  # put the new bullet in the position of the muzzle
-	cookie_bullet.direction = $Muzzle.global_position.direction_to(get_global_mouse_position())  # set the direction vector of the cookie_bullet to be the vector from the muzzle to the mouse position
+	var cookie_bullet = cookie_bullet_scene.instantiate()
+	cookie_bullet.global_position = $Muzzle.global_position
+	# set the direction vector of the cookie_bullet towards the cursor
+	cookie_bullet.direction = $Muzzle.global_position.direction_to(get_global_mouse_position())
 	get_tree().current_scene.add_child(cookie_bullet)
 
 

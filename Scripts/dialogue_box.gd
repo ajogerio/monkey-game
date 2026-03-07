@@ -1,16 +1,16 @@
 extends Control
 
-# references to the child nodes
-@onready var speaker_name = $"Panel/MarginContainer/HBoxContainer/VBoxContainer/Speaker Name"
-@onready var speaker_dialogue = $"Panel/MarginContainer/HBoxContainer/VBoxContainer/Speaker Dialogue"
-@onready var player_portrait = $"Panel/MarginContainer/HBoxContainer/Player Portrait"
-@onready var npc_portrait = $"Panel/MarginContainer/HBoxContainer/NPC Portrait"
-
 var player_name = "Cb"
 var typing_speed := 0.05
 var is_typing := false
 var dialogue: Dictionary = {}
 var current_line_index := 0
+
+# references to the child nodes
+@onready var speaker_name = $"Panel/MarginContainer/HBoxContainer/VBoxContainer/Speaker Name"
+@onready var speaker_dialogue = %"Speaker Dialogue"
+@onready var player_portrait = $"Panel/MarginContainer/HBoxContainer/Player Portrait"
+@onready var npc_portrait = $"Panel/MarginContainer/HBoxContainer/NPC Portrait"
 
 
 func load_dialogue_from_json(filepath: String) -> void:
@@ -65,7 +65,8 @@ func _show_current_line():
 func _start_typing() -> void:
 	while speaker_dialogue.visible_characters < speaker_dialogue.get_total_character_count():
 		speaker_dialogue.visible_characters += 1
-		await get_tree().create_timer(typing_speed).timeout  # wait for typing_speed units before going to next line
+		# wait for typing_speed units before going to next line
+		await get_tree().create_timer(typing_speed).timeout
 
 	is_typing = false
 

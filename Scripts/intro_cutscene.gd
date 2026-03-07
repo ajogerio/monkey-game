@@ -4,10 +4,11 @@ extends Node2D
 @export var monkey_arrival_dialogue_filepath: String
 @export var cb_chase_after_dialogue_filepath: String
 
-@onready var aj := $"Aj"
-@onready var monkey_scene := preload("res://Scenes/enemy_monkey_scene.tscn")
 var monkeys := []
 var monkeys_to_spawn = 3
+
+@onready var aj := $"Aj"
+@onready var monkey_scene := preload("res://Scenes/enemy_monkey_scene.tscn")
 
 
 func play_intro(player):

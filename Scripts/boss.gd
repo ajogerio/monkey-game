@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
-@export var rock_scene: PackedScene
-
 signal boss_hit
 signal boss_dizzy
+
+@export var rock_scene: PackedScene
 
 var rocks_thrown := 0
 var rocks_to_throw := 0

@@ -65,6 +65,7 @@ text = "Cookie"
 label_settings = SubResource("LabelSettings_3jl4t")
 
 [node name="Speaker Dialogue" type="RichTextLabel" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 3
