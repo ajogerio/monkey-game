@@ -17,8 +17,8 @@ var current_level_index := 0
 
 func _ready() -> void:
 	levels = [
-		OUTRO_LEVEL,
 		BOSS_LEVEL,
+		OUTRO_LEVEL,
 		INTRO_LEVEL,
 		TUTORIAL_LEVEL,
 		JUNGLE_LEVEL,
@@ -47,6 +47,9 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 	if level_instance.has_node("Exit Area"):
 		var exit = level_instance.get_node("Exit Area")
 		exit.load_next_level.connect(_on_load_next_level)
+	
+	if level_instance.has_signal("load_next_level"):
+		level_instance.load_next_level.connect(_on_load_next_level)
 		
 	# assign camera bounds to camera
 	if level_instance.has_node("Camera Bounds"):	

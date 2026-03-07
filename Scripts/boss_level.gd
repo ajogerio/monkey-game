@@ -13,6 +13,7 @@ var is_taking_damage := false
 var player: Node2D
 
 signal wake_up(boss_hp)
+signal load_next_level
 
 func _ready() -> void:
 	boss.connect("boss_hit", _on_boss_hit)
@@ -54,8 +55,11 @@ func boss_dies():
 	is_taking_damage = false
 	print("boss is dead")
 	
+	player.controls_enabled = false
+	
 	# set a timer for 3 seconds
 	await get_tree().create_timer(3.0).timeout
+	print("timeout occured")
 	
 	# exit to the outro level
-	
+	load_next_level.emit()
