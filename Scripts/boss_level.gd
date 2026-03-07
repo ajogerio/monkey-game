@@ -15,24 +15,27 @@ var player: Node2D
 signal wake_up(boss_hp)
 signal load_next_level
 
+
 func _ready() -> void:
 	boss.connect("boss_hit", _on_boss_hit)
 	boss.connect("boss_dizzy", _on_boss_dizzy)
 	boss_hearts_ui.visible = false
-	
+
+
 func play_boss_intro(p: Node2D):
 	player = p
-	
+
 	player.controls_enabled = false
-	
+
 	await get_tree().create_timer(3.0).timeout
-	
+
 	DialogueManagerAutoload.dialogue_box.show_dialogue(intro_dialogue_filepath)
 	await DialogueManagerAutoload.dialogue_finished
-	
+
 	player.controls_enabled = true
 	wake_up.emit(boss_hp)
 	boss_hearts_ui.visible = true
+
 
 func _on_boss_hit():
 	if is_taking_damage:
@@ -40,26 +43,28 @@ func _on_boss_hit():
 		full_hearts[boss_hp].visible = false
 		# play boss hit animation
 		is_taking_damage = false
-			
+
 		if boss_hp > 0 and boss_hp < full_hearts.size():
 			wake_up.emit(boss_hp)
 		else:
 			boss_dies()
-		
+
+
 func _on_boss_dizzy():
 	is_taking_damage = true
 	# play dizzy animation
+
 
 func boss_dies():
 	# play  the boss animation death
 	is_taking_damage = false
 	print("boss is dead")
-	
+
 	player.controls_enabled = false
-	
+
 	# set a timer for 3 seconds
 	await get_tree().create_timer(3.0).timeout
 	print("timeout occured")
-	
+
 	# exit to the outro level
 	load_next_level.emit()

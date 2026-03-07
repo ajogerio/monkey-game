@@ -9,45 +9,50 @@ extends Control
 var player_name = "Cb"
 var typing_speed := 0.05
 var is_typing := false
-var dialogue : Dictionary = {}
+var dialogue: Dictionary = {}
 var current_line_index := 0
 
-func load_dialogue_from_json(filepath : String) -> void:
+
+func load_dialogue_from_json(filepath: String) -> void:
 	var json_file = FileAccess.open(filepath, FileAccess.READ)
 	if not json_file:
 		push_error("Failed to open dialogue JSON: %s" % filepath)
 		return
-	
+
 	var json_text = json_file.get_as_text()
 	json_file.close()
-	
+
 	var json = JSON.new()
 	var error_code = json.parse(json_text)
-	
-	if error_code != OK:
-		push_error("Failed to parse JSON: %s (line %d)" % json.get_error_message(), json.get_error_line())
-		return
-	
-	dialogue = json.data # assign it to the global variable so all functions have access
 
-func show_dialogue(dialogue_filepath : String) -> void:
+	if error_code != OK:
+		push_error(
+			"Failed to parse JSON: %s (line %d)" % json.get_error_message(), json.get_error_line()
+		)
+		return
+
+	dialogue = json.data  # assign it to the global variable so all functions have access
+
+
+func show_dialogue(dialogue_filepath: String) -> void:
 	visible = true
-	
-	load_dialogue_from_json(dialogue_filepath) 
+
+	load_dialogue_from_json(dialogue_filepath)
 	current_line_index = 0
 	_show_current_line()
-	
+
+
 func _show_current_line():
 	var line = dialogue["lines"][current_line_index]
 	var speaker = line["speaker"]
-	
+
 	if speaker == player_name:
 		player_portrait.visible = true
 		npc_portrait.visible = false
 	else:
 		player_portrait.visible = false
 		npc_portrait.visible = true
-	
+
 	# set speaker name and text
 	speaker_name.text = speaker
 	speaker_dialogue.clear()
@@ -56,17 +61,19 @@ func _show_current_line():
 	is_typing = true
 	_start_typing()
 
+
 func _start_typing() -> void:
 	while speaker_dialogue.visible_characters < speaker_dialogue.get_total_character_count():
 		speaker_dialogue.visible_characters += 1
-		await get_tree().create_timer(typing_speed).timeout # wait for typing_speed units before going to next line
-	
+		await get_tree().create_timer(typing_speed).timeout  # wait for typing_speed units before going to next line
+
 	is_typing = false
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible:
 		return
-	
+
 	if event.is_action_pressed("ui_accept"):
 		if is_typing:
 			# finish typing instantly
@@ -81,6 +88,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				# end of dialogue
 				visible = false
 				DialogueManagerAutoload.dialogue_finished.emit()
+
 
 func _on_ready() -> void:
 	DialogueManagerAutoload.dialogue_box = self
