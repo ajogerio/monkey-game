@@ -16,10 +16,10 @@ var current_level_index := 0
 
 func _ready() -> void:
 	levels = [
+		BOSS_LEVEL,
 		INTRO_LEVEL,
 		TUTORIAL_LEVEL,
 		JUNGLE_LEVEL,
-		BOSS_LEVEL,
 	]
 	load_level_by_index(0, true)
 	

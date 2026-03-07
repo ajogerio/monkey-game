@@ -44,12 +44,15 @@ func _on_boss_hit():
 		
 func _on_boss_dizzy():
 	is_taking_damage = true
-	print("boss is dizzy")
+	# play dizzy animation
 
 func boss_dies():
 	# play  the boss animation death
 	is_taking_damage = false
 	print("boss is dead")
+	
 	# set a timer for 3 seconds
+	await get_tree().create_timer(3.0).timeout
+	
 	# exit to the outro level
 	

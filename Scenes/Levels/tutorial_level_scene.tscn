@@ -103,3 +103,4 @@ dialogue_filepath = "res://Resources/tutorial_farewell.json"
 [node name="Camera Bounds" parent="." instance=ExtResource("5_wvlgu")]
 
 [node name="Exit Area" parent="." instance=ExtResource("6_h4jwl")]
+position = Vector2(3227, 120)
