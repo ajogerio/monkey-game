@@ -31,13 +31,14 @@ func play_intro(player):
 	await DialogueManagerAutoload.dialogue_finished
 	
 	# monkeys run away with aj to the right of the screen
-	monkeys_exit()
+	await monkeys_exit()
 	
 	# cb dialogue plays
-	DialogueManagerAutoload.dialogue_box.show_dialogue()
+	DialogueManagerAutoload.dialogue_box.show_dialogue(cb_chase_after_dialogue_filepath)
+	await DialogueManagerAutoload.dialogue_finished
 	
 	# cb exits to the right
-	#cb_exits()
+	cb_exits(player)
 
 func enter_monkeys():
 	# clear the monkey list
@@ -106,5 +107,11 @@ func monkeys_exit():
 	
 	await tween.finished
 
-func cb_exits():
-	print("cb exits")
+func cb_exits(player):
+	var viewport_width = get_viewport_rect().size.x
+	var exit_x = viewport_width + 100
+	
+	var tween = create_tween()
+	
+	tween.tween_property(player, "global_position", Vector2(exit_x, player.global_position.y), 2.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	await tween.finished
