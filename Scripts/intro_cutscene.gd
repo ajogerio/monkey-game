@@ -2,6 +2,7 @@ extends Node2D
 
 @export var intro_dialogue_filepath: String
 @export var monkey_arrival_dialogue_filepath: String
+@export var cb_chase_after_dialogue_filepath: String
 
 @onready var aj := $"Aj"
 @onready var monkey_scene := preload("res://Scenes/enemy_monkey_scene.tscn")
@@ -33,7 +34,7 @@ func play_intro(player):
 	monkeys_exit()
 	
 	# cb dialogue plays
-	#DialogueManagerAutoload.dialogue_box.show_dialogue()
+	DialogueManagerAutoload.dialogue_box.show_dialogue()
 	
 	# cb exits to the right
 	#cb_exits()
