@@ -27,9 +27,10 @@ func play_intro(player):
 	
 	# monkey dialogue plays
 	DialogueManagerAutoload.dialogue_box.show_dialogue(monkey_arrival_dialogue_filepath)
+	await DialogueManagerAutoload.dialogue_finished
 	
 	# monkeys run away with aj to the right of the screen
-	#monkeys_exit()
+	monkeys_exit()
 	
 	# cb dialogue plays
 	#DialogueManagerAutoload.dialogue_box.show_dialogue()
@@ -38,12 +39,14 @@ func play_intro(player):
 	#cb_exits()
 
 func enter_monkeys():
-	print("Enter Monkeys")
+	# clear the monkey list
 	monkeys.clear()
+	
 	var viewport_width = get_viewport_rect().size.x
 	var target_x_base = aj.global_position.x + 50
 	var spacing = 30 # pixels between each monkey
 	
+	# spawn the monkeys
 	for i in range (monkeys_to_spawn):
 		var monkey = monkey_scene.instantiate()
 		add_child(monkey)
@@ -58,7 +61,6 @@ func enter_monkeys():
 		await tween.finished
 
 func monkeys_grab_aj():
-	print("Monkey grab aj")
 	if monkeys.size() < 2:
 		return
 	
@@ -75,7 +77,33 @@ func monkeys_grab_aj():
 	await move_tween.finished
 
 func monkeys_exit():
-	print("monkey exit")
+	var viewport_width = get_viewport_rect().size.x
+	var exit_x = viewport_width + 100
+	
+	var tween = create_tween()
+	
+	for i in range(monkeys.size()):
+		var monkey = monkeys[i]
+		
+		tween.parallel().tween_property(
+			monkey,
+			"global_position",
+			Vector2(exit_x, monkey.global_position.y),
+			2.0
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		
+	if monkeys.size() > 2:
+		var carrier = monkeys[1]
+		var aj_target = Vector2(exit_x, carrier.global_position.y - 20)
+		
+		tween.parallel().tween_property(
+			aj,
+			"global_position",
+			aj_target,
+			2.0
+		).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	
+	await tween.finished
 
 func cb_exits():
 	print("cb exits")
