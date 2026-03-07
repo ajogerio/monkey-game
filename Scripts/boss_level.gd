@@ -10,6 +10,7 @@ extends Node2D
 var boss_hp := 5
 var damage_amount := 1
 var is_taking_damage := false
+var player: Node2D
 
 signal wake_up(boss_hp)
 
@@ -18,7 +19,9 @@ func _ready() -> void:
 	boss.connect("boss_dizzy", _on_boss_dizzy)
 	boss_hearts_ui.visible = false
 	
-func play_boss_intro(player: Node2D):
+func play_boss_intro(p: Node2D):
+	player = p
+	
 	player.controls_enabled = false
 	
 	await get_tree().create_timer(3.0).timeout

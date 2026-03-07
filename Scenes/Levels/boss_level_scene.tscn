@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bmmu4k6wab7ga" path="res://Sprites/Placeholders/aj character idle sprite.png" id="7_onp4q"]
 [ext_resource type="Texture2D" uid="uid://bqxyoieirlfki" path="res://Sprites/Objects/cage.png" id="8_n0t1m"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehaha"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1yi3o"]
 texture = ExtResource("2_3smec")
 7:1/0 = 0
 7:2/0 = 0
@@ -42,9 +42,9 @@ texture = ExtResource("2_3smec")
 8:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7fuom"]
-sources/0 = SubResource("TileSetAtlasSource_ehaha")
+sources/0 = SubResource("TileSetAtlasSource_1yi3o")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_04d0l"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1uhkm"]
 texture = ExtResource("3_gredn")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -53,7 +53,7 @@ texture = ExtResource("3_gredn")
 
 [sub_resource type="TileSet" id="TileSet_il0n8"]
 physics_layer_0/collision_layer = 2
-sources/0 = SubResource("TileSetAtlasSource_04d0l")
+sources/0 = SubResource("TileSetAtlasSource_1uhkm")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vc6hs"]
 size = Vector2(359.125, 240)
