@@ -19,6 +19,7 @@ sources/0 = SubResource("TileSetAtlasSource_hpceo")
 [node name="IntroCutscene" type="Node2D"]
 script = ExtResource("1_jpfy1")
 intro_dialogue_filepath = "res://Resources/intro_arguing.json"
+monkey_arrival_dialogue_filepath = "res://Resources/intro_monkey_arrival.json"
 
 [node name="Terrain Blockout" type="TileMap" parent="."]
 position = Vector2(1, 0)

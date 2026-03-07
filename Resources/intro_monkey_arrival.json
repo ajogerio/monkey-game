@@ -1,0 +1,38 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Aj": {
+			"portrait": "insert portrait here"
+		},
+		"Monkey Goon": {
+			"portrait": "insert portrait here"
+		},
+	},
+	"lines": [
+		{"speaker": "Aj", "text": "WOAH! What the hell?! Let go of me!"},
+		{"speaker": "Cb", "text": "HEY! Who are you guys?"},
+		{"speaker": "Monkey Goon", "text": "OOO AAA AAA"},
+		{"speaker": "Monkey Goon", "text": "You humans have doomed us all!"},
+		{"speaker": "Monkey Goon", "text": "OOO OOO AAA AAA AAA"},
+		{"speaker": "Cb", "text": "What do you mean doomed us all? We were just having an argument."},
+		{"speaker": "Monkey Goon", "text": "OOO OOO AAA AAA"},
+		{"speaker": "Monkey Goon", "text": "That was not JUST an argument."},
+		{"speaker": "Monkey Goon", "text": "That was a a Monkey Talk."},
+		{"speaker": "Monkey Goon", "text": "An extreme argument between two couples is called a Monkey Talk."},
+		{"speaker": "Monkey Goon", "text": "And a Monkey Talk as extreme as this... is enough to awaken... HIM"},
+		{"speaker": "Cb", "text": "Him?"},
+		{"speaker": "Monkey Goon", "text": "Yes... him... the beearer of doom and chaos. It is no other than... Klat Yeknom!"},
+		{"speaker": "Aj", "text": "Who the hell is Klat Yeknom? Sounds like a dumbass."},
+		{"speaker": "Monkey Goon", "text": "QUIET YOU FOOL! HE CAN HEAR YOU!"},
+		{"speaker": "Aj", "text": "Can you just let go of me please?"},
+		{"speaker": "Monkey Goon", "text": "No. There is only one way to stop him from destroying the world."},
+		{"speaker": "Monkey Goon", "text": "We must offer you as a sacrfice."},
+		{"speaker": "Aj", "text": "What? NO PLEASE LET ME GO!"},
+		{"speaker": "Monkey Goon", "text": "OOO OOO AAA AAA"},
+		{"speaker": "Monkey Goon", "text": "Come my monkey brothers, let us bring the offering to our lord."},
+		{"speaker": "Cb", "text": "WAIT STOP!"},
+		{"speaker": "Aj", "text": "BABY HELP ME! AAAAAAAAAAAAAAAA!"},
+	]
+}
