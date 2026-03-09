@@ -2,7 +2,8 @@ extends Node2D
 
 @export var gifts_dialogue_filepath : String
 @export var iloveyou_dialogue_filepath : String
-@export var letter_scene : PackedScene
+
+@onready var letter_scene: PackedScene = preload("res://Scenes/letter_scene.tscn")
 
 func play_cutscene(player, transition):
 	player.controls_enabled = false
@@ -31,4 +32,5 @@ func play_cutscene(player, transition):
 func show_letter():
 	var letter = letter_scene.instantiate()
 	get_tree().current_scene.add_child(letter)
-	await get_tree().create_timer(3.0).timeout
+	await letter.done_reading
+	letter.queue_free()

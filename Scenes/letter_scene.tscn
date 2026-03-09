@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpn37vuhif8r7"]
 
-[ext_resource type="Script" path="res://Scenes/letter_scene.gd" id="1_im6v5"]
+[ext_resource type="Script" path="res://Scripts/letter.gd" id="1_im6v5"]
 
 [node name="Letter" type="CanvasLayer"]
 script = ExtResource("1_im6v5")
@@ -83,3 +83,5 @@ offset_top = -31.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Done"
+
+[connection signal="pressed" from="Control/Done Button" to="." method="_on_done_button_pressed"]
