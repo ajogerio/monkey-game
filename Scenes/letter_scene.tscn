@@ -2,20 +2,49 @@
 
 [node name="Letter" type="CanvasLayer"]
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
 
-[node name="Paper" type="Panel" parent="CenterContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Paper" type="Panel" parent="Control/CenterContainer"]
+custom_minimum_size = Vector2(200, 230)
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Paper"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/CenterContainer/Paper"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
 
-[node name="Letter Text" type="RichTextLabel" parent="CenterContainer/Paper/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer/Paper/ScrollContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Letter Text" type="RichTextLabel" parent="Control/CenterContainer/Paper/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Dear Reader,
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
@@ -39,7 +68,15 @@ Vivamus luctus egestas leo. Donec ut dolor. Morbi vel lectus in quam fringilla r
 Sincerely,
 Lorem Ipsum"
 
-[node name="Next Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Next Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -49.0
+offset_top = -31.0
+grow_horizontal = 0
+grow_vertical = 0
 text = "Done"
