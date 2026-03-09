@@ -1,0 +1,13 @@
+{
+	"portraits": {
+		"Cb": {
+			"portrait": "sample portrait goes here"
+		},
+		"Aj": {
+			"portrait": "insert portrait here"
+		},
+	},
+	"lines": [
+		{"speaker": "Aj", "text": "Thanks for saving me!"},
+	]
+}
