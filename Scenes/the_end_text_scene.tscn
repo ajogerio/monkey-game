@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://csydxm8138y00"]
 
-[node name="TheEndTextScene" type="Control"]
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TheEndTextScene" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,7 +12,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="TheEndTextScene"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.25
@@ -19,4 +21,5 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
-text = "[center]The End[/center]"
+text = "[center]The End[/center]
+[center]Happy Anniversary mahal! I love you! :)[/center]"

@@ -4,6 +4,7 @@ extends Node2D
 @export var iloveyou_dialogue_filepath : String
 
 @onready var letter_scene: PackedScene = preload("res://Scenes/letter_scene.tscn")
+@onready var the_end_text_scene: PackedScene = preload("res://Scenes/the_end_text_scene.tscn")
 
 func play_cutscene(player, transition):
 	player.controls_enabled = false
@@ -25,7 +26,9 @@ func play_cutscene(player, transition):
 	DialogueManagerAutoload.dialogue_box.show_dialogue(iloveyou_dialogue_filepath)
 	await DialogueManagerAutoload.dialogue_finished
 
-	# show the end text
+	# show "the end"
+	var the_end_text = the_end_text_scene.instantiate()
+	get_tree().current_scene.add_child(the_end_text)
 	
 	# show confetti
 
