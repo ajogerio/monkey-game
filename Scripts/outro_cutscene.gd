@@ -2,6 +2,7 @@ extends Node2D
 
 @export var gifts_dialogue_filepath : String
 @export var iloveyou_dialogue_filepath : String
+@export var letter_scene : PackedScene
 
 func play_cutscene(player, transition):
 	player.controls_enabled = false
@@ -28,5 +29,6 @@ func play_cutscene(player, transition):
 	# show confetti
 
 func show_letter():
-	print("show letter")
+	var letter = letter_scene.instantiate()
+	get_tree().current_scene.add_child(letter)
 	await get_tree().create_timer(3.0).timeout

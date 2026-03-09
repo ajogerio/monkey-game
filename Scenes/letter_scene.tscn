@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://cpn37vuhif8r7"]
+[gd_scene load_steps=2 format=3 uid="uid://cpn37vuhif8r7"]
+
+[ext_resource type="Script" path="res://Scenes/letter_scene.gd" id="1_im6v5"]
 
 [node name="Letter" type="CanvasLayer"]
+script = ExtResource("1_im6v5")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -68,7 +71,7 @@ Vivamus luctus egestas leo. Donec ut dolor. Morbi vel lectus in quam fringilla r
 Sincerely,
 Lorem Ipsum"
 
-[node name="Next Button" type="Button" parent="Control"]
+[node name="Done Button" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
