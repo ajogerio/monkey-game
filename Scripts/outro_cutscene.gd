@@ -3,7 +3,7 @@ extends Node2D
 @export var gifts_dialogue_filepath : String
 @export var iloveyou_dialogue_filepath : String
 
-func play_cutscene(player):
+func play_cutscene(player, transition):
 	player.controls_enabled = false
 	
 	await get_tree().create_timer(3.0).timeout
@@ -11,9 +11,13 @@ func play_cutscene(player):
 	# play the outro dialogue of gifts
 	DialogueManagerAutoload.dialogue_box.show_dialogue(gifts_dialogue_filepath)
 	await DialogueManagerAutoload.dialogue_finished
-
+	
+	transition.fade_out()
+	
 	# show the letter
 	await show_letter()
+	
+	transition.fade_in()
 
 	# show the last dialogue
 	DialogueManagerAutoload.dialogue_box.show_dialogue(iloveyou_dialogue_filepath)

@@ -16,8 +16,8 @@ var current_level_index := 0
 
 func _ready() -> void:
 	levels = [
-		BOSS_LEVEL,
 		OUTRO_LEVEL,
+		BOSS_LEVEL,
 		INTRO_LEVEL,
 		TUTORIAL_LEVEL,
 		JUNGLE_LEVEL,
@@ -73,6 +73,8 @@ func load_level(level_scene: PackedScene, skip_fade: bool = false) -> void:
 		await level_instance.play_boss_intro(player)
 	elif level_instance.has_method("play_intro"):
 		await level_instance.play_intro(player)
+	elif level_instance.has_method("play_cutscene"):
+		await level_instance.play_cutscene(player, transition)
 	else:
 		player.controls_enabled = true
 
