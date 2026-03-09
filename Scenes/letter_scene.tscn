@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cpn37vuhif8r7"]
+
+[node name="Letter" type="CanvasLayer"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Paper" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Paper"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Letter Text" type="RichTextLabel" parent="CenterContainer/Paper/ScrollContainer"]
+layout_mode = 2
+text = "Dear Reader,
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
+
+Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+
+Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
+
+Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+
+Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+
+Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin.
+
+Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis.
+
+Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Vivamus luctus egestas leo. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+
+Sincerely,
+Lorem Ipsum"
+
+[node name="Next Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Done"

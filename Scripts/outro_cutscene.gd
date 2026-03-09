@@ -12,12 +12,12 @@ func play_cutscene(player, transition):
 	DialogueManagerAutoload.dialogue_box.show_dialogue(gifts_dialogue_filepath)
 	await DialogueManagerAutoload.dialogue_finished
 	
-	transition.fade_out()
+	await transition.fade_out()
 	
 	# show the letter
 	await show_letter()
 	
-	transition.fade_in()
+	await transition.fade_in()
 
 	# show the last dialogue
 	DialogueManagerAutoload.dialogue_box.show_dialogue(iloveyou_dialogue_filepath)
@@ -29,3 +29,4 @@ func play_cutscene(player, transition):
 
 func show_letter():
 	print("show letter")
+	await get_tree().create_timer(3.0).timeout
