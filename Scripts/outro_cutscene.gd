@@ -1,9 +1,27 @@
 extends Node2D
 
-# play the outro dialogue of gifts
+@export var gifts_dialogue_filepath : String
+@export var iloveyou_dialogue_filepath : String
 
-# show the letter
+func play_cutscene(player):
+	player.controls_enabled = false
+	
+	await get_tree().create_timer(3.0).timeout
 
-# show the last dialogue
+	# play the outro dialogue of gifts
+	DialogueManagerAutoload.dialogue_box.show_dialogue(gifts_dialogue_filepath)
+	await DialogueManagerAutoload.dialogue_finished
 
-# show the end screen
+	# show the letter
+	await show_letter()
+
+	# show the last dialogue
+	DialogueManagerAutoload.dialogue_box.show_dialogue(iloveyou_dialogue_filepath)
+	await DialogueManagerAutoload.dialogue_finished
+
+	# show the end text
+	
+	# show confetti
+
+func show_letter():
+	print("show letter")
