@@ -138,7 +138,7 @@ next_checkpoint = "Checkpoint6"
 dialogue_filepath = "res://Resources/tutorial_monkey_shooting.json"
 
 [node name="Tutorial Checkpoint6" parent="." instance=ExtResource("4_ic8x4")]
-position = Vector2(2985, 39)
+position = Vector2(2985, 12)
 checkpoint_name = "Checkpoint6"
 dialogue_filepath = "res://Resources/tutorial_farewell.json"
 
