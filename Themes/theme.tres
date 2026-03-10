@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dkyd5wg7xwtop"]
+
+[ext_resource type="FontFile" uid="uid://bik8qm7qv2huo" path="res://Fonts/PixelOperator-Bold.ttf" id="1_jrprj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38vlj"]
+bg_color = Color(0.180392, 0.290196, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmllm"]
+bg_color = Color(0.105882, 0.164706, 0.121569, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbfg1"]
+bg_color = Color(0.0784314, 0.188235, 0.101961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5be73"]
+bg_color = Color(0.196078, 0.2, 0.32549, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[resource]
+Button/colors/font_color = Color(0.909804, 0.960784, 0.913725, 1)
+Button/colors/icon_normal_color = Color(0.243137, 0.372549, 0.27451, 1)
+Button/fonts/font = ExtResource("1_jrprj")
+Button/icons/icon = null
+Button/styles/hover = SubResource("StyleBoxFlat_38vlj")
+Button/styles/normal = SubResource("StyleBoxFlat_wmllm")
+Button/styles/pressed = SubResource("StyleBoxFlat_cbfg1")
+Label/fonts/font = ExtResource("1_jrprj")
+Panel/styles/panel = SubResource("StyleBoxFlat_5be73")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/font_sizes/normal_font_size = 16
+RichTextLabel/fonts/normal_font = ExtResource("1_jrprj")

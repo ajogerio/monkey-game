@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpn37vuhif8r7"]
+[gd_scene load_steps=4 format=3 uid="uid://cpn37vuhif8r7"]
 
 [ext_resource type="Script" path="res://Scripts/letter.gd" id="1_im6v5"]
-[ext_resource type="FontFile" uid="uid://6tlynfkyq07p" path="res://Fonts/PixelOperator.ttf" id="2_75adf"]
-[ext_resource type="FontFile" uid="uid://bik8qm7qv2huo" path="res://Fonts/PixelOperator-Bold.ttf" id="2_71847"]
+[ext_resource type="Theme" uid="uid://dkyd5wg7xwtop" path="res://Themes/theme.tres" id="2_ifej7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0revy"]
 content_margin_left = 10.0
@@ -14,12 +13,6 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-
-[sub_resource type="Theme" id="Theme_v6m81"]
-RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
-RichTextLabel/font_sizes/normal_font_size = 16
-RichTextLabel/fonts/bold_font = ExtResource("2_71847")
-RichTextLabel/fonts/normal_font = ExtResource("2_75adf")
 
 [node name="Letter" type="CanvasLayer"]
 script = ExtResource("1_im6v5")
@@ -55,8 +48,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 3
-horizontal_scroll_mode = 0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/CenterContainer/Paper/ScrollContainer"]
 layout_mode = 2
@@ -71,7 +64,7 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource("Theme_v6m81")
+theme = ExtResource("2_ifej7")
 theme_override_colors/default_color = Color(0, 0, 0.00784314, 0.996078)
 theme_override_constants/shadow_offset_y = 0
 theme_override_font_sizes/normal_font_size = 10
@@ -112,6 +105,8 @@ offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
+theme = ExtResource("2_ifej7")
+theme_override_constants/outline_size = 0
 text = "Done"
 
 [connection signal="pressed" from="Control/Done Button" to="." method="_on_done_button_pressed"]
