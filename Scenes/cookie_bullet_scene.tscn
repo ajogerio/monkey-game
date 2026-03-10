@@ -1,27 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp5neqwnb18rc"]
+[gd_scene load_steps=4 format=3 uid="uid://bp5neqwnb18rc"]
 
+[ext_resource type="Texture2D" uid="uid://74t0sk4v64vq" path="res://Sprites/Objects/cookie.png" id="2_6vfix"]
 [ext_resource type="Script" path="res://Scripts/cookie_bullet.gd" id="3_r6sp0"]
 
-[sub_resource type="Gradient" id="Gradient_kea6s"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ah22x"]
-gradient = SubResource("Gradient_kea6s")
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_xe07u"]
+radius = 8.0
 
 [node name="Cookie_Bullet" type="Area2D" groups=["cookie_bullet"]]
-position = Vector2(49, 27)
+position = Vector2(51, 30)
 collision_layer = 8
 collision_mask = 22
 script = ExtResource("3_r6sp0")
 metadata/_edit_group_ = true
 
-[node name="Cookie Sprite" type="Sprite2D" parent="." groups=["cookie_bullet"]]
-position = Vector2(2.26498e-06, 0)
-scale = Vector2(0.21875, 0.1875)
-texture = SubResource("GradientTexture2D_ah22x")
-
 [node name="Cookie Hitbox" type="CollisionShape2D" parent="." groups=["cookie_bullet"]]
 shape = SubResource("CircleShape2D_xe07u")
+
+[node name="Cookie Sprite" type="Sprite2D" parent="." groups=["cookie_bullet"]]
+position = Vector2(-0.00270844, -0.00697708)
+scale = Vector2(1, 0.98)
+texture = ExtResource("2_6vfix")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/aj_scene.tscn" id="3_doqwc"]
 [ext_resource type="Texture2D" uid="uid://dinf3tm75ecgo" path="res://Sprites/Tilesets/tileset_1.png" id="5_02e2f"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kwv03"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bmi7"]
 texture = ExtResource("5_02e2f")
 7:1/0 = 0
 7:2/0 = 0
@@ -44,7 +44,7 @@ texture = ExtResource("5_02e2f")
 [sub_resource type="TileSet" id="TileSet_saerl"]
 physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 29
-sources/0 = SubResource("TileSetAtlasSource_kwv03")
+sources/0 = SubResource("TileSetAtlasSource_3bmi7")
 
 [node name="IntroCutscene" type="Node2D"]
 script = ExtResource("1_jpfy1")
