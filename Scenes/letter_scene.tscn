@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpn37vuhif8r7"]
+[gd_scene load_steps=3 format=3 uid="uid://cpn37vuhif8r7"]
 
 [ext_resource type="Script" path="res://Scripts/letter.gd" id="1_im6v5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0revy"]
+bg_color = Color(0.909804, 0.847059, 0.658824, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 10
 
 [node name="Letter" type="CanvasLayer"]
 script = ExtResource("1_im6v5")
@@ -27,6 +34,7 @@ grow_vertical = 2
 [node name="Paper" type="Panel" parent="Control/CenterContainer"]
 custom_minimum_size = Vector2(200, 230)
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0revy")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/CenterContainer/Paper"]
 layout_mode = 1
@@ -38,16 +46,13 @@ grow_vertical = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer/Paper/ScrollContainer"]
+[node name="Letter Text" type="RichTextLabel" parent="Control/CenterContainer/Paper/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="Letter Text" type="RichTextLabel" parent="Control/CenterContainer/Paper/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0.00784314, 0.996078)
+theme_override_constants/shadow_offset_y = 0
+theme_override_font_sizes/normal_font_size = 7
 text = "Dear Reader,
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.
@@ -79,7 +84,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -49.0
-offset_top = -31.0
+offset_top = -37.12
+offset_right = -10.0
+offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Done"
