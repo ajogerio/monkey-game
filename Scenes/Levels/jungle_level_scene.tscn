@@ -63,11 +63,12 @@ sources/0 = SubResource("TileSetAtlasSource_f8rou")
 [node name="Jungle Level" type="Node2D"]
 
 [node name="Player Spawn" type="Marker2D" parent="."]
-position = Vector2(57, 185)
+position = Vector2(9, 186)
 
 [node name="Camera Bounds" type="Area2D" parent="."]
 
 [node name="Bounds Shape" type="CollisionShape2D" parent="Camera Bounds"]
+visible = false
 position = Vector2(1596.5, 120)
 shape = SubResource("RectangleShape2D_ct1iw")
 
