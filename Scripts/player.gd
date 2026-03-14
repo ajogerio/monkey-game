@@ -12,7 +12,7 @@ var is_knocked_back := false
 var knockback_decay := 800.0
 
 @onready var anim = $"Player Sprite/AnimationPlayer"
-
+@onready var sfx: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready():
 	# play animation
@@ -52,6 +52,7 @@ func _physics_process(delta: float) -> void:
 	# jumping:
 	if Input.is_action_just_pressed("jump"):
 		velocity.y = -JUMP_SPEED  # negative value so that it goes upwards (+y is up and -y is down)
+		sfx.play()
 
 	move_and_slide()
 
