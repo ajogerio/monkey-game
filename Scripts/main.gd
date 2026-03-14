@@ -16,9 +16,9 @@ var current_level_index := 0
 
 func _ready() -> void:
 	levels = [
+		TUTORIAL_LEVEL,
 		BOSS_LEVEL,
 		INTRO_LEVEL,
-		TUTORIAL_LEVEL,
 		JUNGLE_LEVEL,
 		OUTRO_LEVEL,
 	]
