@@ -60,7 +60,7 @@ gifts_dialogue_filepath = "res://Resources/outro_dialogue.json"
 iloveyou_dialogue_filepath = "res://Resources/outro_iloveyou.json"
 
 [node name="Player Spawn" type="Marker2D" parent="."]
-position = Vector2(142, 185)
+position = Vector2(159, 185)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, 0)
@@ -76,7 +76,7 @@ position = Vector2(180.438, 120)
 shape = SubResource("RectangleShape2D_wdy23")
 
 [node name="Aj" type="Sprite2D" parent="."]
-position = Vector2(194, 184)
+position = Vector2(203, 185)
 texture = ExtResource("2_s8qms")
 
 [node name="Terrain Blockout" type="TileMap" parent="."]
