@@ -14,6 +14,7 @@ var knockback_decay := 800.0
 @onready var anim = $"Player Sprite/AnimationPlayer"
 @onready var sfx: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
+
 func _ready():
 	# play animation
 	anim.play("idle")

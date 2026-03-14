@@ -21,7 +21,6 @@ func _ready() -> void:
 		OUTRO_LEVEL,
 		INTRO_LEVEL,
 		JUNGLE_LEVEL,
-		
 	]
 	load_level_by_index(0, true)
 

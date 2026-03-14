@@ -45,7 +45,7 @@ func _on_boss_hit():
 		full_hearts[boss_hp].visible = false
 		anim.play("hit")
 		await anim.animation_finished
-		
+
 		is_taking_damage = false
 
 		if boss_hp > 0 and boss_hp < full_hearts.size():
