@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b757sdjyt2fh5"]
+[gd_scene load_steps=6 format=3 uid="uid://b757sdjyt2fh5"]
 
 [ext_resource type="Script" path="res://Scripts/snorlax.gd" id="1_iuqji"]
 [ext_resource type="PackedScene" uid="uid://2beuub4oqvwg" path="res://Scenes/floating_e_key_scene.tscn" id="2_t253t"]
 [ext_resource type="Texture2D" uid="uid://d0ermqssxxa48" path="res://Sprites/Characters/snorlax.png" id="3_djgff"]
+[ext_resource type="AudioStream" uid="uid://b8m4pbf7rlsxb" path="res://Audio/interact.mp3" id="4_c2r2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evw67"]
 size = Vector2(54, 34.5)
@@ -25,6 +26,10 @@ texture = ExtResource("3_djgff")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.25)
 shape = SubResource("RectangleShape2D_evw67")
+
+[node name="AudioListener2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_c2r2m")
+volume_db = 5.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
