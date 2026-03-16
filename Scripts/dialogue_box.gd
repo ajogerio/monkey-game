@@ -1,7 +1,7 @@
 extends Control
 
 var player_name = "Cb"
-var typing_speed := 0.05
+var typing_speed := 0.03
 var is_typing := false
 var dialogue: Dictionary = {}
 var current_line_index := 0
@@ -11,6 +11,7 @@ var current_line_index := 0
 @onready var speaker_dialogue = %"Speaker Dialogue"
 @onready var player_portrait = $"Panel/MarginContainer/HBoxContainer/Player Portrait"
 @onready var npc_portrait = $"Panel/MarginContainer/HBoxContainer/NPC Portrait"
+@onready var sfx: AudioStreamPlayer = $AudioStreamPlayer
 
 
 func load_dialogue_from_json(filepath: String) -> void:
@@ -63,11 +64,15 @@ func _show_current_line():
 
 
 func _start_typing() -> void:
+	sfx.stream.loop = true
+	sfx.play()
 	while speaker_dialogue.visible_characters < speaker_dialogue.get_total_character_count():
 		speaker_dialogue.visible_characters += 1
 		# wait for typing_speed units before going to next line
+		
 		await get_tree().create_timer(typing_speed).timeout
-
+	
+	sfx.stop()
 	is_typing = false
 
 

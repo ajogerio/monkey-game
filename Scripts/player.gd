@@ -12,7 +12,7 @@ var is_knocked_back := false
 var knockback_decay := 800.0
 
 @onready var anim = $"Player Sprite/AnimationPlayer"
-@onready var sfx: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var sfx: AudioStreamPlayer = $AudioStreamPlayer
 
 
 func _ready():

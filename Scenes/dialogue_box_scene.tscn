@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl73fbqyb0vqm"]
+[gd_scene load_steps=7 format=3 uid="uid://bl73fbqyb0vqm"]
 
 [ext_resource type="Theme" uid="uid://dkyd5wg7xwtop" path="res://Themes/theme.tres" id="1_17ta6"]
 [ext_resource type="Script" path="res://Scripts/dialogue_box.gd" id="1_madn3"]
+[ext_resource type="AudioStream" uid="uid://b0nwymdrtn3st" path="res://Audio/typing.mp3" id="3_40ixg"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h1jdo"]
 
@@ -80,5 +81,9 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 8
 texture = SubResource("PlaceholderTexture2D_mfufd")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_40ixg")
+volume_db = 6.0
 
 [connection signal="ready" from="." to="." method="_on_ready"]
