@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://j3ml3ouf16fc"]
+[gd_scene load_steps=12 format=3 uid="uid://j3ml3ouf16fc"]
 
 [ext_resource type="Script" path="res://Scripts/boss_level.gd" id="1_dgdms"]
 [ext_resource type="Texture2D" uid="uid://dinf3tm75ecgo" path="res://Sprites/Tilesets/tileset_1.png" id="2_3smec"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bfsuw6vceouvu" path="res://Sprites/UI/boss_heart_full.png" id="4_trd7f"]
 [ext_resource type="Texture2D" uid="uid://qqv2xlf28etr" path="res://Sprites/UI/boss_heart_empty.png" id="5_0td32"]
 [ext_resource type="Texture2D" uid="uid://bmmu4k6wab7ga" path="res://Sprites/Placeholders/aj character idle sprite.png" id="7_onp4q"]
+[ext_resource type="AudioStream" uid="uid://decphqlg4e1gj" path="res://Audio/boss_hit.mp3" id="8_lc768"]
 [ext_resource type="Texture2D" uid="uid://bqxyoieirlfki" path="res://Sprites/Objects/cage.png" id="8_n0t1m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1yi3o"]
@@ -190,5 +191,8 @@ texture = ExtResource("7_onp4q")
 [node name="Cage" type="Sprite2D" parent="."]
 position = Vector2(346, 176)
 texture = ExtResource("8_n0t1m")
+
+[node name="Boss Hit Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lc768")
 
 [connection signal="wake_up" from="." to="Boss" method="_on_boss_level_wake_up"]

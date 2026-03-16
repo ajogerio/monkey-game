@@ -15,7 +15,7 @@ var player: Node2D
 @onready var dialogue_timer := $"Dialogue Start Timer"
 @onready var boss_hearts_ui := $"Boss Hearts"
 @onready var anim = $"Boss/Boss Sprite/AnimationPlayer"
-
+@onready var boss_hit_sfx: AudioStreamPlayer = $"Boss Hit Sound"
 
 func _ready() -> void:
 	boss.connect("boss_hit", _on_boss_hit)
@@ -43,6 +43,7 @@ func _on_boss_hit():
 	if is_taking_damage:
 		boss_hp -= damage_amount
 		full_hearts[boss_hp].visible = false
+		boss_hit_sfx.play()
 		anim.play("hit")
 		await anim.animation_finished
 
