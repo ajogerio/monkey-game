@@ -13,10 +13,9 @@ var current_level_index := 0
 @onready var player = $Player
 @onready var transition = $Transition
 
-
 func _ready() -> void:
 	levels = [
-			BOSS_LEVEL,
+		BOSS_LEVEL,
 		TUTORIAL_LEVEL,
 		OUTRO_LEVEL,
 		INTRO_LEVEL,

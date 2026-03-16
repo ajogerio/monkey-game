@@ -4,6 +4,7 @@ signal boss_hit
 signal boss_dizzy
 
 @export var rock_scene: PackedScene
+@onready var rolling_stone_sfx: AudioStreamPlayer = $"Rolling Stone Sound"
 
 var rocks_thrown := 0
 var rocks_to_throw := 0
@@ -29,6 +30,7 @@ func _on_timer_timeout() -> void:
 
 
 func throw_rock():
+	rolling_stone_sfx.play()
 	var rock = rock_scene.instantiate()
 	rock.global_position = $"Attack Origin".global_position
 	get_tree().current_scene.add_child(rock)
