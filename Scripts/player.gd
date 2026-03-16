@@ -12,8 +12,8 @@ var is_knocked_back := false
 var knockback_decay := 800.0
 
 @onready var anim = $"Player Sprite/AnimationPlayer"
-@onready var sfx: AudioStreamPlayer = $AudioStreamPlayer
-
+@onready var jump_sfx: AudioStreamPlayer = $"Jump Sound"
+@onready var shoot_sfx: AudioStreamPlayer = $"Shoot Sound"
 
 func _ready():
 	# play animation
@@ -53,7 +53,7 @@ func _physics_process(delta: float) -> void:
 	# jumping:
 	if Input.is_action_just_pressed("jump"):
 		velocity.y = -JUMP_SPEED  # negative value so that it goes upwards (+y is up and -y is down)
-		sfx.play()
+		jump_sfx.play()
 
 	move_and_slide()
 
@@ -77,6 +77,8 @@ func shoot() -> void:
 	# set the direction vector of the cookie_bullet towards the cursor
 	cookie_bullet.direction = $Muzzle.global_position.direction_to(get_global_mouse_position())
 	get_tree().current_scene.add_child(cookie_bullet)
+	shoot_sfx.play()
+	
 
 
 func take_rock_hit(from_position: Vector2):
