@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 DialogueManagerAutoload="*res://Scripts/dialogue_manager_autoload.gd"
 SignalBusAutoload="*res://Scripts/signal_bus_autoload.gd"
+BackgroundMusicAutoload="*res://Scenes/background_music_scene.tscn"
 
 [display]
 
