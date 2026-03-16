@@ -18,7 +18,7 @@ func _ready() -> void:
 	levels = [
 
 		TUTORIAL_LEVEL,
-				BOSS_LEVEL,
+		BOSS_LEVEL,
 		OUTRO_LEVEL,
 		INTRO_LEVEL,
 		JUNGLE_LEVEL,
