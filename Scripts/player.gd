@@ -10,6 +10,7 @@ var controls_enabled := true
 var knockback_velocity: Vector2 = Vector2.ZERO
 var is_knocked_back := false
 var knockback_decay := 800.0
+var jumps_so_far := 0
 
 @onready var anim = $"Player Sprite/AnimationPlayer"
 @onready var jump_sfx: AudioStreamPlayer = $"Jump Sound"
@@ -49,10 +50,14 @@ func _physics_process(delta: float) -> void:
 	# gravity movement:
 	if not is_on_floor():
 		velocity.y += GRAVITY_SPEED * delta
+	
+	if is_on_floor():
+		jumps_so_far = 0
 
 	# jumping:
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and jumps_so_far < 2:
 		velocity.y = -JUMP_SPEED  # negative value so that it goes upwards (+y is up and -y is down)
+		jumps_so_far += 1
 		jump_sfx.play()
 
 	move_and_slide()
