@@ -19,16 +19,23 @@ func _ready():
 	SignalBusAutoload.start_checkpoint_chain.connect(Callable(self, "_on_start_checkpoint_chain"))
 	DialogueManagerAutoload.dialogue_finished.connect(Callable(self, "_on_dialogue_finished"))
 
+func _wait_until_grounded(player):
+	while not player.is_on_floor()	:
+		await get_tree().process_frame
 
 func _on_body_entered(body: Node2D) -> void:
 	if not is_active or has_been_completed:
 		return
 
 	if body.is_in_group("player"):
-		body.controls_enabled = false  # freeze player
 		has_been_completed = true
 		is_active = false
 		arrow_indicator.hide_arrow()
+		
+		await _wait_until_grounded(body)
+		await get_tree().create_timer(0.1).timeout
+		
+		body.controls_enabled = false # freeze player
 
 		if dialogue_filepath != "":
 			waiting_for_dialogue = true
