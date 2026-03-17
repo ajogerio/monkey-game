@@ -1,14 +1,17 @@
 {
 	"portraits": {
 		"Cb": {
-			"portrait": "sample portrait goes here"
+			"portrait": "res://Sprites/Portraits/cb.png"
 		},
 		"Aj": {
-			"portrait": "insert portrait here"
+			"portrait": "res://Sprites/Portraits/aj.png"
 		},
 		"Klat Yeknom": {
-			"portrait": "insert portrait here"
+			"portrait": "res://Sprites/Portraits/klat_yeknom.png"
 		},
+		"Snorlax": {
+			"portrait": "res://Sprites/Portraits/snorlax.png"
+		}
 	},
 	"lines": [
 		{"speaker": "Cb", "text": "What... the... fu--"},
