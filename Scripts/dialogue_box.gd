@@ -46,11 +46,16 @@ func show_dialogue(dialogue_filepath: String) -> void:
 func _show_current_line():
 	var line = dialogue["lines"][current_line_index]
 	var speaker = line["speaker"]
-
+	
+	var portrait_path = dialogue["portraits"][speaker]["portrait"]
+	var portrait = load(portrait_path)
+	
 	if speaker == player_name:
+		player_portrait.texture = portrait
 		player_portrait.visible = true
 		npc_portrait.visible = false
 	else:
+		npc_portrait.texture = portrait
 		player_portrait.visible = false
 		npc_portrait.visible = true
 
