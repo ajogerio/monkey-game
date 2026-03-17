@@ -1,11 +1,11 @@
 {
 	"portraits": {
 		"Cb": {
-			"portrait": "sample portrait goes here"
+			"portrait": "res://Sprites/Portraits/cb.png"
 		},
 		"Snorlax": {
-			"portrait": "insert portrait here"
-		}
+			"portrait": "res://Sprites/Portraits/snorlax.png"
+		},
 	},
 	"lines": [
 		{"speaker": "Cb", "text": "WOAH!"},

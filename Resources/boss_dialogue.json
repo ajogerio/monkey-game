@@ -9,9 +9,6 @@
 		"Klat Yeknom": {
 			"portrait": "res://Sprites/Portraits/klat_yeknom.png"
 		},
-		"Snorlax": {
-			"portrait": "res://Sprites/Portraits/snorlax.png"
-		}
 	},
 	"lines": [
 		{"speaker": "Cb", "text": "What... the... fu--"},

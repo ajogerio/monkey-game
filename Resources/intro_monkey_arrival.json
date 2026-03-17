@@ -1,13 +1,13 @@
 {
 	"portraits": {
 		"Cb": {
-			"portrait": "sample portrait goes here"
+			"portrait": "res://Sprites/Portraits/cb.png"
 		},
 		"Aj": {
-			"portrait": "insert portrait here"
+			"portrait": "res://Sprites/Portraits/aj.png"
 		},
 		"Monkey Goon": {
-			"portrait": "insert portrait here"
+			"portrait": "res://Sprites/Portraits/monkey_goon.png"
 		},
 	},
 	"lines": [
