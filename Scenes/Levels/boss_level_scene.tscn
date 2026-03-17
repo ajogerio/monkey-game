@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b77ipel2dy33a" path="res://Scenes/boss_scene.tscn" id="3_uiruu"]
 [ext_resource type="Texture2D" uid="uid://bfsuw6vceouvu" path="res://Sprites/UI/boss_heart_full.png" id="4_trd7f"]
 [ext_resource type="Texture2D" uid="uid://qqv2xlf28etr" path="res://Sprites/UI/boss_heart_empty.png" id="5_0td32"]
-[ext_resource type="Texture2D" uid="uid://bmmu4k6wab7ga" path="res://Sprites/Placeholders/aj character idle sprite.png" id="7_onp4q"]
+[ext_resource type="Texture2D" uid="uid://b0ansjeddmwt6" path="res://Sprites/Placeholders/aj character idle sprite left facing.png" id="6_cldgx"]
 [ext_resource type="AudioStream" uid="uid://decphqlg4e1gj" path="res://Audio/boss_hit.mp3" id="8_lc768"]
 [ext_resource type="Texture2D" uid="uid://bqxyoieirlfki" path="res://Sprites/Objects/cage.png" id="8_n0t1m"]
 
@@ -186,7 +186,7 @@ shape = SubResource("RectangleShape2D_vc6hs")
 
 [node name="Aj" type="Sprite2D" parent="."]
 position = Vector2(345, 177)
-texture = ExtResource("7_onp4q")
+texture = ExtResource("6_cldgx")
 
 [node name="Cage" type="Sprite2D" parent="."]
 position = Vector2(346, 176)
